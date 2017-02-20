@@ -1,6 +1,8 @@
 {
   "name": "nile-webapp",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Web Interface for Kafka within Nile Service at CERN.",
+  "author": "adediosf",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -12,22 +14,28 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "^2.3.1",
-    "@angular/compiler": "^2.3.1",
-    "@angular/core": "^2.3.1",
-    "@angular/forms": "^2.3.1",
-    "@angular/http": "^2.3.1",
-    "@angular/platform-browser": "^2.3.1",
-    "@angular/platform-browser-dynamic": "^2.3.1",
-    "@angular/router": "^3.3.1",
+    "@angular/common": "2.4.4",
+    "@angular/compiler": "2.4.4",
+    "@angular/core": "2.4.4",
+    "@angular/forms": "2.4.4",
+    "@angular/http": "2.4.4",
+    "@angular/platform-browser": "2.4.4",
+    "@angular/platform-browser-dynamic": "2.4.4",
+    "@angular/platform-server": "2.4.4",
+    "@angular/router": "3.4.4",
+    "@angularclass/conventions-loader": "1.0.13",
+    "bootstrap": "4.0.0-alpha.4",
     "core-js": "^2.4.1",
-    "rxjs": "^5.0.1",
+    "ng2-bootstrap": "1.3.3",
+    "ng2-smart-table": "^0.5.3-0",
+    "normalize.css": "^4.2.0",
+    "rxjs": "5.0.3",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.7.2"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0-beta.30",
-    "@angular/compiler-cli": "^2.3.1",
+    "@angular/compiler-cli": "2.4.4",
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
     "codelyzer": "~2.0.0-beta.1",
@@ -39,8 +47,16 @@
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
     "protractor": "~4.0.13",
-    "ts-node": "1.2.1",
-    "tslint": "^4.3.0",
-    "typescript": "~2.0.3"
+    "ts-node": "2.0.0",
+    "tslint": "4.4.2",
+    "typescript": "2.1.5",
+    "url-loader": "0.5.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cerndb/nile-webapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cerndb/nile-webapp/issues"
   }
 }

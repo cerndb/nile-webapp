@@ -1,4 +1,4 @@
-# NileWebapp
+# Nile Web Interface
 
 ##Introduction
 
