@@ -9,7 +9,7 @@ import { routing } from './app.routing';
 // App is our top level component
 import { App } from './app.component';
 import { PagesModule } from './pages/pages.module';
-
+import { ElementsModule } from './theme/theme.module';
 
 @NgModule({
   bootstrap: [App],
@@ -20,6 +20,7 @@ import { PagesModule } from './pages/pages.module';
     HttpModule,
     RouterModule,
     PagesModule,
+    ElementsModule.forRoot(),
     routing
   ],
   providers: []

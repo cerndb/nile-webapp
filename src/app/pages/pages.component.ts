@@ -2,14 +2,17 @@
  * Created by adediosf on 17/02/17.
  */
 import { Component } from '@angular/core';
+import { Routes } from '@angular/router';
 
 import { MENU } from '../app.menu';
+
+import { MenuService } from '../theme/elements/side-bar';
 
 @Component({
   selector: 'pages',
   styles: [],
   template:`
-      <h1>Pages component!!</h1>
+      <menu></menu>
       <router-outlet></router-outlet>
 <!--    <ba-sidebar></ba-sidebar>
     <ba-page-top></ba-page-top>
@@ -26,4 +29,13 @@ import { MENU } from '../app.menu';
 
 export class Pages {
 
+  constructor(private _menuService: MenuService) {
+  }
+
+  /**
+   * In order to update the side-bar menu with the pages.menu constant.
+   */
+  ngOnInit() {
+    this._menuService.updateMenuByRoutes(<Routes>MENU);
+  }
 }
