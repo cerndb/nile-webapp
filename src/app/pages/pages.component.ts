@@ -12,6 +12,7 @@ import {MenuService} from "../theme/elements/side-bar";
   selector: 'pages',
   styles: [],
   template:`
+      <side-bar></side-bar>
       <menu-bar></menu-bar>
       <router-outlet></router-outlet>
 <!--    <ba-sidebar></ba-sidebar>

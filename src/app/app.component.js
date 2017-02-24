@@ -6,17 +6,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+require("style-loader!./app.scss");
+require("style-loader!./theme/initial.scss");
 var App = (function () {
     function App() {
         this.title = 'app works!';
+        console.info("probando");
+        console.log("aqui");
     }
     return App;
 }());
 App = __decorate([
     core_1.Component({
         selector: 'app',
-        templateUrl: './app.component.html',
-        styleUrls: ['./app.component.css']
+        templateUrl: './app.component.html'
     })
 ], App);
 exports.App = App;

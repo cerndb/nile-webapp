@@ -1,4 +1,7 @@
 "use strict";
+/**
+ * Created by adediosf on 17/02/17.
+ */
 var router_1 = require("@angular/router");
 var pages_component_1 = require("./pages.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");

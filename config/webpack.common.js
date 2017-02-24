@@ -125,7 +125,7 @@ module.exports = function (options) {
             {
               loader: 'awesome-typescript-loader',
               options: {
-                configFileName: helpers.root('src','tsconfig.webpack.json')
+                configFileName: helpers.root('src', 'tsconfig.webpack.json')
               }
             },
             {

@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-require("./menu.component.scss");
+require("style-loader!./menu.component.scss");
 var MenuComponent = (function () {
     function MenuComponent(_router, _service) {
         this._router = _router;
@@ -58,9 +58,8 @@ var MenuComponent = (function () {
 }());
 MenuComponent = __decorate([
     core_1.Component({
-        selector: 'menu',
-        templateUrl: 'menu.component.html',
-        styleUrls: ['menu.component.scss']
+        selector: 'menu-bar',
+        templateUrl: 'menu.component.html'
     })
 ], MenuComponent);
 exports.MenuComponent = MenuComponent;

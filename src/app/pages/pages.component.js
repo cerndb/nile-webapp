@@ -26,7 +26,7 @@ Pages = __decorate([
     core_1.Component({
         selector: 'pages',
         styles: [],
-        template: "\n      <menu></menu>\n      <router-outlet></router-outlet>\n<!--    <ba-sidebar></ba-sidebar>\n    <ba-page-top></ba-page-top>\n    <div class=\"al-main\">\n      <div class=\"al-content\">\n        <ba-content-top></ba-content-top>\n        <router-outlet></router-outlet>\n      </div>\n    </div>\n    <ba-back-top position=\"200\"></ba-back-top>-->\n    "
+        template: "\n      <menu-bar></menu-bar>\n      <router-outlet></router-outlet>\n<!--    <ba-sidebar></ba-sidebar>\n    <ba-page-top></ba-page-top>\n    <div class=\"al-main\">\n      <div class=\"al-content\">\n        <ba-content-top></ba-content-top>\n        <router-outlet></router-outlet>\n      </div>\n    </div>\n    <ba-back-top position=\"200\"></ba-back-top>-->\n    "
     })
 ], Pages);
 exports.Pages = Pages;

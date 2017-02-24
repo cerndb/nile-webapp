@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
 import 'style-loader!./app.scss';
 import 'style-loader!./theme/initial.scss';
 
-
 @Component({
   selector: 'app',
   templateUrl: './app.component.html'

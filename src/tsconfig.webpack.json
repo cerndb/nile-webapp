@@ -4,14 +4,14 @@
     "declaration": false,
     "emitDecoratorMetadata": true,
     "removeComments": false,
-    "experimentalDecorators": false,
-    "lib": ["es2015", "dom"],
+    "experimentalDecorators": true,
+    "lib": ["es6", "dom"],
     "mapRoot": "./",
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "compiled",
     "sourceMap": true,
-    "target": "es5",
+    "target": "es6",
     "types": ["node"],
     "typeRoots": [
       "node_modules/@types"

@@ -1,41 +1,109 @@
-$font-family: 'Roboto', sans-serif;
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
 
-$resXXL: 1280px;
-$resXL: 1170px;
-$resL: 991px;
-$resM: 768px;
-$resS: 660px;
-$resXS: 500px;
-$resXXS: 435px;
-$resMin: 320px;
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
 
-$top-height: 66px;
-$sidebar-width: 180px;
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
 
-$small-card-height: 114px;
-$xsmall-card-height: 187px;
-$medium-card-height: 400px;
-$extra-medium-card-height: 550px;
-$large-card-height: 974px;
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    cursor: pointer;
+  }
 
-$default-animation-duration: 0.2s;
-$default-animation-style: ease-out;
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
 
-$assets-root: 'assets/';
-$images-root: $assets-root + 'img/';
-$fonts-root: $assets-root + 'fonts/';
-$font-thin: 100;
-$font-light: 300;
-$font-normal: 400;
-$font-bold: 700;
-$font-bolder: 500;
-$font-ultraBold: 900;
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
 
-$facebook-color: #3b5998;
-$twitter-color: #55acee;
-$google-color: #dd4b39;
-$linkedin-color: #0177B5;
-$github-color: #6b6b6b;
-$stackoverflow-color: #2F96E8;
-$dribble-color: #F26798;
-$behace-color: #0093FA;
+@mixin bg-nr($relativeUrl) {
+  background: url($images-root + $relativeUrl) no-repeat 0 0;
+}
+@mixin bg($relativeUrl) {
+  background: url($images-root + $relativeUrl);
+}
+
+@mixin bg-image($relativeUrl) {
+  background-image: url($images-root + $relativeUrl);
+}
+
+@mixin bg-translucent-dark($opacity) {
+  background: rgba(0, 0, 0, $opacity);
+}
+
+@mixin placeholderStyle($color, $opacity) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: $color;
+    opacity: $opacity;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $color;
+    opacity: $opacity;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    opacity: $opacity;
+  }
+}
+
+@mixin overrideColors($color) {
+  p,
+  h1,h2,h3,h4,h5,h6,
+  .pie-chart-item,
+  .panel-heading>.dropdown .dropdown-toggle,
+  .panel-title,
+  ol.blur span,
+  ul.blur,
+  .popular-app-cost,
+  .popular-app-info,
+  .panel-title>.small,
+  .panel-title>.small>a,
+  .panel-title>a,
+  .panel-title>small,
+  .panel-title>small>a,
+  .traffic-text span,
+  .form-group label,
+  .help-block{
+    color: $color;
+  }
+  .feed-message .message-time, .text-muted {
+    color: darken($color, 20);
+  }
+}
+
+@mixin gradient($color-1, $color-2, $color-3) {
+  background: $color-2; /* Old browsers */
+  background: -moz-radial-gradient(bottom, ellipse cover,  $color-1 0%, $color-2 45%, $color-3 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(bottom, ellipse cover,  $color-1 0%,$color-2 45%,$color-3 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at bottom,  $color-1 0%,$color-2 45%,$color-3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-1', endColorstr='$color-3',GradientType=1); /* IE6-9 fallback on horizontal gradient */
+
+}

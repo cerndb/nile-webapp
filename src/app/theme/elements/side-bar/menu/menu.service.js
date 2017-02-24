@@ -9,8 +9,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
  * Created by adediosf on 21/02/17.
  */
 var core_1 = require("@angular/core");
-//TODO: Delete this and add it with webpack
-var lodash_1 = require("lodash");
 //TODO: check this
 var BehaviorSubject_1 = require("rxjs/BehaviorSubject");
 var MenuService = (function () {
@@ -26,7 +24,7 @@ var MenuService = (function () {
      */
     MenuService.prototype.updateMenuByRoutes = function (routes) {
         //coming from lodash library
-        var convertedRoutes = this.convertRoutesToMenus(lodash_1.default.cloneDeep(routes));
+        var convertedRoutes = this.convertRoutesToMenus(_.cloneDeep(routes));
         this.menuItems.next(convertedRoutes);
     };
     MenuService.prototype.convertRoutesToMenus = function (routes) {

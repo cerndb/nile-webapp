@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-require("./menu-item.component.scss");
+require("style-loader!./menu-item.component.scss");
 var MenuItemComponent = (function () {
     function MenuItemComponent() {
         this.child = false;
@@ -38,8 +38,7 @@ __decorate([
 MenuItemComponent = __decorate([
     core_1.Component({
         selector: 'menu-item',
-        templateUrl: 'menu-item.component.html',
-        styleUrls: ['menu-item.component.scss']
+        templateUrl: 'menu-item.component.html'
     })
 ], MenuItemComponent);
 exports.MenuItemComponent = MenuItemComponent;

@@ -13,8 +13,6 @@ var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
 var side_bar_1 = require("./elements/side-bar");
 var menu_service_1 = require("./elements/side-bar/menu/menu.service");
-var theme_config_1 = require("./theme.config");
-var theme_configProvider_1 = require("./theme.configProvider");
 var ELEMENT_COMPONENTS = [
     side_bar_1.SideBarComponent,
     side_bar_1.MenuItemComponent,
@@ -29,10 +27,7 @@ var ElementsModule = ElementsModule_1 = (function () {
     ElementsModule.forRoot = function () {
         return {
             ngModule: ElementsModule_1,
-            providers: [
-                theme_configProvider_1.BaThemeConfigProvider,
-                theme_config_1.BaThemeConfig
-            ].concat(ELEMENT_SERVICES)
+            providers: ELEMENT_SERVICES.slice(),
         };
     };
     return ElementsModule;
