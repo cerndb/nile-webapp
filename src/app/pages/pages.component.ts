@@ -6,13 +6,13 @@ import { Routes } from '@angular/router';
 
 import { MENU } from '../app.menu';
 
-import { MenuService } from '../theme/elements/side-bar';
+import {MenuService} from "../theme/elements/side-bar";
 
 @Component({
   selector: 'pages',
   styles: [],
   template:`
-      <menu></menu>
+      <menu-bar></menu-bar>
       <router-outlet></router-outlet>
 <!--    <ba-sidebar></ba-sidebar>
     <ba-page-top></ba-page-top>

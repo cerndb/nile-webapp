@@ -5,12 +5,11 @@ import { Subscription } from 'rxjs/Rx';
 
 import { MenuService } from './menu.service';
 
-import './menu.component.scss';
+import 'style-loader!./menu.component.scss';
 
 @Component({
-  selector: 'menu',
-  templateUrl: 'menu.component.html',
-  styleUrls: ['menu.component.scss']
+  selector: 'menu-bar',
+  templateUrl: 'menu.component.html'
 })
 
 export class MenuComponent {

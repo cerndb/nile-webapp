@@ -3,6 +3,7 @@
  */
 import { NgModule }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
+
 import { ElementsModule } from '../theme/theme.module';
 
 import { routing }       from './pages.routing';

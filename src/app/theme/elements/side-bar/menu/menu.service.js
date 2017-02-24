@@ -17,6 +17,7 @@ var MenuService = (function () {
     function MenuService(_router) {
         this._router = _router;
         this.menuItems = new BehaviorSubject_1.BehaviorSubject([]);
+        this._currentMenuItem = {};
     }
     /**
      * Get the pages menu from pages.menu and convert them into Menus.
@@ -103,6 +104,24 @@ var MenuService = (function () {
     MenuService.prototype._selectItem = function (object) {
         object.selected = this._router.isActive(this._router.createUrlTree(object.route.paths), object.pathMatch === 'full');
         return object;
+    };
+    MenuService.prototype.selectMenuItem = function (menuItems) {
+        var _this = this;
+        var items = [];
+        menuItems.forEach(function (item) {
+            _this._selectItem(item);
+            if (item.selected) {
+                _this._currentMenuItem = item;
+            }
+            if (item.children && item.children.length > 0) {
+                item.children = _this.selectMenuItem(item.children);
+            }
+            items.push(item);
+        });
+        return items;
+    };
+    MenuService.prototype.getCurrentItem = function () {
+        return this._currentMenuItem;
     };
     return MenuService;
 }());

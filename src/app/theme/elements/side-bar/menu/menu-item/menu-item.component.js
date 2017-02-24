@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+require("./menu-item.component.scss");
 var MenuItemComponent = (function () {
     function MenuItemComponent() {
         this.child = false;
@@ -36,7 +37,7 @@ __decorate([
 ], MenuItemComponent.prototype, "toggleSubMenu", void 0);
 MenuItemComponent = __decorate([
     core_1.Component({
-        selector: 'app-menu-item',
+        selector: 'menu-item',
         templateUrl: 'menu-item.component.html',
         styleUrls: ['menu-item.component.scss']
     })

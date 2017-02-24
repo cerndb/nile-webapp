@@ -9,13 +9,6 @@ import {SideBarComponent, MenuComponent, MenuItemComponent} from "./elements/sid
 
 import {MenuService} from "./elements/side-bar/menu/menu.service";
 
-import {
-  BaThemeConfig
-} from './theme.config';
-
-import {
-  BaThemeConfigProvider
-} from './theme.configProvider';
 
 const ELEMENT_COMPONENTS = [
   SideBarComponent,
@@ -46,8 +39,6 @@ export class ElementsModule {
     return <ModuleWithProviders> {
       ngModule: ElementsModule,
       providers: [
-        BaThemeConfigProvider,
-        BaThemeConfig,
         ...ELEMENT_SERVICES
       ],
     };

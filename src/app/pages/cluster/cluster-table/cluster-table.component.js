@@ -15,7 +15,7 @@ ClusterTable = __decorate([
     core_1.Component({
         selector: 'cluster-table',
         templateUrl: './cluster-table.component.html',
-        styleUrls: ['./cluster-table.component.css']
+        styleUrls: ['cluster-table.component.scss']
     })
 ], ClusterTable);
 exports.ClusterTable = ClusterTable;

@@ -15,7 +15,7 @@ Dashboard = __decorate([
     core_1.Component({
         selector: 'dashboard',
         templateUrl: 'dashboard.component.html',
-        styleUrls: ['dashboard.component.css']
+        styleUrls: ['dashboard.component.scss']
     })
 ], Dashboard);
 exports.Dashboard = Dashboard;

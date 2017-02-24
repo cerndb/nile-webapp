@@ -7,7 +7,7 @@ describe('AppComponent', function () {
         testing_1.TestBed.configureTestingModule({
             declarations: [
                 app_component_1.App
-            ],
+            ]
         });
         testing_1.TestBed.compileComponents();
     });
@@ -22,7 +22,7 @@ describe('AppComponent', function () {
         expect(app.title).toEqual('app works!');
     }));
     it('should render title in a h1 tag', testing_1.async(function () {
-        var fixture = testing_1.TestBed.createComponent(AppComponent);
+        var fixture = testing_1.TestBed.createComponent(app_component_1.App);
         fixture.detectChanges();
         var compiled = fixture.debugElement.nativeElement;
         expect(compiled.querySelector('h1').textContent).toContain('app works!');

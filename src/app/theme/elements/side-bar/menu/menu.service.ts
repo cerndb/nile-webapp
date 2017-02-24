@@ -4,9 +4,6 @@
 import {Injectable} from '@angular/core';
 import {Router, Routes} from '@angular/router';
 
-//TODO: Delete this and add it with webpack
-import _ from 'lodash';
-
 //TODO: check this
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
@@ -18,7 +15,8 @@ export class MenuService {
 
   protected _currentMenuItem = {};
 
-  constructor(private _router:Router) { }
+  constructor(private _router:Router) {
+  }
 
   /**
    * Get the pages menu from pages.menu and convert them into Menus.

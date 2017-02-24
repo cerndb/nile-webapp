@@ -2,8 +2,10 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { App } from './app.component';
+import {} from 'jasmine';
 
-describe('AppComponent', () => {
+
+describe('App', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [

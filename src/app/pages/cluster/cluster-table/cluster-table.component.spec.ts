@@ -3,21 +3,22 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ClusterTableComponent } from './cluster-table.component';
+import { ClusterTable } from './cluster-table.component';
 
-describe('ClusterTableComponent', () => {
-  let component: ClusterTableComponent;
-  let fixture: ComponentFixture<ClusterTableComponent>;
+
+describe('ClusterTable', () => {
+  let component: ClusterTable;
+  let fixture: ComponentFixture<ClusterTable>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ClusterTableComponent ]
+      declarations: [ ClusterTable ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ClusterTableComponent);
+    fixture = TestBed.createComponent(ClusterTable);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

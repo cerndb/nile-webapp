@@ -5,7 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { MenuItemComponent } from './menu-item.component';
 
-describe('MenuItemComponent', () => {
+describe('MenuItem', () => {
   let component: MenuItemComponent;
   let fixture: ComponentFixture<MenuItemComponent>;
 
