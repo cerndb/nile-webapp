@@ -13,8 +13,9 @@ import {MenuService} from "../theme/elements/side-bar";
   styles: [],
   template:`
       <side-bar></side-bar>
-      <menu-bar></menu-bar>
-      <router-outlet></router-outlet>
+      <div class="al-main">
+          <router-outlet></router-outlet>  
+       </div>
 <!--    <ba-sidebar></ba-sidebar>
     <ba-page-top></ba-page-top>
     <div class="al-main">
