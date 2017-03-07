@@ -16,7 +16,7 @@ var SideBarComponent = (function () {
 SideBarComponent = __decorate([
     core_1.Component({
         selector: 'side-bar',
-        templateUrl: 'side-bar.component.html',
+        templateUrl: 'SideBar.component.html',
         styleUrls: ['side-bar.component.css']
     })
 ], SideBarComponent);

@@ -1,3 +1,4 @@
+//TODO: is this really needed?
 export const IMAGES_ROOT = 'assets/img/';
 
 export const layoutSizes = {

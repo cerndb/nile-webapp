@@ -3,13 +3,13 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { Subscription } from 'rxjs/Rx';
 
-import { MenuService } from './menu.service';
+import { MenuService } from './Menu.service';
 
-import 'style-loader!./menu.component.scss';
+import 'style-loader!./Menu.component.scss';
 
 @Component({
   selector: 'menu-bar',
-  templateUrl: 'menu.component.html'
+  templateUrl: 'Menu.component.html'
 })
 
 export class MenuComponent {

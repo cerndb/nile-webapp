@@ -1,10 +1,10 @@
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 
-import 'style-loader!./menu-item.component.scss';
+import 'style-loader!./MenuItem.component.scss';
 
 @Component({
   selector: 'menu-item',
-  templateUrl: 'menu-item.component.html'
+  templateUrl: 'MenuItem.component.html'
 })
 
 export class MenuItemComponent  {

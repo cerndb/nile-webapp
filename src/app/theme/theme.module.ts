@@ -5,15 +5,14 @@ import { NgModule, ModuleWithProviders }      from '@angular/core';
 import { CommonModule }  from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import {SideBarComponent, MenuComponent, MenuItemComponent} from "./elements/side-bar";
-
-import {MenuService} from "./elements/side-bar/menu/menu.service";
+import {SideBarComponent, MenuComponent, MenuItemComponent, PageTop, MenuService} from "./elements";
 
 
 const ELEMENT_COMPONENTS = [
   SideBarComponent,
   MenuItemComponent,
   MenuComponent,
+  PageTop
 ];
 
 const ELEMENT_SERVICES = [

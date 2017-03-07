@@ -1,11 +1,11 @@
 import {Component, ElementRef, HostListener, OnInit} from '@angular/core';
 
-import 'style-loader!./side-bar.component.scss';
+import 'style-loader!./SideBar.component.scss';
 
 
 @Component({
   selector: 'side-bar',
-  templateUrl: 'side-bar.component.html'
+  templateUrl: 'SideBar.component.html'
 })
 
 export class SideBarComponent implements OnInit {
