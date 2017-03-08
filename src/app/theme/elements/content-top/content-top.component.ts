@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-import 'style-loader!./ContentTop.component.scss';
+import 'style-loader!./content-top.component.scss';
 
 @Component({
   selector: 'content-top',
-  templateUrl: 'ContentTop.component.html'
+  templateUrl: 'content-top.component.html'
 })
+
 export class ContentTopComponent {
 
   constructor() { }

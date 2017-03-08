@@ -1,8 +1,8 @@
 /**
  * Created by adediosf on 07/03/17.
  */
-export * from './PageTop';
-export * from './SideBar/Menu/MenuItem';
-export * from './SideBar/Menu';
-export * from './SideBar';
-export * from './ContentTop';
+export * from './page-top';
+export * from './side-bar/menu/menu-item';
+export * from './side-bar/menu';
+export * from './side-bar';
+export * from './content-top';

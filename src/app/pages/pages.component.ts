@@ -6,7 +6,7 @@ import { Routes } from '@angular/router';
 
 import { MENU } from '../app.menu';
 
-import {MenuService} from "../theme/elements/SideBar/Menu";
+import {MenuService} from "../theme/elements/side-bar/menu";
 
 @Component({
   selector: 'pages',

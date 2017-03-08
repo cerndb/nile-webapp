@@ -30,7 +30,8 @@ a.al-logo {
   float: left;
   outline: none !important;
   line-height: 60px;
-
+  text-decoration: none;
+  
   span {
     color: $primary;
   }
@@ -124,6 +125,8 @@ a.collapse-menu-link {
   top: 26px;
   right: -25px;
   left: auto;
+  text-decoration: none;
+
   .header {
     padding: 10px 12px;
     border-bottom: 1px solid $default;
@@ -140,6 +143,8 @@ a.collapse-menu-link {
       margin-left: 12px;
       text-decoration: none;
       &:hover {
+        text-decoration: none;
+
         //  color: $dropdown-text;
       }
     }

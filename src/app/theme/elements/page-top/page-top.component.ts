@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 
-import 'style-loader!./PageTop.component.scss';
+import 'style-loader!./page-top.component.scss';
 
 @Component({
   selector: 'page-top',
-  templateUrl: 'PageTop.component.html',
+  templateUrl: 'page-top.component.html',
 })
 
 export class PageTopComponent {
@@ -30,7 +30,7 @@ export class PageTopComponent {
 
   public signOut()
   {
-    
+
   }
 
 }

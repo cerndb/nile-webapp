@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-require("style-loader!./PageTop.component.scss");
+require("style-loader!./page-top.component.scss");
 var PageTop = (function () {
     function PageTop() {
         this.isScrolled = false;
@@ -30,7 +30,7 @@ var PageTop = (function () {
 PageTop = __decorate([
     core_1.Component({
         selector: 'page-top',
-        templateUrl: 'PageTop.component.html',
+        templateUrl: 'page-top.component.html',
     })
 ], PageTop);
 exports.PageTop = PageTop;

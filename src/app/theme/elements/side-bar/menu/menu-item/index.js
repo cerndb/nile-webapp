@@ -2,4 +2,7 @@
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(require("./PageTop.component"));
+/**
+ * Created by adediosf on 07/03/17.
+ */
+__export(require("./menu-item.component.ts"));

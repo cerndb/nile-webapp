@@ -5,5 +5,5 @@ function __export(m) {
 /**
  * Created by adediosf on 07/03/17.
  */
-__export(require("./Menu.component"));
-__export(require("./Menu.service"));
+__export(require("./menu.component.ts"));
+__export(require("./menu.service.ts"));

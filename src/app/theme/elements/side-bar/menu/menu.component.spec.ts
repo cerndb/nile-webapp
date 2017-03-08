@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { MenuComponent } from './Menu.component';
+import { MenuComponent } from './menu.component';
 
 describe('MenuComponent', () => {
   let component: MenuComponent;
