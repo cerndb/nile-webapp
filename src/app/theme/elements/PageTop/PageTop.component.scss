@@ -1,5 +1,4 @@
 @import '../../sass/conf/conf';
-//@import '../../components/baMsgCenter/baMsgCenter';
 
 .page-top {
   background-color: $sidebar;
@@ -39,6 +38,8 @@ a.al-logo {
 
 a.al-logo:hover {
   color: $primary;
+  text-decoration: none;
+
 }
 
 .user-profile {
@@ -118,37 +119,57 @@ a.collapse-menu-link {
   background-size: cover;
 }
 
-.search {
-  text-shadow: none;
-  font-size: 13px;
-  line-height: 25px;
-  transition: all 0.5s ease;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 162px;
-  float: left;
-  margin: 20px 0 0 30px;
+.dropdown-menu {
+  border-radius: 5px;
+}
 
-  label {
-    cursor: pointer;
+.top-dropdown-menu {
+  width: 316px;
+  left: auto;
+  right: -47px;
+  top: 26px;
+ // @include scrollbars(.4em, rgba(0,0,0,0.5), #fff);
+  .header {
+    padding: 10px 12px;
+    border-bottom: 1px solid $default;
+    font-size: 12px;
+    strong {
+      float: left;
+     //color: $dropdown-text;
+    }
+    & > a {
+      float: right;
+      margin-left: 12px;
+      text-decoration: none;
+      &:hover {
+      //  color: $dropdown-text;
+      }
+    }
   }
-  i {
-    width: 16px;
-    display: inline-block;
-    cursor: pointer;
-    padding-left: 1px;
-    font-size: 16px;
-    margin-right: 13px;
-  }
-  input {
-    color: $sidebar-text;
-    background: none;
-    border: none;
-    outline: none;
-    width: 120px;
-    padding: 0;
-    margin: 0 0 0 -3px;
-    height: 27px;
+
+  &.profile-dropdown {
+    width: 145px;
+    top: 55px;
+    right: -25px;
+    a {
+      text-align: left;
+      border: none;
+      text-decoration: none;
+      //color: $dropdown-text;
+      padding: 4px 16px 4px 20px;
+      &.signout {
+        border-top: 1px solid $default;
+      }
+      i {
+        margin-right: 10px;
+      }
+      &:hover {
+        background: #f4fcff;
+      }
+    }
+    i.dropdown-arr {
+      right: 25px;
+    }
   }
 }
 

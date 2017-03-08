@@ -7,7 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-require("style-loader!./menu.component.scss");
+require("style-loader!./Menu.component.scss");
 var MenuComponent = (function () {
     function MenuComponent(_router, _service) {
         this._router = _router;
@@ -46,6 +46,7 @@ var MenuComponent = (function () {
         this.showHoverElem = true;
         this.hoverElemHeight = $event.currentTarget.clientHeight;
         // TODO: get rid of magic 66 constant
+        // To create a rectangle in the right margin when mouse hover an item.
         this.hoverElemTop = $event.currentTarget.getBoundingClientRect().top - 66;
     };
     MenuComponent.prototype.toggleSubMenu = function ($event) {
@@ -59,7 +60,7 @@ var MenuComponent = (function () {
 MenuComponent = __decorate([
     core_1.Component({
         selector: 'menu-bar',
-        templateUrl: 'menu.component.html'
+        templateUrl: 'Menu.component.html'
     })
 ], MenuComponent);
 exports.MenuComponent = MenuComponent;

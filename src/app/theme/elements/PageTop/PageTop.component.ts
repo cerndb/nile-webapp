@@ -6,7 +6,8 @@ import 'style-loader!./PageTop.component.scss';
   selector: 'page-top',
   templateUrl: 'PageTop.component.html',
 })
-export class PageTop {
+
+export class PageTopComponent {
 
   public isScrolled:boolean = false;
   public isMenuCollapsed:boolean = false;
@@ -26,4 +27,10 @@ export class PageTop {
   public scrolledChanged(isScrolled) {
     this.isScrolled = isScrolled;
   }
+
+  public signOut()
+  {
+    
+  }
+
 }

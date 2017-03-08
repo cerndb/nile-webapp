@@ -11,15 +11,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
-var side_bar_1 = require("./elements/side-bar");
-var menu_service_1 = require("./elements/side-bar/menu/menu.service");
+var elements_1 = require("./elements");
 var ELEMENT_COMPONENTS = [
-    side_bar_1.SideBarComponent,
-    side_bar_1.MenuItemComponent,
-    side_bar_1.MenuComponent,
+    elements_1.SideBarComponent,
+    elements_1.MenuItemComponent,
+    elements_1.MenuComponent,
+    elements_1.PageTop
 ];
 var ELEMENT_SERVICES = [
-    menu_service_1.MenuService
+    elements_1.MenuService
 ];
 var ElementsModule = ElementsModule_1 = (function () {
     function ElementsModule() {

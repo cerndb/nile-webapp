@@ -11,8 +11,6 @@ require("style-loader!./theme/initial.scss");
 var App = (function () {
     function App() {
         this.title = 'app works!';
-        console.info("probando");
-        console.log("aqui");
     }
     return App;
 }());

@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+require("style-loader!./SideBar.component.scss");
 var SideBarComponent = (function () {
     function SideBarComponent() {
     }
@@ -16,8 +17,7 @@ var SideBarComponent = (function () {
 SideBarComponent = __decorate([
     core_1.Component({
         selector: 'side-bar',
-        templateUrl: 'SideBar.component.html',
-        styleUrls: ['side-bar.component.css']
+        templateUrl: 'SideBar.component.html'
     })
 ], SideBarComponent);
 exports.SideBarComponent = SideBarComponent;

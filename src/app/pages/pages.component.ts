@@ -13,11 +13,13 @@ import {MenuService} from "../theme/elements/SideBar/Menu";
   styles: [],
   template:`
       <side-bar></side-bar>
+      <page-top></page-top>
       <div class="al-main">
-          <router-outlet></router-outlet>  
+        <div class="al-content">
+          <router-outlet></router-outlet>
+        </div>
        </div>
-<!--    <ba-sidebar></ba-sidebar>
-    <ba-page-top></ba-page-top>
+<!--  
     <div class="al-main">
       <div class="al-content">
         <ba-content-top></ba-content-top>
