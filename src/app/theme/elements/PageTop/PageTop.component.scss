@@ -119,59 +119,38 @@ a.collapse-menu-link {
   background-size: cover;
 }
 
-.dropdown-menu {
-  border-radius: 5px;
-}
-
-.top-dropdown-menu {
-  width: 316px;
-  left: auto;
-  right: -47px;
+.signout-item {
+  width: 145px;
   top: 26px;
- // @include scrollbars(.4em, rgba(0,0,0,0.5), #fff);
+  right: -25px;
+  left: auto;
   .header {
     padding: 10px 12px;
     border-bottom: 1px solid $default;
     font-size: 12px;
     strong {
       float: left;
-     //color: $dropdown-text;
+      //color: $dropdown-text;
     }
     & > a {
+      text-align: left;
+      border: none;
+      padding: 4px 16px 4px 20px;
       float: right;
       margin-left: 12px;
       text-decoration: none;
       &:hover {
-      //  color: $dropdown-text;
+        //  color: $dropdown-text;
       }
     }
   }
-
-  &.profile-dropdown {
-    width: 145px;
-    top: 55px;
-    right: -25px;
-    a {
-      text-align: left;
-      border: none;
-      text-decoration: none;
-      //color: $dropdown-text;
-      padding: 4px 16px 4px 20px;
-      &.signout {
-        border-top: 1px solid $default;
-      }
-      i {
-        margin-right: 10px;
-      }
-      &:hover {
-        background: #f4fcff;
-      }
-    }
-    i.dropdown-arr {
-      right: 25px;
-    }
+  &.signout {
+    line-height: 1;
+    border-radius: 5px;
+    border-top: 1px solid $default;
   }
 }
+
 
 @media screen and (max-width: $resS) {
   .search {

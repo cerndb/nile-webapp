@@ -16,17 +16,10 @@ import {MenuService} from "../theme/elements/SideBar/Menu";
       <page-top></page-top>
       <div class="al-main">
         <div class="al-content">
+            <content-top></content-top>
           <router-outlet></router-outlet>
         </div>
        </div>
-<!--  
-    <div class="al-main">
-      <div class="al-content">
-        <ba-content-top></ba-content-top>
-        <router-outlet></router-outlet>
-      </div>
-    </div>
-    <ba-back-top position="200"></ba-back-top>-->
     `
 
 })
