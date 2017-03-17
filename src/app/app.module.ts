@@ -10,6 +10,8 @@ import { routing } from './app.routing';
 import { App } from './app.component';
 import { PagesModule } from './pages/pages.module';
 import { ElementsModule } from './theme/theme.module';
+import { GlobalState } from './global.state';
+
 
 @NgModule({
   bootstrap: [App],
@@ -23,6 +25,8 @@ import { ElementsModule } from './theme/theme.module';
     ElementsModule.forRoot(),
     routing
   ],
-  providers: []
+  providers: [
+    GlobalState
+  ]
 })
 export class AppModule { }

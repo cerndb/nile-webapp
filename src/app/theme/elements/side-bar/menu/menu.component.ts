@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import {GlobalState} from '../../../../global.state';
 
 import { Subscription } from 'rxjs/Rx';
 
@@ -14,6 +15,11 @@ import 'style-loader!./menu.component.scss';
 
 export class MenuComponent {
 
+  @Input() menuHeight: number;
+  @Input() sidebarCollapsed: boolean = false;
+
+  @Output() expandMenu = new EventEmitter<any>();
+
   public menuItems: any[];
   protected _menuItemsSub: Subscription;
   public showHoverElem: boolean;
@@ -23,7 +29,7 @@ export class MenuComponent {
   public outOfArea: number = -200;
 
 
-  constructor(private _router: Router, private _service: MenuService) {
+  constructor(private _router: Router, private _service: MenuService, private _state: GlobalState) {
   }
 
   public updateMenu(newMenuItems) {
@@ -34,6 +40,7 @@ export class MenuComponent {
   public selectMenuAndNotify(): void {
     if (this.menuItems) {
       this.menuItems = this._service.selectMenuItem(this.menuItems);
+      this._state.notifyDataChanged('menu.activeLink', this._service.getCurrentItem());
     }
   }
 
@@ -70,8 +77,15 @@ export class MenuComponent {
   public toggleSubMenu($event): boolean {
     let submenu = jQuery($event.currentTarget).next();
 
-    $event.item.expanded = !$event.item.expanded;
-    submenu.slideToggle();
+    if (this.sidebarCollapsed) {
+      this.expandMenu.emit(null);
+      if (!$event.item.expanded) {
+        $event.item.expanded = true;
+      }
+    } else {
+      $event.item.expanded = !$event.item.expanded;
+      submenu.slideToggle();
+    }
 
 
     return false;
