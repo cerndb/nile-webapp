@@ -22,7 +22,7 @@ export class ClusterTable  {
     },
     pager: {
       display: true,
-      perPage: 10
+      perPage: 12
     },
     edit: {
       editButtonContent: '<i class="ion-edit"></i>',
@@ -36,33 +36,27 @@ export class ClusterTable  {
       },
       userName: {
         title: 'UserName',
-        type: 'string',
-        editable: false
+        type: 'string'
       },
       egroup: {
-        title: 'Egroup',
-        type: 'string',
-        editable: false
+        title: 'E-group',
+        type: 'string'
       },
       category: {
         title: 'Category',
-        type: 'string',
-        editable: false
+        type: 'string'
       },
       project: {
         title: 'Project',
-        type: 'string',
-        editable: false
+        type: 'string'
       },
       description: {
         title: 'Description',
-        type: 'string',
-        editable: false
+        type: 'string'
       },
       type : {
         title: 'Type',
-        type: 'string',
-        editable: false
+        type: 'string'
       }
     }
   };
@@ -74,5 +68,9 @@ export class ClusterTable  {
     });
   }
 
+  //the idea will be to have an explandable with all the instances according to the cluster Selected
+  onRowSelect(event):void {
+    console.log(event.data);
+  }
 
 }
