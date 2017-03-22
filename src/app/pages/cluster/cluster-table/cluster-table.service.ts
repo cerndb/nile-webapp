@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 
 
 @Injectable()
-export class ClusterTableSevice {
+export class ClusterTableService {
 
   clusterData = [
     {

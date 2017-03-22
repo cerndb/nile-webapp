@@ -8,7 +8,6 @@
   "scripts": {
     "start2": "webpack --config webpack.config.js",
     "ng": "ng",
-    "start3": "ng serve",
     "webpack-dev-server": "webpack-dev-server",
     "start": "npm run server:dev",
     "server:dev": "webpack-dev-server --config config/webpack.dev.js --open --progress --profile --watch --content-base src/",

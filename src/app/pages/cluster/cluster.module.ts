@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 import { ClusterTable} from './cluster-table/cluster-table.component';
-import { ClusterTableSevice } from "./cluster-table/cluster-table.service";
+import { ClusterTableService } from './cluster-table/cluster-table.service';
 
 @NgModule({
   imports: [
@@ -14,7 +14,7 @@ import { ClusterTableSevice } from "./cluster-table/cluster-table.service";
     ClusterTable
   ],
   providers: [
-    ClusterTableSevice
+    ClusterTableService
   ]
 })
 

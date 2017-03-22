@@ -9,7 +9,7 @@
     "mapRoot": "./",
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "compiled",
+    "outDir": "../dist",
     "sourceMap": true,
     "target": "es6",
     "types": ["node"],
@@ -18,8 +18,8 @@
     ],
     "exclude": [
       "node_modules",
-      "dist",
-      "compiled",
+      "../dist",
+      "src/**/*.js",
       "src/**/*.spec.ts",
       "src/**/*.e2e.ts"
     ],
@@ -30,6 +30,8 @@
     "angularCompilerOptions": {
       "genDir": "compiled",
       "skipMetadataEmit": true
-    }
+    },
+    "compileOnSave": false,
+    "buildOnSave": false
   }
 }
