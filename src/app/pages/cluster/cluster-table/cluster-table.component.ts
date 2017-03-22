@@ -22,7 +22,7 @@ export class ClusterTable  {
     },
     pager: {
       display: true,
-      perPage: 12
+      perPage: 10
     },
     edit: {
       editButtonContent: '<i class="ion-edit"></i>',
