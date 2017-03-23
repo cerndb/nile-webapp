@@ -6,7 +6,7 @@ import { Pages } from './pages.component';
 import { ModuleWithProviders } from '@angular/core';
 
 import { Dashboard } from './dashboard/dashboard.component';
-import { ClusterTable } from './cluster/cluster-table/cluster-table.component';
+import { ClusterTableComponent } from './cluster/cluster-table/cluster-table.component';
 
 export const routes: Routes = [
   {
@@ -15,7 +15,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: Dashboard },
-      { path: 'cluster', component: ClusterTable }
+      { path: 'cluster', component: ClusterTableComponent }
     ]
   }
 ];

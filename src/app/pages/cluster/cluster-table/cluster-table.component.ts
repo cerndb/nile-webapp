@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {ClusterTableSevice} from "./cluster-table.service";
-import {LocalDataSource} from "ng2-smart-table";
+import { ClusterTableService } from './cluster-table.service';
+import { LocalDataSource } from 'ng2-smart-table';
 
 
 import 'style-loader!./cluster-table.component.scss';
@@ -10,7 +10,7 @@ import 'style-loader!./cluster-table.component.scss';
   templateUrl: './cluster-table.component.html'
 })
 
-export class ClusterTable  {
+export class ClusterTableComponent  {
 
   query: string = '';
 
@@ -62,14 +62,14 @@ export class ClusterTable  {
   };
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(protected service: ClusterTableSevice) {
+  constructor(protected service: ClusterTableService) {
     this.service.getData().then((data) => {
       this.source.load(data);
     });
   }
 
-  //the idea will be to have an explandable with all the instances according to the cluster Selected
-  onRowSelect(event):void {
+  // the idea will be to have an explandable with all the instances according to the cluster Selected
+  onRowSelect(event): void {
     console.log(event.data);
   }
 
