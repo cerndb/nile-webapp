@@ -6,11 +6,11 @@ import 'style-loader!./app.scss';
 import 'style-loader!./theme/initial.scss';
 
 @Component({
-  selector: 'app',
+  selector: 'nile-root',
   templateUrl: './app.component.html'
 })
 /* TODO: Component with merge the baTheme(preloaders) and the pages */
-export class App {
+export class AppComponent {
 
   isMenuCollapsed: boolean = false;
 

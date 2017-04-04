@@ -3,14 +3,14 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 import 'style-loader!./menu-item.component.scss';
 
 @Component({
-  selector: 'menu-item',
+  selector: 'nile-menu-item',
   templateUrl: 'menu-item.component.html'
 })
 
 export class MenuItemComponent  {
 
   @Input() menuItem:any;
-  @Input() child:boolean = false;
+  @Input() child: boolean = false;
   @Output() itemHover = new EventEmitter<any>();
   @Output() toggleSubMenu = new EventEmitter<any>();
 

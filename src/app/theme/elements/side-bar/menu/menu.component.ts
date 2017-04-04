@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import {GlobalState} from '../../../../global.state';
 
@@ -9,12 +9,11 @@ import { MenuService } from './menu.service';
 import 'style-loader!./menu.component.scss';
 
 @Component({
-  selector: 'menu-bar',
+  selector: 'nile-menu-bar',
   templateUrl: 'menu.component.html'
 })
 
-export class MenuComponent {
-
+export class MenuComponent implements OnInit, OnDestroy {
   @Input() menuHeight: number;
   @Input() sidebarCollapsed: boolean = false;
 
@@ -45,6 +44,7 @@ export class MenuComponent {
   }
 
   public ngOnInit(): void {
+
     this._onRouteChange = this._router.events.subscribe((event) => {
 
       if (event instanceof NavigationEnd) {
@@ -75,7 +75,7 @@ export class MenuComponent {
   }
 
   public toggleSubMenu($event): boolean {
-    let submenu = jQuery($event.currentTarget).next();
+    const submenu = jQuery($event.currentTarget).next();
 
     if (this.sidebarCollapsed) {
       this.expandMenu.emit(null);

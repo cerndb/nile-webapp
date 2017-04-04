@@ -5,7 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { SideBarComponent } from './side-bar.component';
 
-describe('side-bar', () => {
+describe('SideBarComponent', () => {
   let component: SideBarComponent;
   let fixture: ComponentFixture<SideBarComponent>;
 

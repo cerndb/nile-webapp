@@ -4,16 +4,16 @@ import {GlobalState} from '../../../global.state';
 import 'style-loader!./page-top.component.scss';
 
 @Component({
-  selector: 'page-top',
+  selector: 'nile-page-top',
   templateUrl: 'page-top.component.html',
 })
 
 export class PageTopComponent {
 
-  public isScrolled:boolean = false;
-  public isMenuCollapsed:boolean = false;
+  public isScrolled: boolean = false;
+  public isMenuCollapsed: boolean = false;
 
-  constructor(private _state:GlobalState) {
+  constructor(private _state: GlobalState) {
     this._state.subscribe('menu.isCollapsed', (isCollapsed) => {
       this.isMenuCollapsed = isCollapsed;
     });

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { Dashboard } from './dashboard.component';
+import { DashboardComponent } from './dashboard.component';
 
 
 @NgModule({
@@ -9,7 +9,7 @@ import { Dashboard } from './dashboard.component';
     CommonModule
   ],
   declarations: [
-    Dashboard
+    DashboardComponent
   ]
 })
 

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'cern-toolbar',
+  selector: 'nile-cern-toolbar',
   templateUrl: './cern-toolbar.component.html',
   styleUrls: ['./cern-toolbar.component.css']
 })

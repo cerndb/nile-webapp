@@ -14,11 +14,11 @@
   </a>
 
   <ul *ngIf="menuItem.children" class="al-sidebar-sublist" [ngClass]="{'slide-right': menuItem.slideRight}">
-    <menu-item [menuItem]="subItem"
+    <nile-menu-item [menuItem]="subItem"
                   [child]="true"
                   (itemHover)="onHoverItem($event)"
                   (toggleSubMenu)="onToggleSubMenu($event, subItem)"
-                  *ngFor="let subItem of menuItem.children"></menu-item>
+                  *ngFor="let subItem of menuItem.children"></nile-menu-item>
   </ul>
 
 </li>

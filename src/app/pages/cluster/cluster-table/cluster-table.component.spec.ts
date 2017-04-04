@@ -6,7 +6,7 @@ import { DebugElement } from '@angular/core';
 import { ClusterTableComponent } from './cluster-table.component';
 
 
-describe('ClusterTable', () => {
+describe('ClusterTableComponent', () => {
   let component: ClusterTableComponent;
   let fixture: ComponentFixture<ClusterTableComponent>;
 

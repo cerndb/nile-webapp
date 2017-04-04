@@ -6,7 +6,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 import 'style-loader!./cluster-table.component.scss';
 
 @Component({
-  selector: 'cluster-table',
+  selector: 'nile-cluster-table',
   templateUrl: './cluster-table.component.html'
 })
 

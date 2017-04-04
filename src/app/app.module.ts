@@ -7,15 +7,15 @@ import { RouterModule } from '@angular/router';
 import { routing } from './app.routing';
 
 // App is our top level component
-import { App } from './app.component';
+import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
 import { ElementsModule } from './theme/theme.module';
 import { GlobalState } from './global.state';
 
 
 @NgModule({
-  bootstrap: [App],
-  declarations: [App],
+  bootstrap: [AppComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     FormsModule,

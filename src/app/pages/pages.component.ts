@@ -1,22 +1,22 @@
 /**
  * Created by adediosf on 17/02/17.
  */
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Routes } from '@angular/router';
 
 import { MENU } from '../app.menu';
 
-import {MenuService} from "../theme/elements/side-bar/menu";
+import { MenuService } from '../theme/elements/side-bar/menu';
 
 @Component({
-  selector: 'pages',
+  selector: 'nile-pages',
   styles: [],
-  template:`
-      <side-bar></side-bar>
-      <page-top></page-top>
+  template: `
+      <nile-side-bar></nile-side-bar>
+      <nile-page-top></nile-page-top>
       <div class="al-main">
         <div class="al-content">
-            <content-top></content-top>
+            <nile-content-top></nile-content-top>
           <router-outlet></router-outlet>
         </div>
        </div>
@@ -24,7 +24,7 @@ import {MenuService} from "../theme/elements/side-bar/menu";
 
 })
 
-export class Pages {
+export class PagesComponent implements OnInit {
 
   constructor(private _menuService: MenuService) {
   }
