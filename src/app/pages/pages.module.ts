@@ -12,7 +12,6 @@ import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ClusterModule } from './cluster/cluster.module';
 
-
 @NgModule({
   imports: [
     CommonModule,
