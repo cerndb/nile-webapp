@@ -15,7 +15,8 @@ export class SideBarComponent implements OnInit, AfterViewInit {
   public isMenuShouldCollapsed: boolean = false;
 
   constructor(private _elementRef: ElementRef, private _state: GlobalState) {
-    this._state.subscribe('menu.isCollapsed', (isCollapsed) => {this.isMenuCollapsed = isCollapsed;
+    this._state.subscribe('menu.isCollapsed', (isCollapsed) => {
+      this.isMenuCollapsed = isCollapsed;
     });
   }
 
