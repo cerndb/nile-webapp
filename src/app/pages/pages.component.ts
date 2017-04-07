@@ -12,6 +12,7 @@ import { MenuService } from '../theme/elements/side-bar/menu';
   selector: 'nile-pages',
   styles: [],
   template: `
+      <nile-cern-toolbar></nile-cern-toolbar>
       <nile-side-bar></nile-side-bar>
       <nile-page-top></nile-page-top>
       <div class="al-main">

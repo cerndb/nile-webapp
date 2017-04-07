@@ -1,11 +1,12 @@
 /**
  * Created by adediosf on 21/02/17.
  */
-import { NgModule, ModuleWithProviders }      from '@angular/core';
-import { CommonModule }  from '@angular/common';
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import {SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, ContentTopComponent, MenuService} from "./elements";
+import {SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, ContentTopComponent, MenuService, CernToolbarComponent}
+from './elements';
 
 
 const ELEMENT_COMPONENTS = [
@@ -13,7 +14,8 @@ const ELEMENT_COMPONENTS = [
   MenuItemComponent,
   MenuComponent,
   PageTopComponent,
-  ContentTopComponent
+  ContentTopComponent,
+  CernToolbarComponent
 ];
 
 const ELEMENT_SERVICES = [
@@ -27,7 +29,7 @@ const ELEMENT_SERVICES = [
   ],
   imports: [
     CommonModule,
-    RouterModule,
+    RouterModule
   ],
   exports: [
     ...ELEMENT_COMPONENTS

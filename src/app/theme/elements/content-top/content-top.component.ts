@@ -11,7 +11,7 @@ import 'style-loader!./content-top.component.scss';
 export class ContentTopComponent {
 
   //for breadcrumbs
-  public activePageTitle:string = '';
+  public activePageTitle: string = '';
 
   constructor(private _state: GlobalState) {
     this._state.subscribe('menu.activeLink', (activeLink) => {

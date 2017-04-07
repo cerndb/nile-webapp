@@ -6,3 +6,5 @@ export * from './side-bar/menu/menu-item';
 export * from './side-bar/menu';
 export * from './side-bar';
 export * from './content-top';
+export * from './pie-chart';
+export * from './cern-toolbar';

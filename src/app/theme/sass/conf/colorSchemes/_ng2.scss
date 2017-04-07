@@ -14,9 +14,17 @@ $input-border: rgba(255, 255, 255, 0.6); // input border color
 $input-background: rgba(255, 255, 255, 0.1); // input border color for hover
 $dropdown-text: #7d7d7d; // dropdown text color
 
+//pagetop
+$pagetop-height: 66px;
+
+//cerntoolbar
+$cerntoolbar-height: 42px;
+$cerntoolbar-background: #222;
+
 // sidebar colors
-$sidebar: #282828;
+$sidebar: $cerntoolbar-background;
 $sidebar-text: #ffffff;
+$sidebar-top-height: $pagetop-height + $cerntoolbar-height;
 
 // specific components colors
 $mail-box: whitesmoke;
@@ -61,7 +69,7 @@ $danger-bg: tint($danger, 20%);
 $activelink: #285eb8;
 $hoverlink: darken($activelink, 20%);
 
-// main background
+// content background
 @mixin body-bg() {
   background-color: $body-bg;
 
@@ -72,13 +80,14 @@ $hoverlink: darken($activelink, 20%);
     position: fixed;
     width: 100%;
     height: 100%;
-    top: 0;
     left: 0;
+    top: $sidebar-top-height;
     background: url($mainBgUrl) no-repeat center center;
     background-size: cover;
     will-change: transform;
     z-index: 0;
   }
+
 }
 
 // additional background if you want another layer

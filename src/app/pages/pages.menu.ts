@@ -10,7 +10,7 @@ export const PAGES_MENU = [
         path: 'dashboard',
         data: {
           menu: {
-            title: 'Dashboard',
+            title: 'Overview',
             icon: 'ion-android-home',
             selected: false,
             expanded: false,

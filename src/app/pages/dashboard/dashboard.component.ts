@@ -18,8 +18,14 @@ export class DashboardComponent {
   showLegend = true;
 
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: [ '#e99450', '#d89f59', '#f2dfa7', '#a5d7c6']
   };
+  // domain: [
+  //   '#bf9d76', '#e99450', '#d89f59', '#f2dfa7', '#a5d7c6', '#7794b1', '#afafaf', '#707160', '#ba9383', '#d9d5c3'
+  //   ]
+  // domain: [
+  //   '#a8385d', '#7aa3e5', '#a27ea8', '#aae3f5', '#adcded', '#a95963', '#8796c0', '#7ed3ed', '#50abcc', '#ad6886'
+  //   ]
 
   // pie
   showLabels = true;
