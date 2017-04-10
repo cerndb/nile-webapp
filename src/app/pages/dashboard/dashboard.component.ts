@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
 import { single, multi } from './data';
 
+import 'style-loader!./dashboard.component.scss';
+
 @Component({
   selector: 'nile-dashboard',
-  templateUrl: 'dashboard.component.html',
-  styleUrls: ['dashboard.component.css']
+  templateUrl: 'dashboard.component.html'
 })
 
 export class DashboardComponent {
@@ -18,7 +19,7 @@ export class DashboardComponent {
   showLegend = true;
 
   colorScheme = {
-    domain: [ '#e99450', '#d89f59', '#f2dfa7', '#a5d7c6']
+    domain: ['#40daf1',  '#1b70ef', '#3c4eb9']
   };
   // domain: [
   //   '#bf9d76', '#e99450', '#d89f59', '#f2dfa7', '#a5d7c6', '#7794b1', '#afafaf', '#707160', '#ba9383', '#d9d5c3'
@@ -33,7 +34,7 @@ export class DashboardComponent {
   doughnut = false;
 
   constructor() {
-    Object.assign(this, {single, multi})
+    Object.assign(this, {single, multi});
   }
 
   onSelect(event) {
