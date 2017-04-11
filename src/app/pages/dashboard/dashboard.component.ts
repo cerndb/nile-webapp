@@ -1,43 +1,30 @@
-import {Component} from '@angular/core';
-import { single, multi } from './data';
+import {AfterViewInit, Component} from '@angular/core';
 
 import 'style-loader!./dashboard.component.scss';
+import {DashboardService} from './dashboard.service';
 
 @Component({
   selector: 'nile-dashboard',
   templateUrl: 'dashboard.component.html'
 })
 
-export class DashboardComponent {
+export class DashboardComponent implements  AfterViewInit {
 
-  single: any[];
-  multi: any[];
+  kafka: any [];
+  zookeeper: any [];
 
-  view: any[] = [700, 400];
-
-  // options
-  showLegend = true;
-
-  colorScheme = {
-    domain: ['#40daf1',  '#1b70ef', '#3c4eb9']
-  };
-  // domain: [
-  //   '#bf9d76', '#e99450', '#d89f59', '#f2dfa7', '#a5d7c6', '#7794b1', '#afafaf', '#707160', '#ba9383', '#d9d5c3'
-  //   ]
-  // domain: [
-  //   '#a8385d', '#7aa3e5', '#a27ea8', '#aae3f5', '#adcded', '#a95963', '#8796c0', '#7ed3ed', '#50abcc', '#ad6886'
-  //   ]
-
-  // pie
-  showLabels = true;
-  explodeSlices = false;
-  doughnut = false;
-
-  constructor() {
-    Object.assign(this, {single, multi});
+  constructor(private _service: DashboardService) {
+    this.kafka = this._service.getKafkaData();
+    this.zookeeper = this._service.getZookeeperData();
+    console.log('get data from service');
+    console.log(this.kafka);
   }
 
-  onSelect(event) {
-    console.log(event);
+
+  ngAfterViewInit(): void {
+
+    let el = jQuery('.nile-pie-chart').get(0) as HTMLElement;
+    console.log(el);
   }
+
 }

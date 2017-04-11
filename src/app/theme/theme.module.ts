@@ -5,8 +5,11 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import {SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, ContentTopComponent, MenuService, CernToolbarComponent}
-from './elements';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+
+
+import {SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, ContentTopComponent, MenuService,
+  CernToolbarComponent, PieChartComponent} from './elements';
 
 
 const ELEMENT_COMPONENTS = [
@@ -15,7 +18,8 @@ const ELEMENT_COMPONENTS = [
   MenuComponent,
   PageTopComponent,
   ContentTopComponent,
-  CernToolbarComponent
+  CernToolbarComponent,
+  PieChartComponent
 ];
 
 const ELEMENT_SERVICES = [
@@ -29,7 +33,9 @@ const ELEMENT_SERVICES = [
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgxChartsModule
+
   ],
   exports: [
     ...ELEMENT_COMPONENTS

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { ClusterTableService } from './cluster-table.service';
 import { LocalDataSource } from 'ng2-smart-table';
 
-
 import 'style-loader!./cluster-table.component.scss';
 
 @Component({

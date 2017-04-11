@@ -1,11 +1,12 @@
-<ngx-charts-pie-chart
-  [view]="view"
-  [scheme]="colorScheme"
-  [results]="single"
-  [legend]="showLegend"
-  [explodeSlices]="explodeSlices"
-  [labels]="showLabels"
-  [doughnut]="doughnut"
-  [gradient]="gradient"
-  (select)="onSelect($event)">
-</ngx-charts-pie-chart>
+<h1>Nodes per Cluster</h1>
+<div class="row">
+  <div class="col-md-6">
+    <p>Kafka</p>
+    <nile-pie-chart [single]="kafka"></nile-pie-chart>
+  </div>
+  <div class="col-md-6">
+    <p>Zookeeper</p>
+    <nile-pie-chart [single]="zookeeper"> </nile-pie-chart>
+  </div>
+</div>
+

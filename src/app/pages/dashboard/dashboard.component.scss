@@ -1,6 +1,19 @@
-.chart-legend .legend-label {
-  color: #000 !important;
-  font-size: 100% !important;
-  font-weight: normal;
+#top {
+  clear:both;
+  position:fixed;
+  top:0;
+  height:50%;
+  width:100%;
+  font-size:16px;
+  text-align:center;
 }
 
+#bottom {
+  clear:both;
+  position:fixed;
+  bottom:0;
+  height:50%;
+  width:100%;
+  font-size:16px;
+  text-align:center;
+}

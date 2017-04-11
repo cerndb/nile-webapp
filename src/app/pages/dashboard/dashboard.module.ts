@@ -1,17 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ElementsModule } from '../../theme/theme.module';
+
 import { DashboardComponent } from './dashboard.component';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import {DashboardService} from './dashboard.service';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    NgxChartsModule
+    ElementsModule
   ],
   declarations: [
     DashboardComponent
+  ],
+  providers: [
+    DashboardService
   ]
 })
 
