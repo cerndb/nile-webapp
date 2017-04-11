@@ -3,16 +3,17 @@
     "baseUrl": "",
     "declaration": false,
     "emitDecoratorMetadata": true,
+    "removeComments": false,
     "experimentalDecorators": true,
     "lib": ["es6", "dom"],
     "mapRoot": "./",
     "module": "es6",
     "moduleResolution": "node",
-    "outDir": "../dist/out-tsc",
+    "outDir": "../dist",
     "sourceMap": true,
     "target": "es5",
     "typeRoots": [
-      "../node_modules/@types"
+      "./."
     ]
   }
 }
