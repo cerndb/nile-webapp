@@ -1,4 +1,5 @@
-import { Component, Input} from '@angular/core';
+import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+
 
 import 'style-loader!./pie-chart.component.scss';
 
@@ -7,7 +8,7 @@ import 'style-loader!./pie-chart.component.scss';
   templateUrl: './pie-chart.component.html'
 })
 
-export class PieChartComponent  {
+export class PieChartComponent implements OnChanges {
 
   @Input() single: any[];
 
@@ -34,6 +35,13 @@ export class PieChartComponent  {
   constructor() {
   }
 
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['single']) {
+      console.log('New single data');
+      console.log(this.single);
+    }
+  }
 
   onSelect(event) {
     console.log(event);
