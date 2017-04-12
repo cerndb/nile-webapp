@@ -14,17 +14,15 @@ export class DashboardComponent implements  AfterViewInit {
   zookeeper: any [];
 
   constructor(private _service: DashboardService) {
-    this.kafka = this._service.getKafkaData();
-    this.zookeeper = this._service.getZookeeperData();
-    console.log('get data from service');
-    console.log(this.kafka);
+    this._service.getKafkaData().then(data => this.kafka = data);
+    this._service.getZookeeperData().then(data => this.zookeeper = data);
   }
 
 
   ngAfterViewInit(): void {
 
     let el = jQuery('.nile-pie-chart').get(0) as HTMLElement;
-    console.log(el);
+ //   console.log(el);
   }
 
 }
