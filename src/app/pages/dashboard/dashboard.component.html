@@ -1,13 +1,14 @@
-<h1>Nodes per Cluster</h1>
-<div class="row">
-  <div class="col-md-6">
-    <p>Kafka</p>
-    <nile-pie-chart *ngIf="kafka" [single]="kafka"></nile-pie-chart>
-  </div>
-  <div class="col-md-6">
-    <p>Zookeeper</p>
-    <nile-pie-chart *ngIf="zookeeper" [single]="zookeeper"> </nile-pie-chart>
-  </div>
-</div>
 
+<nile-card title="Nodes per Cluster" baCardClass="with-scroll">
+  <div class="row">
+    <div class="col-md-6">
+      <p>Kafka</p>
+      <nile-pie-chart *ngIf="kafka" [single]="kafka"></nile-pie-chart>
+    </div>
+    <div class="col-md-6">
+      <p>Zookeeper</p>
+      <nile-pie-chart *ngIf="zookeeper" [single]="zookeeper"> </nile-pie-chart>
+    </div>
+  </div>
+</nile-card>
 

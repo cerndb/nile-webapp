@@ -9,7 +9,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 import {SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, ContentTopComponent, MenuService,
-  CernToolbarComponent, PieChartComponent} from './elements';
+  CernToolbarComponent, PieChartComponent, CardComponent} from './elements';
 
 
 const ELEMENT_COMPONENTS = [
@@ -19,7 +19,8 @@ const ELEMENT_COMPONENTS = [
   PageTopComponent,
   ContentTopComponent,
   CernToolbarComponent,
-  PieChartComponent
+  PieChartComponent,
+  CardComponent
 ];
 
 const ELEMENT_SERVICES = [
@@ -29,7 +30,8 @@ const ELEMENT_SERVICES = [
 
 @NgModule({
   declarations: [
-    ...ELEMENT_COMPONENTS
+    ...ELEMENT_COMPONENTS,
+    CardComponent
   ],
   imports: [
     CommonModule,
