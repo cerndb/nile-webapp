@@ -16,7 +16,7 @@
       "polyfills": "polyfills.ts",
       "test": "test.ts",
       "tsconfig": "src/tsconfig.webpack.json",
-      "prefix": "app",
+      "prefix": "nile",
       "styles": [
         "styles.css"
       ],
