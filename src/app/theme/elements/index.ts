@@ -9,3 +9,4 @@ export * from './content-top';
 export * from './pie-chart';
 export * from './cern-toolbar';
 export * from './card';
+export * from './modal-dialog';
