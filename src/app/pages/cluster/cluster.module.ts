@@ -8,6 +8,7 @@ import { ClusterComponent } from './cluster.component';
 import { ClusterTableComponent } from './cluster-table/cluster-table.component';
 import { ClusterTableService } from './cluster-table/cluster-table.service';
 import { ClusterFormComponent } from './cluster-form/cluster-form.component';
+import { ClusterDialogComponent } from './cluster-dialog/cluster-dialog.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { ClusterFormComponent } from './cluster-form/cluster-form.component';
   declarations: [
     ClusterTableComponent,
     ClusterFormComponent,
-    ClusterComponent
+    ClusterComponent,
+    ClusterDialogComponent
   ],
   providers: [
     ClusterTableService

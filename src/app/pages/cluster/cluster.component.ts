@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { ModalDialogComponent } from '../../theme/elements/modal-dialog';
+import {ClusterDialogComponent} from './cluster-dialog/cluster-dialog.component';
+
 
 import 'style-loader!./cluster.component.scss';
 
@@ -10,12 +12,10 @@ import 'style-loader!./cluster.component.scss';
 
 export class ClusterComponent  {
 
-  @ViewChild(ModalDialogComponent)
-  public readonly modal: ModalDialogComponent;
+  @ViewChild(ClusterDialogComponent)
+  public readonly dialog: ClusterDialogComponent;
 
   constructor() { }
 
-  createCluster() {
-    console.log('create cluster clicked!');
-  }
+
 }

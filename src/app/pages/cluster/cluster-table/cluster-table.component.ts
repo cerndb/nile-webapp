@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ClusterTableService } from './cluster-table.service';
 import { LocalDataSource } from 'ng2-smart-table';
+import { ClusterDialogComponent } from '../cluster-dialog/cluster-dialog.component';
 
 import 'style-loader!./cluster-table.component.scss';
 
@@ -10,6 +11,9 @@ import 'style-loader!./cluster-table.component.scss';
 })
 
 export class ClusterTableComponent  {
+
+  @ViewChild(ClusterDialogComponent)
+  public readonly dialog: ClusterDialogComponent;
 
   query: string = '';
 
@@ -57,7 +61,8 @@ export class ClusterTableComponent  {
         title: 'Type',
         type: 'string'
       }
-    }
+    },
+    mode: 'external'
   };
   source: LocalDataSource = new LocalDataSource();
 
@@ -70,6 +75,10 @@ export class ClusterTableComponent  {
   // the idea will be to have an explandable with all the instances according to the cluster Selected
   onRowSelect(event): void {
     console.log(event.data);
+  }
+
+  onEdit(event): void {
+    this.dialog.fillData(event.data);
   }
 
 }
