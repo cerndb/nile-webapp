@@ -2,8 +2,14 @@
 
   <div class="row">
     <nile-card baCardClass="with-scroll" >
-      <ng2-smart-table [settings]="settings" [source]="source" (userRowSelect)="onRowSelect($event)"></ng2-smart-table>
+      <ng2-smart-table [settings]="settings" [source]="source"
+                       (userRowSelect)="onRowSelect($event)"
+                       (edit)="onEdit($event)" >
+      </ng2-smart-table>
+      <nile-cluster-dialog></nile-cluster-dialog>
+
     </nile-card>
+
   </div>
 
 </div>
