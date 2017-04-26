@@ -16,6 +16,9 @@ export class ClusterDialogComponent implements OnInit {
   @ViewChild('clusterform')
   private clusterForm: NgForm;
 
+  // Use to disabled HTML tags
+  public create: boolean = true;
+
   constructor() { }
 
   ngOnInit() {
@@ -26,10 +29,12 @@ export class ClusterDialogComponent implements OnInit {
   }
 
   public fillData(data): void {
+    this.create = false;
     console.log(data);
     console.log(data.type);
     this.clusterForm.form.patchValue(
       {
+        name: data.name,
         username: data.userName,
         description: data.description,
         egroup: data.egroup,

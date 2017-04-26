@@ -8,112 +8,112 @@ export class ClusterTableService {
 
   clusterData = [
     {
-      clusterName: 'zookeeper-aromerom',
+      name: 'zookeeper-aromerom',
       userName: 'aromerom',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'aromerom dev cluster',
       description: 'Zookeeper internal development cluster',
-      type: 'ZOOKEEPER'
+      type: 'Zookeeper'
     },
     {
-      clusterName: 'kafka-aromerom-dev',
+      name: 'kafka-aromerom-dev',
       userName: 'aromerom',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'aromerom dev cluster',
       description: '',
-      type: 'KAFKA'
+      type: 'Kafka'
     },
     {
-      clusterName: 'zk-monit-test',
+      name: 'zk-monit-test',
       userName: 'aromerom',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'monit',
       description: 'zk test cluster for monit',
-      type: 'ZOOKEEPER'
+      type: 'Zookeeper'
     },
     {
-      clusterName: 'kafka-monit-test',
+      name: 'kafka-monit-test',
       userName: 'aromerom',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'monit',
       description: 'kafka test cluster for monit',
-      type: 'KAFKA'
+      type: 'Kafka'
     },
     {
-      clusterName: 'kafka-pilot-dev',
+      name: 'kafka-pilot-dev',
       userName: 'mmartinm',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'NILE Pilot',
       description: 'Kafka internal development cluster',
-      type: 'KAFKA'
+      type: 'Kafka'
     },
     {
-      clusterName: 'zookeeper-pilot-dev',
+      name: 'zookeeper-pilot-dev',
       userName: 'mmartinm',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'NILE Pilot',
       description: 'Zookeeper internal development cluster',
-      type: 'ZOOKEEPER'
+      type: 'Zookeeper'
     },
     {
-      clusterName: 'nile-kafka-mmartinm-dev',
+      name: 'nile-kafka-mmartinm-dev',
       userName: 'mmartinm',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: '',
       description: '',
-      type: 'KAFKA'
+      type: 'Kafka'
     },
     {
-      clusterName: 'nile-zk-mmartinm',
+      name: 'nile-zk-mmartinm',
       userName: 'mmartinm',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: '',
       description: 'Zookeeper internal development cluster',
-      type: 'ZOOKEEPER'
+      type: 'Zookeeper'
     },
     {
-      clusterName: 'kafka-nxcals-test',
+      name: 'kafka-nxcals-test',
       userName: 'wjurasz',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'nxcals',
       description: 'kafka test cluster for nxcals',
-      type: 'KAFKA'
+      type: 'Kafka'
     },
     {
-      clusterName: 'zookeeper-nxcals-test',
+      name: 'zookeeper-nxcals-test',
       userName: 'wjurasz',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'nxcals',
       description: 'Zookeeper test cluster for nxcals',
-      type: 'ZOOKEEPER'
+      type: 'Zookeeper'
     },
     {
-      clusterName: 'kafka-sec-test',
+      name: 'kafka-sec-test',
       userName: 'certsoc',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'SECURITY TEAM',
       description: 'cluster for security team',
-      type: 'KAFKA'
+      type: 'Kafka'
     },
     {
-      clusterName: 'zookeeper-sec-test',
+      name: 'zookeeper-sec-test',
       userName: 'certsoc',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'SECURITY TEAM',
       description: 'Zookeeper test cluster for Security Team',
-      type: 'ZOOKEEPER'
+      type: 'Zookeeper'
     }
   ];
 
