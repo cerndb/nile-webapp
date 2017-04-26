@@ -33,12 +33,12 @@ export class ClusterTableComponent  {
       cancelButtonContent: '<i class="ion-close"></i>',
     },
     columns: {
-      clusterName: {
-        title: 'ClusterName',
+      name: {
+        title: 'Cluster Name',
         type: 'string',
       },
       userName: {
-        title: 'UserName',
+        title: 'Username',
         type: 'string'
       },
       egroup: {
