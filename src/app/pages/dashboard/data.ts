@@ -3,11 +3,11 @@
  */
 export const kafka = [
   {
-    'name': 'Monitoring',
+    'name': 'Test',
     'value': 3
   },
   {
-    'name': 'Security',
+    'name': 'Dev',
     'value': 4
   },
   {
@@ -18,11 +18,11 @@ export const kafka = [
 
 export const zk = [
   {
-    'name': 'Monitoring',
+    'name': 'Test',
     'value': 6
   },
   {
-    'name': 'Security',
+    'name': 'Dev',
     'value': 8
   },
   {
