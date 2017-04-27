@@ -26,19 +26,22 @@ export class ClusterDialogComponent implements OnInit {
 
   createCluster() {
     console.log('save create cluster clicked!');
+    this.modal.hide();
   }
 
   public fillData(data): void {
     this.create = false;
     console.log(data);
-    console.log(data.type);
     this.clusterForm.form.patchValue(
       {
         name: data.name,
         username: data.userName,
         description: data.description,
         egroup: data.egroup,
-        type: data.type
+        type: data.type,
+        retention: data.log_retention_hours,
+        replication: data.replication_factor,
+        partitions: data.partitions_number
       });
     this.modal.show();
   }
