@@ -35,7 +35,7 @@ export class ClusterDialogComponent implements OnInit {
   public fillData(data): void {
     this.create = false;
     this.title.nativeElement.textContent = 'Edit Cluster';
-    console.log(this.title.nativeElement.toString());
+    console.log(data);
     this.clusterForm.form.patchValue(
       {
         name: data.name,
