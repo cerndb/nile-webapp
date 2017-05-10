@@ -1,6 +1,7 @@
 @import '../../sass/conf/conf';
 
 .page-top {
+//  background-image: linear-gradient(270deg, rgb(60, 166, 212), rgb(49, 151, 201) 51%, rgb(24, 116, 176));;
   background-color: $sidebar;
   position: fixed;
   z-index: 904;
@@ -44,7 +45,7 @@ a.al-logo:hover {
 }
 
 .user-profile {
-  float: right;
+  margin-left: 100px;
   min-width: 230px;
   margin-top: 10px;
 }
@@ -62,11 +63,7 @@ a.al-logo:hover {
   a {
     display: block;
   }
-  img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-  }
+
 }
 
 a.refresh-data {
