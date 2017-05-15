@@ -9,6 +9,7 @@
   height: $pagetop-height;
   width: 100%;
   min-width: $resMin;
+  margin-top: $cerntoolbar-height;
   padding: 0 32px 0 40px;
 
   .dropdown-toggle::after {
