@@ -1,0 +1,7 @@
+<div class="tooltip-container">
+  <nile-tooltip-content
+    *ngFor="let tooltip of tooltipService.components"
+    [title]="tooltip.title"
+    [ref]="tooltip.ref">
+  </nile-tooltip-content>
+</div>
