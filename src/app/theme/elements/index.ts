@@ -10,3 +10,5 @@ export * from './pie-chart';
 export * from './cern-toolbar';
 export * from './card';
 export * from './modal-dialog';
+export * from './tooltip-content';
+export * from './tooltip-container';

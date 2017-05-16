@@ -8,8 +8,10 @@ import { RouterModule } from '@angular/router';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, ContentTopComponent, MenuService,
-  CernToolbarComponent, PieChartComponent, CardComponent, ModalDialogComponent } from './elements';
+  CernToolbarComponent, PieChartComponent, CardComponent, ModalDialogComponent,
+  TooltipContainerComponent, TooltipContentComponent, TooltipService} from './elements';
 
+import { BaScrollPosition, TooltipDirective } from './directives';
 
 const ELEMENT_COMPONENTS = [
   SideBarComponent,
@@ -20,18 +22,26 @@ const ELEMENT_COMPONENTS = [
   CernToolbarComponent,
   PieChartComponent,
   CardComponent,
-  ModalDialogComponent
-
+  ModalDialogComponent,
+  TooltipContentComponent,
+  TooltipContainerComponent
 ];
 
 const ELEMENT_SERVICES = [
-  MenuService
+  MenuService,
+  TooltipService
+];
+
+const ELEMENT_DIRECTIVES = [
+  BaScrollPosition,
+  TooltipDirective,
 ];
 
 
 @NgModule({
   declarations: [
-    ...ELEMENT_COMPONENTS
+    ...ELEMENT_COMPONENTS,
+    ...ELEMENT_DIRECTIVES,
   ],
   imports: [
     CommonModule,
@@ -40,7 +50,8 @@ const ELEMENT_SERVICES = [
 
   ],
   exports: [
-    ...ELEMENT_COMPONENTS
+    ...ELEMENT_COMPONENTS,
+    ...ELEMENT_DIRECTIVES
   ]
 })
 

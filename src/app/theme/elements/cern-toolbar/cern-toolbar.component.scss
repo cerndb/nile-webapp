@@ -3,12 +3,10 @@
 
 #cern-toolbar {
   background-color: $cerntoolbar-background;
-//  position: relative;
-//  top:0;
-//  left: 0;
-//  width: 100%;
+  position: fixed;
+  width: 100%;
   height: $cerntoolbar-height;
-  z-index: 904;
+  z-index: 1006;
   font-family: 'PT Sans', 'Trebuchet MS', Tahoma, sans-serif;
   color: #999;
   font-size: 14px;

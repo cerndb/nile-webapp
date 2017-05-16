@@ -20,7 +20,7 @@ import { MenuService } from '../theme/elements/side-bar/menu';
             <nile-content-top></nile-content-top>
           <router-outlet></router-outlet>
         </div>
-       </div>
+      </div>
     `
 
 })

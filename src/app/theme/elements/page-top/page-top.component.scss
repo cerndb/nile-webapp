@@ -1,6 +1,7 @@
 @import '../../sass/conf/conf';
 
 .page-top {
+//  background-image: linear-gradient(270deg, rgb(60, 166, 212), rgb(49, 151, 201) 51%, rgb(24, 116, 176));;
   background-color: $sidebar;
   position: fixed;
   z-index: 904;
@@ -8,6 +9,7 @@
   height: $pagetop-height;
   width: 100%;
   min-width: $resMin;
+  margin-top: $cerntoolbar-height;
   padding: 0 32px 0 40px;
 
   .dropdown-toggle::after {
@@ -44,7 +46,7 @@ a.al-logo:hover {
 }
 
 .user-profile {
-  float: right;
+  margin-left: 100px;
   min-width: 230px;
   margin-top: 10px;
 }
@@ -53,19 +55,15 @@ a.al-logo:hover {
   float: right;
   margin-right: 12px;
   transition: all .15s ease-in-out;
-  padding: 0;
-  width: 36px;
-  height: 36px;
+  padding-top: 10px;
+  width: 55px;
+  height: 45px;
   border: 0;
   opacity: 1;
   position: relative;
   a {
     display: block;
-  }
-  img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+    color: $body-bg;
   }
 }
 
@@ -85,7 +83,6 @@ a.refresh-data {
 
 a.collapse-menu-link {
   font-size: 31px;
-  cursor: pointer;
   display: block;
   text-decoration: none;
   line-height: 42px;
@@ -100,59 +97,69 @@ a.collapse-menu-link {
   }
 }
 
-.al-skin-dropdown {
-  float: right;
-  margin-top: 14px;
-  margin-right: 26px;
 
-  .tpl-skin-panel {
-    max-height: 300px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-  }
-}
-
-.icon-palette {
-  display: inline-block;
-  width: 14px;
-  height: 13px;
-  @include bg('theme/palette.png');
-  background-size: cover;
-}
-
-.signout-item {
-  width: 145px;
-  top: 26px;
-  right: -25px;
+.top-dropdown-menu {
+  font-size: inherit;
+  width: 340px;
   left: auto;
-  text-decoration: none;
+  right: -47px;
+  top: 26px;
 
+  @include scrollbars(.4em, rgba(0,0,0,0.5), #fff);
   .header {
     padding: 10px 12px;
     border-bottom: 1px solid $default;
     font-size: 12px;
     strong {
       float: left;
-      //color: $dropdown-text;
+      color: $dropdown-text;
     }
     & > a {
-      text-align: left;
-      border: none;
-      padding: 4px 16px 4px 20px;
       float: right;
       margin-left: 12px;
       text-decoration: none;
       &:hover {
-        text-decoration: none;
-
-        //  color: $dropdown-text;
+        color: $dropdown-text;
       }
     }
   }
-  &.signout {
-    line-height: 1;
-    border-radius: 5px;
+  & > a {
     border-top: 1px solid $default;
+    display: block;
+    text-align: left;
+    padding: 10px;
+    font-size: 12px;
+    text-decoration: none;
+    &:hover {
+      color: $dropdown-text;
+    }
+  }
+
+  &.profile-dropdown {
+    width: 190px;
+    top: 55px;
+    right: -25px;
+    a {
+      text-align: left;
+      border: none;
+      text-decoration: none;
+      color: $dropdown-text;
+      padding: 4px 16px 4px 20px;
+      i {
+        margin-right: 10px;
+      }
+      &:hover {
+        background: #f4fcff;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 415px) {
+  .top-dropdown-menu {
+    right: -81px;
+
   }
 }
 
@@ -180,9 +187,6 @@ a.collapse-menu-link {
     margin-left: 10px;
   }
 
-  .al-skin-dropdown {
-    display: none;
-  }
 }
 
 .profile-toggle-link{

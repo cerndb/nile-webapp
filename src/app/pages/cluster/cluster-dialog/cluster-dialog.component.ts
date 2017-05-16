@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {Component, ContentChild, ElementRef, Inject, OnInit, ViewChild} from '@angular/core';
 import { ModalDialogComponent } from '../../../theme/elements/modal-dialog';
 import { NgForm } from '@angular/forms';
 
@@ -16,6 +16,9 @@ export class ClusterDialogComponent implements OnInit {
   @ViewChild('clusterform')
   private clusterForm: NgForm;
 
+  @ViewChild('title')
+  private title: ElementRef;
+
   // Use to disabled HTML tags
   public create: boolean = true;
 
@@ -31,6 +34,7 @@ export class ClusterDialogComponent implements OnInit {
 
   public fillData(data): void {
     this.create = false;
+    this.title.nativeElement.textContent = 'Edit Cluster';
     console.log(data);
     this.clusterForm.form.patchValue(
       {
