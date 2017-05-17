@@ -3,8 +3,9 @@
 # compiled output
 /dist
 /tmp
-/src/app/**/*.js
-/src/app/**/*.map
+/src/**/*.js
+/src/**/*.map
+/compiled
 
 # dependencies
 /node_modules
@@ -16,6 +17,7 @@
 .c9/
 *.launch
 .settings/
+*.iml
 
 # IDE - VSCode
 .vscode/*
