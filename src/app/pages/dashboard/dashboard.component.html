@@ -19,16 +19,20 @@
   </div>
 </nile-card>
 
-<nile-card title="Nodes per Cluster" baCardClass="with-scroll">
   <div class="row">
-    <div class="col-md-6">
-      <p>Kafka</p>
-      <nile-pie-chart *ngIf="kafka" [data]="kafka"></nile-pie-chart>
-    </div>
-    <div class="col-md-6">
-      <p>Zookeeper</p>
-      <nile-pie-chart *ngIf="zookeeper" [data]="zookeeper"> </nile-pie-chart>
+    <div class="col-md-12">
+      <nile-card title="Nodes per Cluster" baCardClass="with-scroll">
+        <div class="row">
+          <div class="col-md-12 col-lg-6">
+            <p>Kafka</p>
+            <nile-pie-chart *ngIf="kafka" [data]="kafka"></nile-pie-chart>
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <p>Zookeeper</p>
+            <nile-pie-chart *ngIf="zookeeper" [data]="zookeeper"> </nile-pie-chart>
+          </div>
+        </div>
+      </nile-card>
     </div>
   </div>
-</nile-card>
 
