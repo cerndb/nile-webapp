@@ -3,11 +3,11 @@
   <a routerLink="/pages/dashboard" class="al-logo clearfix"><span>Nile-</span>Webapp</a>
   <a href (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>
 
-  <!--<div>-->
+  <!--<div class="project-profile clearfix" [ngStyle]="{'visibility': isProjectMenuVisible?'visible':'hidden'}">-->
     <!--<nile-user-dropdown-menu></nile-user-dropdown-menu>-->
   <!--</div>-->
 
-  <div class="user-profile clearfix">
+  <div class="user-profile" [ngStyle]="{'visibility': isToolMenuVisible?'visible':'hidden'}" >
     <div class="dropdown al-user-profile">
         <a id="user-profile-dd" data-toggle="dropdown" href="#" class="profile-toggle-link dropdown-toggle" role="button" aria-expanded="false">
           <span class="user-name">Tools </span>
@@ -21,6 +21,5 @@
         </ul>
     </div>
   </div>
-
 
 </div>

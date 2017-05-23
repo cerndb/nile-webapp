@@ -17,12 +17,6 @@
   }
 }
 
-.blur {
-  .page-top.scrolled {
-    background-color: rgba(black, 0.85)
-  }
-}
-
 a.al-logo {
   color: $sidebar-text;
   display: block;
@@ -97,6 +91,11 @@ a.collapse-menu-link {
   }
 }
 
+.project-profile {
+  margin-right: 100px;
+  min-width: 230px;
+  margin-top: 10px;
+}
 
 .top-dropdown-menu {
   font-size: inherit;
