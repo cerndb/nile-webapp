@@ -12,11 +12,11 @@ export class PieChartComponent implements OnChanges {
 
   @Input() data: any[];
 
-  @Input() size: any[] = [700, 400];
+  @Input() size: any[] = [600, 400];
 
-  @Input() showLegend = true;
+  @Input() showLegend = false;
 
-  @Input() showLabels = true;
+  @Input() showLabels = false;
 
   colorScheme = {
     domain: ['#40daf1', '#1b70ef', '#3c4eb9', '#00abff']

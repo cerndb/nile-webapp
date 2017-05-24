@@ -1,4 +1,4 @@
-<nile-card title="General Resources Summary" baCardClass="with-scroll">
+<!--<nile-card title="General Resources Summary" baCardClass="with-scroll">
   <div class="row">
     <div class="col-md-3">
       <p>VCPU</p>
@@ -17,22 +17,47 @@
       <nile-pie-chart *ngIf="storageUsage" [data]="storageUsage" [size]="[300, 250]" [showLabels]="false" [showLegend]="false"> </nile-pie-chart>
     </div>
   </div>
-</nile-card>
+</nile-card>-->
 
-  <div class="row">
-    <div class="col-md-12">
-      <nile-card title="Nodes per Cluster" baCardClass="with-scroll">
-        <div class="row">
-          <div class="col-md-12 col-lg-6">
-            <p>Kafka</p>
-            <nile-pie-chart *ngIf="kafka" [data]="kafka"></nile-pie-chart>
-          </div>
-          <div class="col-md-12 col-lg-6">
-            <p>Zookeeper</p>
-            <nile-pie-chart *ngIf="zookeeper" [data]="zookeeper"> </nile-pie-chart>
-          </div>
+<div class="row">
+  <div class="col-md-12">
+    <nile-card title="Nodes per Cluster" baCardClass="with-scroll">
+      <div class="row">
+        <div class="col-md-12 col-lg-3">
+          <p>VCPU</p>
+          <nile-pie-chart *ngIf="vcpu" [data]="vcpu" [size]="[300, 250]"></nile-pie-chart>
         </div>
-      </nile-card>
-    </div>
+        <div class="col-md-12 col-lg-3">
+          <p>Number of Nodes</p>
+          <nile-pie-chart *ngIf="numberNodes" [data]="numberNodes" [size]="[300, 250]"> </nile-pie-chart>
+        </div>
+        <div class="col-md-12 col-lg-3">
+          <p>Volumes</p>
+          <nile-pie-chart *ngIf="numberVolumes" [data]="numberVolumes" [size]="[300, 250]"> </nile-pie-chart>
+        </div>
+        <div class="col-md-12 col-lg-3">
+          <p>Real Storage Usage</p>
+          <nile-pie-chart *ngIf="storageUsage" [data]="storageUsage" [size]="[300, 250]" > </nile-pie-chart>
+        </div>
+      </div>
+    </nile-card>
   </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <nile-card title="Nodes per Cluster" baCardClass="with-scroll">
+      <div class="row">
+        <div class="col-md-12 col-lg-6">
+          <p>Kafka</p>
+          <nile-pie-chart *ngIf="kafka" [data]="kafka" [showLabels]="true" ></nile-pie-chart>
+        </div>
+        <div class="col-md-12 col-lg-6">
+          <p>Zookeeper</p>
+          <nile-pie-chart *ngIf="zookeeper" [data]="zookeeper" [showLabels]="true" > </nile-pie-chart>
+        </div>
+      </div>
+    </nile-card>
+  </div>
+</div>
 
