@@ -3,13 +3,24 @@
   <a routerLink="/pages/dashboard" class="al-logo clearfix"><span>Nile-</span>Webapp</a>
   <a href (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>
 
-  <!--<div class="project-profile clearfix" [ngStyle]="{'visibility': isProjectMenuVisible?'visible':'hidden'}">-->
-    <!--<nile-user-dropdown-menu></nile-user-dropdown-menu>-->
-  <!--</div>-->
+  <div class="row">
+    <div class="col project-profile" [ngStyle]="{'visibility': isProjectMenuVisible?'visible':'hidden'}">
+      <div class="dropdown al-project-profile">
+        <!--<nile-user-dropdown-menu></nile-user-dropdown-menu>-->
+        <a id="project-profile" class="dropdown-toggle" role="button" aria-expanded="false" data-toggle="dropdown" href="#" >
+          <span class="context-project">Personal papappapapapapapapapapapapapapap</span>
+          <span class="fa fa-caret-down"></span>
+        </a>
+        <ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="project-profile">
+          <li class="dropdown-item"><a href><i class="fa fa-cog"></i>Request Quota</a></li>
+          <li class="dropdown-item"><a href="http://nile-user-guide.web.cern.ch/nile-user-guide/" target="_new"><i class="fa fa-question-circle"></i>Help</a></li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="user-profile" [ngStyle]="{'visibility': isToolMenuVisible?'visible':'hidden'}" >
-    <div class="dropdown al-user-profile">
-        <a id="user-profile-dd" data-toggle="dropdown" href="#" class="profile-toggle-link dropdown-toggle" role="button" aria-expanded="false">
+    <div class="col user-profile" [ngStyle]="{'visibility': isToolMenuVisible?'visible':'hidden'}" >
+      <div class="dropdown al-user-profile">
+        <a id="user-profile-dd" data-toggle="dropdown" href="#" class="dropdown-toggle" role="button" aria-expanded="false">
           <span class="user-name">Tools </span>
           <span class="fa fa-caret-down"></span>
         </a>
@@ -19,7 +30,9 @@
           <li class="dropdown-divider" ></li>
           <li class="dropdown-item"><a href="https://cern.service-now.com/service-portal" target="_new">Submit a ticket</a></li>
         </ul>
+      </div>
     </div>
   </div>
+
 
 </div>
