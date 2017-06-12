@@ -12,16 +12,16 @@ import { MenuService } from '../theme/elements/side-bar/menu';
   selector: 'nile-pages',
   styles: [],
   template: `
-      <nile-cern-toolbar></nile-cern-toolbar>
-      <nile-side-bar></nile-side-bar>
-      <nile-page-top></nile-page-top>
-      <div class="al-main">
-        <div class="al-content">
-            <nile-content-top></nile-content-top>
-          <router-outlet></router-outlet>
-        </div>
+    <nile-cern-toolbar></nile-cern-toolbar>
+    <nile-side-bar></nile-side-bar>
+    <nile-page-top [isToolMenuVisible]="true" [isProjectMenuVisible]="true"></nile-page-top>
+    <div class="al-main">
+      <div class="al-content">
+        <nile-content-top></nile-content-top>
+        <router-outlet></router-outlet>
       </div>
-    `
+    </div>
+  `
 
 })
 

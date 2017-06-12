@@ -17,12 +17,6 @@
   }
 }
 
-.blur {
-  .page-top.scrolled {
-    background-color: rgba(black, 0.85)
-  }
-}
-
 a.al-logo {
   color: $sidebar-text;
   display: block;
@@ -97,6 +91,27 @@ a.collapse-menu-link {
   }
 }
 
+.project-profile {
+    margin-right: 100px;
+    min-width: 230px;
+    margin-top: 10px;
+}
+
+.al-project-profile {
+  float: left;
+  margin-left: 42px;
+  transition: all .15s ease-in-out;
+  padding-top: 10px;
+  width: 125px;
+  height: 45px;
+  border: 0;
+  opacity: 1;
+  position: relative;
+  a {
+    display: block;
+    color: $body-bg;
+  }
+}
 
 .top-dropdown-menu {
   font-size: inherit;
@@ -156,40 +171,23 @@ a.collapse-menu-link {
 
 }
 
-@media (max-width: 415px) {
-  .top-dropdown-menu {
-    right: -81px;
-
-  }
-}
-
 
 @media screen and (max-width: $resS) {
-  .search {
+  .al-user-profile {
     display: none;
   }
-}
-
-@media screen and (max-width: $resXS) {
-  .page-top {
-    padding: 0 20px;
-  }
-}
-
-@media (max-width: $resXXS) {
-  .user-profile{
-    min-width: 136px;
-  }
-  a.refresh-data {
+  .project-profile {
+    min-width: 150px;
     margin-right: 10px;
   }
-  a.collapse-menu-link {
-    margin-left: 10px;
-  }
 
 }
 
-.profile-toggle-link{
-  cursor: pointer;
+
+@media (max-width: $resXXS) {
+  .project-profile {
+    display: none;
+  }
+
 }
 

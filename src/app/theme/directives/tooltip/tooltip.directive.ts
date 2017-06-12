@@ -10,7 +10,7 @@ import { TooltipService } from '../../elements/tooltip-container/tooltip.service
 export class TooltipDirective implements OnDestroy {
 
   @Input() tooltipTitle: string = '';
-  private id: string;
+  private id: number;
 
   constructor(private tooltipService: TooltipService, private element: ElementRef) { }
 
