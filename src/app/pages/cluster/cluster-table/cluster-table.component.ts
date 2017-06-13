@@ -34,33 +34,41 @@ export class ClusterTableComponent  {
     },
     columns: {
       name: {
-        title: 'Cluster Name',
+        title: 'Name',
         type: 'string',
       },
-      userName: {
-        title: 'Username',
+      type : {
+        title: 'Type',
         type: 'string'
       },
-      egroup: {
-        title: 'E-group',
+      master: {
+        title: 'master-slave',
+        type: 'string'
+      },
+      size: {
+        title: 'Size',
+        type: 'string',
+      }
+      description: {
+        title: 'Description',
         type: 'string'
       },
       category: {
         title: 'Category',
         type: 'string'
       },
-      project: {
-        title: 'Project',
+      port_ssl: {
+        title: 'Port-ssl',
+        type: 'number'
+      },
+      userName: {
+        title: 'superUser',
         type: 'string'
       },
-      description: {
-        title: 'Description',
-        type: 'string'
+      version: {
+        title: 'version',
+        type: 'number'
       },
-      type : {
-        title: 'Type',
-        type: 'string'
-      }
     },
     mode: 'external'
   };
