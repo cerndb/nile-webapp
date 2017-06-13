@@ -5,17 +5,7 @@
 
   <div class="row">
     <div class="col project-profile" [ngStyle]="{'visibility': isProjectMenuVisible?'visible':'hidden'}">
-      <div class="dropdown al-project-profile">
-        <!--<nile-user-dropdown-menu></nile-user-dropdown-menu>-->
-        <a id="project-profile" class="dropdown-toggle" role="button" aria-expanded="false" data-toggle="dropdown" href="#" >
-          <span class="context-project">Personal papappapapapapapapapapapapapapap</span>
-          <span class="fa fa-caret-down"></span>
-        </a>
-        <ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="project-profile">
-          <li class="dropdown-item"><a href><i class="fa fa-cog"></i>Request Quota</a></li>
-          <li class="dropdown-item"><a href="http://nile-user-guide.web.cern.ch/nile-user-guide/" target="_new"><i class="fa fa-question-circle"></i>Help</a></li>
-        </ul>
-      </div>
+      <nile-project-dropdown-menu></nile-project-dropdown-menu>
     </div>
 
     <div class="col user-profile" [ngStyle]="{'visibility': isToolMenuVisible?'visible':'hidden'}" >
