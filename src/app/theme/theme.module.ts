@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ProjectDropdownMenuComponent, ProjectService } from '../pages/dashboard/project-dropdown-menu';
+
 
 import { SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, ContentTopComponent, MenuService,
   CernToolbarComponent, PieChartComponent, CardComponent, ModalDialogComponent,
@@ -24,12 +26,14 @@ const ELEMENT_COMPONENTS = [
   CardComponent,
   ModalDialogComponent,
   TooltipContentComponent,
-  TooltipContainerComponent
+  TooltipContainerComponent,
+  ProjectDropdownMenuComponent
 ];
 
 const ELEMENT_SERVICES = [
   MenuService,
-  TooltipService
+  TooltipService,
+  ProjectService
 ];
 
 const ELEMENT_DIRECTIVES = [
@@ -47,7 +51,6 @@ const ELEMENT_DIRECTIVES = [
     CommonModule,
     RouterModule,
     NgxChartsModule
-
   ],
   exports: [
     ...ELEMENT_COMPONENTS,

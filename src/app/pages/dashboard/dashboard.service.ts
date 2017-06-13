@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {kafka, numberNodes, numberVolumes, storageUsage, vcpu, zk} from './data';
+import { kafka, numberNodes, numberVolumes, storageUsage, vcpu, zk } from './data';
 
 
 @Injectable()
