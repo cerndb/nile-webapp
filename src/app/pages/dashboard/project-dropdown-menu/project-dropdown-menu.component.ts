@@ -14,15 +14,16 @@ export class ProjectDropdownMenuComponent implements OnInit {
   egroupSelected: string;
 
   constructor(private _service: ProjectService) {
-    this._service.getEgroupsList().then(data => this.egroupList = data);
-    for(var key in this.egroupList)
-    {
-      console.log(key);
-    }
-//    this.egroupSelected = this.egroupList;
+    this._service.getEgroupsList().then(data => {this.egroupList = data;
+                  this.egroupSelected = this.egroupList[0].name; } );
   }
 
   ngOnInit() {
+  }
+
+  changeProject(data) {
+    this.egroupSelected = data;
+    //TODO: Add calls to refresh the rest of the views and pages.
   }
 
 

@@ -4,48 +4,11 @@
     <span class="fa fa-caret-down"></span>
   </a>
   <ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="project-profile">
-    <li class="dropdown-item"><a href><i class="fa fa-cog"></i>Request Quota</a></li>
-    <li class="dropdown-item"><a href="http://nile-user-guide.web.cern.ch/nile-user-guide/" target="_new"><i class="fa fa-question-circle"></i>Help</a></li>
-    <!--<li>-->
-      <!--<ul class="dropdown-menu">-->
-        <!--<li class="dropdown-header">Projects:</li>-->
-        <!--<li>-->
-          <!--<a class="dropdown-selected"-->
-             <!--href="#"-->
-             <!--target="_self">-->
-            <!--<span class="fa fa-check dropdown-selected-icon"></span>-->
-            <!--<span class="dropdown-title">-->
-                <!--IT Security Project-->
-            <!--</span>-->
-          <!--</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-    <!--</li>-->
-    <!--<li class="dropdown-item">-->
-      <!--<ul class="dropdown-menu">-->
-        <!--<li class="dropdown-header">Projects:</li>-->
-        <!--<li class="dropdown-item">-->
-          <!--<a class="dropdown-selected"-->
-             <!--href="#"-->
-             <!--target="_self">-->
-            <!--<span class="fa fa-check dropdown-selected-icon"></span>-->
-            <!--<span class="dropdown-title">-->
-              <!--IT Security project-->
-            <!--</span>-->
-          <!--</a>-->
-        <!--</li>-->
-        <!--<li class="dropdown-item">-->
-          <!--<a class="dropdown-selected"-->
-             <!--href="#"-->
-             <!--target="_self">-->
-            <!--<span class="fa fa-check dropdown-selected-icon"></span>-->
-            <!--<span class="dropdown-title">-->
-              <!--IT Security project2-->
-            <!--</span>-->
-          <!--</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-    <!--</li>-->
-
+    <li  class="dropdown-item" *ngFor="let item of egroupList" (click)="changeProject(item.name)">
+      <a class="dropdown-selected" href="#" target="_self">
+        <span class="fa fa-check dropdown-selected-icon" [hidden]="item.name != egroupSelected"></span>
+        <span class="dropdown-title">{{item.name}}</span>
+      </a>
+    </li>
   </ul>
 </div>

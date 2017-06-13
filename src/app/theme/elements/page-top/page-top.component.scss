@@ -102,7 +102,7 @@ a.collapse-menu-link {
   margin-left: 42px;
   transition: all .15s ease-in-out;
   padding-top: 10px;
-  width: 125px;
+  width: 162px;
   height: 45px;
   border: 0;
   opacity: 1;
@@ -159,7 +159,7 @@ a.collapse-menu-link {
       border: none;
       text-decoration: none;
       color: $dropdown-text;
-      padding: 4px 16px 4px 20px;
+      padding: 4px 16px 4px 10px;
       i {
         margin-right: 10px;
       }
@@ -177,14 +177,14 @@ a.collapse-menu-link {
     display: none;
   }
   .project-profile {
-    min-width: 150px;
-    margin-right: 10px;
+    min-width: 162px;
+    margin-right: 0px;
   }
 
 }
 
 
-@media (max-width: $resXXS) {
+@media (max-width: $resXS) {
   .project-profile {
     display: none;
   }
