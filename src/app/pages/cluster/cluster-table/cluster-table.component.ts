@@ -51,7 +51,7 @@ export class ClusterTableComponent  {
       },
       description: {
         title: 'Description',
-        type: 'string'
+        type: 'string',
       },
       category: {
         title: 'Category',
@@ -61,12 +61,12 @@ export class ClusterTableComponent  {
         title: 'Port-ssl',
         type: 'number'
       },
-      userName: {
-        title: 'superUser',
+      superuser: {
+        title: 'Superuser',
         type: 'string'
       },
       version: {
-        title: 'version',
+        title: 'Version',
         type: 'number'
       },
     },
