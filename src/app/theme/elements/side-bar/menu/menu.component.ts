@@ -71,7 +71,7 @@ export class MenuComponent implements OnInit, OnDestroy {
     this.hoverElemHeight = $event.currentTarget.clientHeight;
     // TODO: get rid of magic 66 constant
     // To create a rectangle in the right margin when mouse hover an item.
-    this.hoverElemTop = $event.currentTarget.getBoundingClientRect().top - 66;
+    this.hoverElemTop = $event.currentTarget.getBoundingClientRect().top - 108;
   }
 
   public toggleSubMenu($event): boolean {
