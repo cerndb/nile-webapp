@@ -9,7 +9,7 @@ export class ClusterTableService {
   clusterData = [
     {
       name: 'zookeeper-aromerom',
-      userName: 'aromerom',
+      superuser: 'aromerom',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'aromerom dev cluster',
@@ -24,7 +24,7 @@ export class ClusterTableService {
     },
     {
       name: 'kafka-aromerom-dev',
-      userName: 'aromerom',
+      superuser: 'aromerom',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'aromerom dev cluster',
@@ -39,7 +39,7 @@ export class ClusterTableService {
     },
     {
       name: 'zk-monit-test',
-      userName: 'aromerom',
+      superuser: 'aromerom',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'monit',
@@ -54,7 +54,7 @@ export class ClusterTableService {
     },
     {
       name: 'kafka-monit-test',
-      userName: 'aromerom',
+      superuser: 'aromerom',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'monit',
@@ -69,7 +69,7 @@ export class ClusterTableService {
     },
     {
       name: 'kafka-pilot-dev',
-      userName: 'mmartinm',
+      superuser: 'mmartinm',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'NILE Pilot',
@@ -84,7 +84,7 @@ export class ClusterTableService {
     },
     {
       name: 'zookeeper-pilot-dev',
-      userName: 'mmartinm',
+      superuser: 'mmartinm',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'NILE Pilot',
@@ -99,7 +99,7 @@ export class ClusterTableService {
     },
     {
       name: 'nile-kafka-mmartinm-dev',
-      userName: 'mmartinm',
+      superuser: 'mmartinm',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: '',
@@ -114,7 +114,7 @@ export class ClusterTableService {
     },
     {
       name: 'nile-zk-mmartinm',
-      userName: 'mmartinm',
+      superuser: 'mmartinm',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: '',
@@ -129,7 +129,7 @@ export class ClusterTableService {
     },
     {
       name: 'kafka-nxcals-test',
-      userName: 'wjurasz',
+      superuser: 'wjurasz',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'nxcals',
@@ -144,7 +144,7 @@ export class ClusterTableService {
     },
     {
       name: 'zookeeper-nxcals-test',
-      userName: 'wjurasz',
+      superuser: 'wjurasz',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'nxcals',
@@ -159,7 +159,7 @@ export class ClusterTableService {
     },
     {
       name: 'kafka-sec-test',
-      userName: 'certsoc',
+      superuser: 'certsoc',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'SECURITY TEAM',
@@ -174,7 +174,7 @@ export class ClusterTableService {
     },
     {
       name: 'zookeeper-sec-test',
-      userName: 'certsoc',
+      superuser: 'certsoc',
       egroup: 'it-db-nile-developers',
       category: 'DEV',
       project: 'SECURITY TEAM',
