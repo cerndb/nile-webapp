@@ -1,11 +1,10 @@
 import {AfterViewInit, Component} from '@angular/core';
 import {DashboardService} from './dashboard.service';
 
-import 'style-loader!./dashboard.component.scss';
-
 @Component({
   selector: 'nile-dashboard',
-  templateUrl: 'dashboard.component.html'
+  templateUrl: 'dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
 
 export class DashboardComponent implements  AfterViewInit {

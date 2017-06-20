@@ -1,11 +1,12 @@
-.chart-legend .legend-label {
-  color: #ffffff !important;
-  // font-size: 100% !important;
-  //  font-weight: bold;
+:host /deep/ {
+  .chart-legend .legend-label {
+    color: #ffffff !important;
+    // font-size: 100% !important;
+    //  font-weight: bold;
   }
   .chart-legend .legend-label .active .legend-label-text {
     color: #e3e3e3 !important;
     font-size: 100% !important;
   }
-
+}
 

@@ -1,10 +1,10 @@
 import { Component, Input} from '@angular/core';
 
-import 'style-loader!./card.component.scss';
 
 @Component({
   selector: 'nile-card',
-  templateUrl: './card.component.html'
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss']
 })
 
 export class CardComponent {

@@ -1,11 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { GlobalState } from '../../../global.state';
 
-import 'style-loader!./page-top.component.scss';
-
 @Component({
   selector: 'nile-page-top',
   templateUrl: 'page-top.component.html',
+  styleUrls: ['./page-top.component.scss']
 })
 
 export class PageTopComponent {

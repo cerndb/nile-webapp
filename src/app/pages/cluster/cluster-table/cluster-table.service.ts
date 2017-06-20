@@ -18,6 +18,9 @@ export class ClusterTableService {
       replication_factor: 3,
       log_retention_hours: 48,
       partitions_number: 3,
+      port_ssl: 9093,
+      version: '0.10.2.0',
+      size: 'small',
     },
     {
       name: 'kafka-aromerom-dev',
@@ -30,6 +33,9 @@ export class ClusterTableService {
       replication_factor: 5,
       log_retention_hours: 240,
       partitions_number: 5,
+      port_ssl: 9090,
+      version: '0.10.2.0',
+      size: 'large',
     },
     {
       name: 'zk-monit-test',
@@ -42,6 +48,9 @@ export class ClusterTableService {
       replication_factor: 3,
       log_retention_hours: 144,
       partitions_number: 3,
+      port_ssl: 9091,
+      version: '0.10.2.0',
+      size: 'small',
     },
     {
       name: 'kafka-monit-test',
@@ -54,6 +63,9 @@ export class ClusterTableService {
       replication_factor: 3,
       log_retention_hours: 120,
       partitions_number: 3,
+      port_ssl: 8045,
+      version: '0.10.2.0',
+      size: 'medium',
     },
     {
       name: 'kafka-pilot-dev',
@@ -66,6 +78,9 @@ export class ClusterTableService {
       replication_factor: 1,
       log_retention_hours: 168,
       partitions_number: 1,
+      port_ssl: 9002,
+      version: '0.10.2.0',
+      size: 'small',
     },
     {
       name: 'zookeeper-pilot-dev',
@@ -78,6 +93,9 @@ export class ClusterTableService {
       replication_factor: 5,
       log_retention_hours: 96,
       partitions_number: 5,
+      port_ssl: 9010,
+      version: '0.10.2.0',
+      size: 'large',
     },
     {
       name: 'nile-kafka-mmartinm-dev',
@@ -90,6 +108,9 @@ export class ClusterTableService {
       replication_factor: 7,
       log_retention_hours: 140,
       partitions_number: 3,
+      port_ssl: 8045,
+      version: '0.10.2.0',
+      size: 'large',
     },
     {
       name: 'nile-zk-mmartinm',
@@ -102,6 +123,9 @@ export class ClusterTableService {
       replication_factor: 3,
       log_retention_hours: 150,
       partitions_number: 10,
+      port_ssl: 8045,
+      version: '0.10.2.0',
+      size: 'small',
     },
     {
       name: 'kafka-nxcals-test',
@@ -114,6 +138,9 @@ export class ClusterTableService {
       replication_factor: 3,
       log_retention_hours: 120,
       partitions_number: 12,
+      port_ssl: 9067,
+      version: '0.10.2.0',
+      size: 'medium',
     },
     {
       name: 'zookeeper-nxcals-test',
@@ -126,6 +153,9 @@ export class ClusterTableService {
       replication_factor: 5,
       log_retention_hours: 170,
       partitions_number: 14,
+      port_ssl: 9111,
+      version: '0.10.2.0',
+      size: 'large',
     },
     {
       name: 'kafka-sec-test',
@@ -138,6 +168,9 @@ export class ClusterTableService {
       replication_factor: 9,
       log_retention_hours: 230,
       partitions_number: 18,
+      port_ssl: 9011,
+      version: '0.10.2.0',
+      size: 'small',
     },
     {
       name: 'zookeeper-sec-test',
@@ -150,6 +183,9 @@ export class ClusterTableService {
       replication_factor: 7,
       log_retention_hours: 60,
       partitions_number: 30,
+      port_ssl: 9047,
+      version: '0.10.2.0',
+      size: 'medium',
     }
   ];
 

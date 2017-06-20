@@ -6,11 +6,10 @@ import { Subscription } from 'rxjs/Rx';
 
 import { MenuService } from './menu.service';
 
-import 'style-loader!./menu.component.scss';
-
 @Component({
   selector: 'nile-menu-bar',
-  templateUrl: 'menu.component.html'
+  templateUrl: 'menu.component.html',
+  styleUrls: ['./menu.component.scss'],
 })
 
 export class MenuComponent implements OnInit, OnDestroy {

@@ -1,11 +1,10 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 
 
-import 'style-loader!./pie-chart.component.scss';
-
 @Component({
   selector: 'nile-pie-chart',
-  templateUrl: './pie-chart.component.html'
+  templateUrl: './pie-chart.component.html',
+  styleUrls: ['./pie-chart.component.scss'],
 })
 
 export class PieChartComponent implements OnChanges {

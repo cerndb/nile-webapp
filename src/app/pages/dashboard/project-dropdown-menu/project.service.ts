@@ -3,8 +3,6 @@
  */
 import { Injectable } from '@angular/core';
 
-import { egroups } from './data';
-
 
 @Injectable()
 export class ProjectService {

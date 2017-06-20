@@ -1,10 +1,9 @@
 import { Component, AfterViewInit, HostListener, Input } from '@angular/core';
 
-import 'style-loader!./tooltip-content.component.scss';
-
 @Component({
   selector: 'nile-tooltip-content',
-  templateUrl: './tooltip-content.component.html'
+  templateUrl: './tooltip-content.component.html',
+  styleUrls: ['./tooltip-content.component.scss'],
 })
 
 export class TooltipContentComponent implements AfterViewInit {

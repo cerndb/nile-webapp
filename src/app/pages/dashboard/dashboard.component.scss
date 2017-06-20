@@ -1,19 +1,21 @@
-#top {
-  clear:both;
-  position:fixed;
-  top:0;
-  height:50%;
-  width:100%;
-  font-size:16px;
-  text-align:center;
-}
+:host /deep/ {
+  #top {
+    clear: both;
+    position: fixed;
+    top: 0;
+    height: 50%;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+  }
 
-#bottom {
-  clear:both;
-  position:fixed;
-  bottom:0;
-  height:50%;
-  width:100%;
-  font-size:16px;
-  text-align:center;
+  #bottom {
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+  }
 }

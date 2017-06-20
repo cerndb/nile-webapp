@@ -3,11 +3,11 @@ import { ClusterTableService } from './cluster-table.service';
 import { LocalDataSource } from 'ng2-smart-table';
 import { ClusterDialogComponent } from '../cluster-dialog/cluster-dialog.component';
 
-import 'style-loader!./cluster-table.component.scss';
 
 @Component({
   selector: 'nile-cluster-table',
-  templateUrl: './cluster-table.component.html'
+  templateUrl: './cluster-table.component.html',
+  styleUrls: ['./cluster-table.component.scss'],
 })
 
 export class ClusterTableComponent  {
@@ -34,33 +34,41 @@ export class ClusterTableComponent  {
     },
     columns: {
       name: {
-        title: 'Cluster Name',
+        title: 'Name',
         type: 'string',
       },
-      userName: {
-        title: 'Username',
+      type : {
+        title: 'Type',
         type: 'string'
       },
-      egroup: {
-        title: 'E-group',
+      master: {
+        title: 'master-slave',
+        type: 'string'
+      },
+      size: {
+        title: 'Size',
+        type: 'string',
+      },
+      description: {
+        title: 'Description',
         type: 'string'
       },
       category: {
         title: 'Category',
         type: 'string'
       },
-      project: {
-        title: 'Project',
+      port_ssl: {
+        title: 'Port-ssl',
+        type: 'number'
+      },
+      userName: {
+        title: 'superUser',
         type: 'string'
       },
-      description: {
-        title: 'Description',
-        type: 'string'
+      version: {
+        title: 'version',
+        type: 'number'
       },
-      type : {
-        title: 'Type',
-        type: 'string'
-      }
     },
     mode: 'external'
   };

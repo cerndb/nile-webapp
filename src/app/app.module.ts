@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { routing } from './app.routing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // App is our top level component
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { GlobalState } from './global.state';
     FormsModule,
     HttpModule,
     RouterModule,
+    BrowserAnimationsModule,
     PagesModule,
     ElementsModule.forRoot(),
     routing
