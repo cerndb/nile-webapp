@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalState } from '../../../global.state';
 
-import 'style-loader!./content-top.component.scss';
 
 @Component({
   selector: 'nile-content-top',
-  templateUrl: 'content-top.component.html'
+  templateUrl: 'content-top.component.html',
+  styleUrls: ['./content-top.component.scss']
 })
 
 export class ContentTopComponent {

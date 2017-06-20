@@ -1,10 +1,11 @@
 <nile-modal-dialog>
+
   <div app-modal-header>
     <button type="button" class="close" (click)="modal.hide()">&times;</button>
     <h2 #title>Create Cluster</h2>
   </div>
-  <div app-modal-body>
 
+  <div app-modal-body>
     <form #clusterform="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
@@ -12,8 +13,16 @@
       </div>
 
       <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" ngModel name="username" [disabled]="!create"/>
+        <label for="type">Type</label>
+        <select class="form-control" id="type" ngModel name="type" [disabled]="!create">
+          <option value="Kafka">Kafka</option>
+          <option value="Zookeeper">Zookeeper</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="superuser">Superuser</label>
+        <input type="text" class="form-control" id="superuser" ngModel name="superuser" [disabled]="!create"/>
       </div>
 
       <div class="form-group">
@@ -26,13 +35,6 @@
         <input type="text" class="form-control" id="egroup" ngModel name="egroup" [disabled]="!create"/>
       </div>
 
-      <div class="form-group">
-        <label for="type">Type</label>
-        <select class="form-control" id="type" ngModel name="type" [disabled]="!create">
-          <option value="Kafka">Kafka</option>
-          <option value="Zookeeper">Zookeeper</option>
-        </select>
-      </div>
 
       <div class="form-group">
         <label><h3>Attributes</h3></label>
@@ -52,10 +54,11 @@
         </div>
       </div>
     </form>
-
   </div>
+
   <div app-modal-footer>
     <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
     <button type="button" class="btn btn-primary" (click)="createCluster()">Save changes</button>
   </div>
+
 </nile-modal-dialog>

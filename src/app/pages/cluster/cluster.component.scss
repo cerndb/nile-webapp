@@ -1,7 +1,9 @@
-.cluster-container div.action-bar {
+:host /deep/ {
+  .cluster-container div.action-bar {
 
-  button {
-    padding: 10px;
-    margin: 10px 0px 10px 20px;
+    button {
+      padding: 10px;
+      margin: 10px 0px 10px 20px;
+    }
   }
 }

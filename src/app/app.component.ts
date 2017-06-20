@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
+import * as $ from 'jquery';
 
 import { GlobalState } from './global.state';
 
-import 'style-loader!./app.scss';
-import 'style-loader!./theme/initial.scss';
-
 @Component({
   selector: 'nile-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+
 })
 /* TODO: Component with merge the baTheme(preloaders) and the pages */
 export class AppComponent {

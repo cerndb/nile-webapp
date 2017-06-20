@@ -1,193 +1,194 @@
 @import '../../sass/conf/conf';
 
-.page-top {
-//  background-image: linear-gradient(270deg, rgb(60, 166, 212), rgb(49, 151, 201) 51%, rgb(24, 116, 176));;
-  background-color: $sidebar;
-  position: fixed;
-  z-index: 904;
-  box-shadow: 2px 0 3px rgba(0, 0, 0, 0.5);
-  height: $pagetop-height;
-  width: 100%;
-  min-width: $resMin;
-  margin-top: $cerntoolbar-height;
-  padding: 0 32px 0 40px;
+:host /deep/ {
 
-  .dropdown-toggle::after {
-    display: none;
+  .page-top {
+    //  background-image: linear-gradient(270deg, rgb(60, 166, 212), rgb(49, 151, 201) 51%, rgb(24, 116, 176));;
+    background-color: $sidebar;
+    position: fixed;
+    z-index: 904;
+    box-shadow: 2px 0 3px rgba(0, 0, 0, 0.5);
+    height: $pagetop-height;
+    width: 100%;
+    min-width: $resMin;
+    margin-top: $cerntoolbar-height;
+    padding: 0 32px 0 40px;
+
+    .dropdown-toggle::after {
+      display: none;
+    }
   }
-}
 
-a.al-logo {
-  color: $sidebar-text;
-  display: block;
-  font-size: 24px;
-  font-family: $font-family;
-  white-space: nowrap;
-  float: left;
-  outline: none !important;
-  line-height: 60px;
-  text-decoration: none;
-
-  span {
-    color: $primary;
-  }
-}
-
-a.al-logo:hover {
-  color: $primary;
-  text-decoration: none;
-
-}
-
-.user-profile {
-  margin-left: 100px;
-  min-width: 230px;
-  margin-top: 10px;
-}
-
-.al-user-profile {
-  float: right;
-  margin-right: 12px;
-  transition: all .15s ease-in-out;
-  padding-top: 10px;
-  width: 55px;
-  height: 45px;
-  border: 0;
-  opacity: 1;
-  position: relative;
-  a {
+  a.al-logo {
+    color: $sidebar-text;
     display: block;
-    color: $body-bg;
-  }
-}
-
-a.refresh-data {
-  color: $sidebar-text;
-  font-size: 13px;
-  text-decoration: none;
-  font-weight: $font-normal;
-  float: right;
-  margin-top: 13px;
-  margin-right: 26px;
-
-  &:hover {
-    color: $warning !important;
-  }
-}
-
-a.collapse-menu-link {
-  font-size: 31px;
-  display: block;
-  text-decoration: none;
-  line-height: 42px;
-  color: $sidebar-text;
-  padding: 0;
-  float: left;
-  margin: 11px 0 0 25px;
-
-  &:hover {
+    font-size: 24px;
+    font-family: $font-family;
+    white-space: nowrap;
+    float: left;
+    outline: none !important;
+    line-height: 60px;
     text-decoration: none;
-    color: $warning;
-  }
-}
 
-.project-profile {
+    span {
+      color: $primary;
+    }
+  }
+
+  a.al-logo:hover {
+    color: $primary;
+    text-decoration: none;
+
+  }
+
+  .user-profile {
+    margin-left: 100px;
+    min-width: 230px;
+    margin-top: 10px;
+  }
+
+  .al-user-profile {
+    float: right;
+    margin-right: 12px;
+    transition: all .15s ease-in-out;
+    padding-top: 10px;
+    width: 55px;
+    height: 45px;
+    border: 0;
+    opacity: 1;
+    position: relative;
+    a {
+      display: block;
+      color: $body-bg;
+    }
+  }
+
+  a.refresh-data {
+    color: $sidebar-text;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: $font-normal;
+    float: right;
+    margin-top: 13px;
+    margin-right: 26px;
+
+    &:hover {
+      color: $warning !important;
+    }
+  }
+
+  a.collapse-menu-link {
+    font-size: 31px;
+    display: block;
+    text-decoration: none;
+    line-height: 42px;
+    color: $sidebar-text;
+    padding: 0;
+    float: left;
+    margin: 11px 0 0 25px;
+
+    &:hover {
+      text-decoration: none;
+      color: $warning;
+    }
+  }
+
+  .project-profile {
     margin-right: 100px;
     min-width: 230px;
     margin-top: 10px;
-}
-
-.al-project-profile {
-  float: left;
-  margin-left: 42px;
-  transition: all .15s ease-in-out;
-  padding-top: 10px;
-  width: 162px;
-  height: 45px;
-  border: 0;
-  opacity: 1;
-  position: relative;
-  a {
-    display: block;
-    color: $body-bg;
   }
-}
 
-.top-dropdown-menu {
-  font-size: inherit;
-  width: 340px;
-  left: auto;
-  right: -47px;
-  top: 26px;
+  .al-project-profile {
+    float: left;
+    margin-left: 42px;
+    transition: all .15s ease-in-out;
+    padding-top: 10px;
+    width: 162px;
+    height: 45px;
+    border: 0;
+    opacity: 1;
+    position: relative;
+    a {
+      display: block;
+      color: $body-bg;
+    }
+  }
 
-  @include scrollbars(.4em, rgba(0,0,0,0.5), #fff);
-  .header {
-    padding: 10px 12px;
-    border-bottom: 1px solid $default;
-    font-size: 12px;
-    strong {
-      float: left;
-      color: $dropdown-text;
+  .top-dropdown-menu {
+    font-size: inherit;
+    width: 340px;
+    left: auto;
+    right: -47px;
+    top: 26px;
+
+    @include scrollbars(.4em, rgba(0, 0, 0, 0.5), #fff);
+    .header {
+      padding: 10px 12px;
+      border-bottom: 1px solid $default;
+      font-size: 12px;
+      strong {
+        float: left;
+        color: $dropdown-text;
+      }
+      & > a {
+        float: right;
+        margin-left: 12px;
+        text-decoration: none;
+        &:hover {
+          color: $dropdown-text;
+        }
+      }
     }
     & > a {
-      float: right;
-      margin-left: 12px;
+      border-top: 1px solid $default;
+      display: block;
+      text-align: left;
+      padding: 10px;
+      font-size: 12px;
       text-decoration: none;
       &:hover {
         color: $dropdown-text;
       }
     }
-  }
-  & > a {
-    border-top: 1px solid $default;
-    display: block;
-    text-align: left;
-    padding: 10px;
-    font-size: 12px;
-    text-decoration: none;
-    &:hover {
-      color: $dropdown-text;
-    }
-  }
 
-  &.profile-dropdown {
-    width: 190px;
-    top: 55px;
-    right: -25px;
-    a {
-      text-align: left;
-      border: none;
-      text-decoration: none;
-      color: $dropdown-text;
-      padding: 4px 16px 4px 10px;
-      i {
-        margin-right: 10px;
-      }
-      &:hover {
-        background: #f4fcff;
+    &.profile-dropdown {
+      width: 190px;
+      top: 55px;
+      right: -25px;
+      a {
+        text-align: left;
+        border: none;
+        text-decoration: none;
+        color: $dropdown-text;
+        padding: 4px 16px 4px 0px;
+        i {
+          margin-right: 10px;
+        }
+        &:hover {
+          background: #f4fcff;
+        }
       }
     }
+
+  }
+
+  @media screen and (max-width: $resS) {
+    .al-user-profile {
+      display: none;
+    }
+    .project-profile {
+      min-width: 162px;
+      margin-right: 0px;
+    }
+
+  }
+
+  @media (max-width: $resXS) {
+    .project-profile {
+      display: none;
+    }
+
   }
 
 }
-
-
-@media screen and (max-width: $resS) {
-  .al-user-profile {
-    display: none;
-  }
-  .project-profile {
-    min-width: 162px;
-    margin-right: 0px;
-  }
-
-}
-
-
-@media (max-width: $resXS) {
-  .project-profile {
-    display: none;
-  }
-
-}
-

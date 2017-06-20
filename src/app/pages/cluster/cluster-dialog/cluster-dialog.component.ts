@@ -2,11 +2,11 @@ import {Component, ContentChild, ElementRef, Inject, OnInit, ViewChild} from '@a
 import { ModalDialogComponent } from '../../../theme/elements/modal-dialog';
 import { NgForm } from '@angular/forms';
 
-import 'style-loader!./cluster-dialog.component.scss';
-
 @Component({
   selector: 'nile-cluster-dialog',
-  templateUrl: './cluster-dialog.component.html'
+  templateUrl: './cluster-dialog.component.html',
+  styleUrls: ['./cluster-dialog.component.scss'],
+
 })
 export class ClusterDialogComponent implements OnInit {
 
@@ -39,7 +39,7 @@ export class ClusterDialogComponent implements OnInit {
     this.clusterForm.form.patchValue(
       {
         name: data.name,
-        username: data.userName,
+        superuser: data.superuser,
         description: data.description,
         egroup: data.egroup,
         type: data.type,

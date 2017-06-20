@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
-import 'style-loader!./modal-dialog.component.scss';
-
 @Component({
   selector: 'nile-modal-dialog',
-  templateUrl: './modal-dialog.component.html'
+  templateUrl: './modal-dialog.component.html',
+  styleUrls: ['./modal-dialog.component.scss']
 })
 
 export class ModalDialogComponent  {

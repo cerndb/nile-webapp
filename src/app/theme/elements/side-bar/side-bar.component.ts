@@ -2,11 +2,10 @@ import {Component, ElementRef, HostListener, OnInit, AfterViewInit} from '@angul
 import {layoutSizes} from '../../theme.constants';
 import {GlobalState} from '../../../global.state';
 
-import 'style-loader!./side-bar.component.scss';
-
 @Component({
   selector: 'nile-side-bar',
-  templateUrl: 'side-bar.component.html'
+  templateUrl: 'side-bar.component.html',
+  styleUrls: ['./side-bar.component.scss'],
 })
 
 export class SideBarComponent implements OnInit, AfterViewInit {

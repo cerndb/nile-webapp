@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
-import 'style-loader!./cern-toolbar.component.scss';
-
 @Component({
   selector: 'nile-cern-toolbar',
-  templateUrl: './cern-toolbar.component.html'
+  templateUrl: './cern-toolbar.component.html',
+  styleUrls: ['./cern-toolbar.component.scss']
 })
 
 export class CernToolbarComponent {

@@ -18,3 +18,7 @@ Then, to run the project, use `npm start` for a dev server. Navigate to `http://
 In case of using Unix, the loading can get stuck, if so, try `UV_THREADPOOL_SIZE=64 npm start`
 
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Based on
+
+This project is based on the admin template made by [Akveo team](https://github.com/akveo/ng2-admin).
