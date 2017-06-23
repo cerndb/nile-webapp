@@ -13,6 +13,16 @@ import { PagesModule } from './pages/pages.module';
 import { ElementsModule } from './theme/theme.module';
 import { GlobalState } from './global.state';
 
+import { ApiModule }  from './api/api.module';
+import { Configuration } from './api/configuration';
+
+
+
+export function apiConfig() {
+  return new Configuration({
+    basePath: 'https://localhost:8080',
+  });
+}
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -28,7 +38,7 @@ import { GlobalState } from './global.state';
     routing
   ],
   providers: [
-    GlobalState
+    GlobalState,
   ]
 })
 export class AppModule { }

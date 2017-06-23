@@ -39,9 +39,9 @@ export class ClusterDialogComponent implements OnInit {
     this.clusterForm.form.patchValue(
       {
         name: data.name,
-        superuser: data.superuser,
+        superuser: data.username,
         description: data.description,
-        egroup: data.egroup,
+        egroup: data.e_group,
         type: data.type,
         retention: data.log_retention_hours,
         replication: data.replication_factor,

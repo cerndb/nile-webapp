@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { ClusterTableService } from './cluster-table.service';
 import { LocalDataSource } from 'ng2-smart-table';
 import { ClusterDialogComponent } from '../cluster-dialog/cluster-dialog.component';
+import { ClusterEntity } from '../../../api/model/clusterEntity';
 
 
 @Component({
@@ -14,6 +15,8 @@ export class ClusterTableComponent  {
 
   @ViewChild(ClusterDialogComponent)
   public readonly dialog: ClusterDialogComponent;
+
+  clusterList: ClusterEntity[];
 
   query: string = '';
 
@@ -41,9 +44,9 @@ export class ClusterTableComponent  {
         title: 'Type',
         type: 'string'
       },
-      master: {
+      master_cluster_id: {
         title: 'master-slave',
-        type: 'string'
+        type: 'number'
       },
       size: {
         title: 'Size',
@@ -53,15 +56,15 @@ export class ClusterTableComponent  {
         title: 'Description',
         type: 'string',
       },
-      category: {
+      class: {
         title: 'Category',
         type: 'string'
       },
-      port_ssl: {
-        title: 'Port-ssl',
+      port: {
+        title: 'Port',
         type: 'number'
       },
-      superuser: {
+      username: {
         title: 'Superuser',
         type: 'string'
       },
@@ -69,15 +72,27 @@ export class ClusterTableComponent  {
         title: 'Version',
         type: 'number'
       },
+      status: {
+        title: 'Status',
+        type: 'string'
+      }
     },
     mode: 'external'
   };
   source: LocalDataSource = new LocalDataSource();
 
   constructor(protected service: ClusterTableService) {
-    this.service.getData().then((data) => {
-      this.source.load(data);
-    });
+    this.service.getClusterList()
+      .subscribe(
+        (data) => {
+          this.clusterList = data;
+          var str = JSON.stringify(this.clusterList);
+          console.log(str);
+          this.source.load(this.clusterList);
+        },
+        (err) => console.log(err)
+
+      );
   }
 
   // the idea will be to have an explandable with all the instances according to the cluster Selected

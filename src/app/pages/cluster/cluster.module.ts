@@ -8,27 +8,30 @@ import { FormsModule } from '@angular/forms';
 import { ClusterComponent } from './cluster.component';
 import { ClusterTableComponent } from './cluster-table/cluster-table.component';
 import { ClusterTableService } from './cluster-table/cluster-table.service';
-import { ClusterFormComponent } from './cluster-form/cluster-form.component';
 import { ClusterDialogComponent } from './cluster-dialog/cluster-dialog.component';
+
+import { ClustersService } from '../../api/api/clusters.service';
+import { ApiModule }  from '../../api/api.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
     Ng2SmartTableModule,
     FormsModule,
-    ElementsModule
+    ElementsModule,
+    ApiModule
   ],
   declarations: [
     ClusterTableComponent,
-    ClusterFormComponent,
     ClusterComponent,
     ClusterDialogComponent
   ],
   providers: [
-    ClusterTableService
+    ClusterTableService,
+    ClustersService
   ]
 })
 
 export class ClusterModule { }
 
-/** TODO: Here it will be added ADD INSTANCES, REQUEST CLUSTER */
