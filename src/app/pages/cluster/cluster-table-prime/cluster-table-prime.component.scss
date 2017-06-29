@@ -1,0 +1,134 @@
+@import "../../../theme/sass/conf/conf";
+
+:host /deep/ {
+  p-dataTable {
+    th, td {
+      border: 1px solid $border-light !important;
+      line-height: 35px;
+      vertical-align: middle;
+      font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+
+    table th {
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+      text-align:center;
+      font-style: normal;
+      padding: .5rem 1rem;
+    }
+
+    table tr td {
+      padding: 0 8px;
+    }
+
+    color: $default-text;
+
+    input {
+      line-height: 1.5 !important;
+    }
+
+    table td {
+      color: $default-text;
+      line-height: 35px;
+    }
+
+    tbody {
+      tr {
+        color: $default-text;
+      }
+      tr:hover {
+        background: rgba(0, 0, 0, 0.03);
+      }
+    }
+
+    .col-icon {
+      width: 55px;
+      vertical-align:middle;
+    }
+
+    .ui-column-filter {
+      width: 100%;
+      line-height: normal;
+      padding: .375rem .75rem;
+      font-weight: 400;
+      border-radius: 0.25rem;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      vertical-align: bottom;
+    }
+
+    p-paginator {
+      font-size: 14px;
+      line-height: 16px;
+      font-family: Roboto, sans-serif;
+      font-size: .875rem;
+
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.25rem;
+
+      justify-content: center;
+      display: flex;
+      padding: 0;
+
+      .ui-paginator-element {
+        padding: 0.30rem 0.75rem;
+        color: #337bb3;
+        background-color: #fff;
+        border-color: #ddd;
+        border: 1px solid #ddd;
+
+        position: relative;
+        float: left;
+        margin-left: -1px;
+        text-decoration: none;
+      }
+
+      .ui-paginator-element:hover {
+          color: #014c8c;
+          background-color: #eceeef;
+          border-color: #ddd;
+      }
+
+      a.ui-state-disabled {
+        color: #818a91;
+        pointer-events: none;
+        cursor: not-allowed;
+        background-color: #fff;
+        border-color: #ddd;
+      }
+
+      a.ui-state-active {
+        z-index: 2;
+        color: #fff;
+        cursor: default;
+        background-color: #0275d8;
+        border-color: #0275d8;
+      }
+
+      a.ui-paginator-first {
+        margin-left: 0;
+        border-bottom-left-radius: 0.25rem;
+        border-top-left-radius: 0.25rem;
+      }
+
+      a.ui-paginator-last {
+        border-bottom-right-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+      }
+
+      .ui-paginator-rpp-options {
+        margin-left: 5px;
+        border-width: 4px;
+        border-color: rgba(50, 50, 50, 0.14);
+      }
+
+    }
+
+  }
+  .paginator-total {
+    color:red;
+    display: flex;
+
+  }
+
+}
+

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { DataTableModule,SharedModule } from 'primeng/primeng';
 
 import { ElementsModule } from '../../theme/theme.module';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +14,9 @@ import { ClusterDialogComponent } from './cluster-dialog/cluster-dialog.componen
 import { ClustersService } from '../../api/api/clusters.service';
 import { ApiModule }  from '../../api/api.module';
 
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ClusterTablePrimeComponent } from './cluster-table-prime/cluster-table-prime.component';
+
 
 @NgModule({
   imports: [
@@ -20,12 +24,16 @@ import { ApiModule }  from '../../api/api.module';
     Ng2SmartTableModule,
     FormsModule,
     ElementsModule,
-    ApiModule
+    ApiModule,
+    DataTableModule,
+    SharedModule,
+    PaginationModule.forRoot()
   ],
   declarations: [
     ClusterTableComponent,
     ClusterComponent,
-    ClusterDialogComponent
+    ClusterDialogComponent,
+    ClusterTablePrimeComponent
   ],
   providers: [
     ClusterTableService,
