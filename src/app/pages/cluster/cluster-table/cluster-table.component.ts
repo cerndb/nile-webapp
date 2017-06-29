@@ -60,9 +60,9 @@ export class ClusterTableComponent  {
         title: 'Category',
         type: 'string'
       },
-      port: {
+      attributes: {
         title: 'Port',
-        type: 'number'
+        type: 'string'
       },
       username: {
         title: 'Superuser',
@@ -87,7 +87,7 @@ export class ClusterTableComponent  {
         (data) => {
           this.clusterList = data;
           var str = JSON.stringify(this.clusterList);
-          console.log(str);
+          console.log(this.clusterList[0].attributes.port);
           this.source.load(this.clusterList);
         },
         (err) => console.log(err)
