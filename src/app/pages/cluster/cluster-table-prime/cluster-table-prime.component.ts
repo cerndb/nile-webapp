@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ClusterEntity } from '../../../api/model/clusterEntity';
 import { ClusterTableService } from '../cluster-table/cluster-table.service';
 import { ClusterDialogComponent } from '../cluster-dialog/cluster-dialog.component';
@@ -9,7 +9,7 @@ import { ClusterDialogComponent } from '../cluster-dialog/cluster-dialog.compone
   templateUrl: './cluster-table-prime.component.html',
   styleUrls: ['./cluster-table-prime.component.scss']
 })
-export class ClusterTablePrimeComponent implements OnInit {
+export class ClusterTablePrimeComponent {
 
   @ViewChild(ClusterDialogComponent)
   public readonly dialog: ClusterDialogComponent;
@@ -38,16 +38,10 @@ export class ClusterTablePrimeComponent implements OnInit {
           this.clusterList = data;
           var str = JSON.stringify(this.clusterList);
           this.numberCluster = this.clusterList.length;
-          console.log(this.numberCluster);
           console.log(this.clusterList);
         },
         (err) => console.log(err)
-
       );
-  }
-
-
-  ngOnInit() {
   }
 
 

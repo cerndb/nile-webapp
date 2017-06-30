@@ -31,10 +31,11 @@
       </div>
 
       <div class="form-group">
-        <label for="e-group">Egroup</label>
-        <input type="text" class="form-control" id="e-group" ngModel name="egroup" [disabled]="!create"/>
+        <label for="category">Category</label>
+        <select class="form-control" id="category" ngModel name="category" [disabled]="!create">
+          <option *ngFor="let cat of categories">{{cat}}</option>
+        </select>
       </div>
-
 
       <div class="form-group">
         <label><h3>Attributes</h3></label>

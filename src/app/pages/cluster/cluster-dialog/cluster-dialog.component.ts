@@ -1,6 +1,7 @@
 import {Component, ContentChild, ElementRef, Inject, OnInit, ViewChild} from '@angular/core';
 import { ModalDialogComponent } from '../../../theme/elements/modal-dialog';
 import { NgForm } from '@angular/forms';
+import { ClusterEntity } from "../../../api/model/clusterEntity";
 
 @Component({
   selector: 'nile-cluster-dialog',
@@ -19,33 +20,45 @@ export class ClusterDialogComponent implements OnInit {
   @ViewChild('title')
   private title: ElementRef;
 
+  private readonly categories;
+
   // Use to disabled HTML tags
   public create: boolean = true;
 
-  constructor() { }
+  constructor() {
+    this.categories = Object.keys(ClusterEntity.ModelClassEnum);
+  }
 
   ngOnInit() {
   }
 
   createCluster() {
-    console.log('save create cluster clicked!');
+    //create or edit the cluster
+    if(this.create){
+      console.log('created cluster');
+    }
+    else {
+      console.log('edit cluster');
+    }
     this.modal.hide();
+
   }
 
-  public fillData(data): void {
+  public fillData(data:ClusterEntity): void {
     this.create = false;
     this.title.nativeElement.textContent = 'Edit Cluster';
     console.log(data);
+
     this.clusterForm.form.patchValue(
       {
         name: data.name,
         superuser: data.username,
         description: data.description,
-        egroup: data.e_group,
+        category: data.class,
         type: data.type,
-        retention: data.log_retention_hours,
-        replication: data.replication_factor,
-        partitions: data.partitions_number
+  //      retention: data.log_retention_hours,
+  //      replication: data.replication_factor,
+  //      partitions: data.partitions_number
       });
     this.modal.show();
   }
