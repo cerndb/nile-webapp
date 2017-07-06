@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { ModalDialogComponent } from '../../theme/elements/modal-dialog';
-import {ClusterDialogComponent} from './cluster-dialog/cluster-dialog.component';
+import {ClusterWizardComponent} from "./cluster-wizard/cluster-wizard.component";
 
 
 @Component({
@@ -12,8 +11,8 @@ import {ClusterDialogComponent} from './cluster-dialog/cluster-dialog.component'
 
 export class ClusterComponent  {
 
-  @ViewChild(ClusterDialogComponent)
-  public readonly dialog: ClusterDialogComponent;
+  @ViewChild(ClusterWizardComponent)
+  public readonly wizard: ClusterWizardComponent;
 
   constructor() { }
 

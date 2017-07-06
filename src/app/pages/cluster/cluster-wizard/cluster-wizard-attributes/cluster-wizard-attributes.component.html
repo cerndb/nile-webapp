@@ -1,0 +1,28 @@
+<form #attributesForm="ngForm">
+
+  <div class="form-group">
+    <label for="zk_root">Zk root</label>
+    <input type="text" class="form-control" id="zk_root" ngModel name="zk_root" />
+  </div>
+
+  <div class="form-group">
+    <label for="port">Port ssl</label>
+    <input type="text" class="form-control" id="port" ngModel name="port" />
+  </div>
+
+  <div class="form-group">
+    <label for="replication_factor">Replication Factor</label>
+    <input type="text" class="form-control" id="replication_factor" ngModel name="replication_factor" />
+  </div>
+
+  <div class="form-group">
+    <label for="retention">Log Retention hours</label>
+    <input type="number" class="form-control" id="retention" ngModel name="retention"/>
+  </div>
+
+  <div class="form-group">
+    <label for="partitions">Partitions Number</label>
+    <input type="number" class="form-control" id="partitions" ngModel name="partitions"/>
+  </div>
+
+</form>

@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { ClusterEntity } from '../../../api/model/clusterEntity';
 import { ClusterTableService } from '../cluster-table/cluster-table.service';
 import { ClusterDialogComponent } from '../cluster-dialog/cluster-dialog.component';
+import { ClusterWizardComponent } from '../cluster-wizard/cluster-wizard.component';
 
 
 @Component({
@@ -11,8 +12,8 @@ import { ClusterDialogComponent } from '../cluster-dialog/cluster-dialog.compone
 })
 export class ClusterTablePrimeComponent {
 
-  @ViewChild(ClusterDialogComponent)
-  public readonly dialog: ClusterDialogComponent;
+  @ViewChild(ClusterWizardComponent)
+  public readonly dialog: ClusterWizardComponent;
 
   clusterList: ClusterEntity[];
 

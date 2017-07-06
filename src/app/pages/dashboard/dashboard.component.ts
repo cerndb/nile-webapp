@@ -1,5 +1,5 @@
-import {AfterViewInit, Component} from '@angular/core';
-import {DashboardService} from './dashboard.service';
+import { AfterViewInit, Component } from '@angular/core';
+import { DashboardService } from './dashboard.service';
 
 @Component({
   selector: 'nile-dashboard',

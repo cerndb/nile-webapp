@@ -17,6 +17,11 @@ import { ApiModule }  from '../../api/api.module';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ClusterTablePrimeComponent } from './cluster-table-prime/cluster-table-prime.component';
 
+import { ClusterWizardComponent } from './cluster-wizard/cluster-wizard.component';
+import { ClusterWizardInfoComponent } from './cluster-wizard/cluster-wizard-info/cluster-wizard-info.component';
+import { ClusterWizardSizeComponent } from './cluster-wizard/cluster-wizard-size/cluster-wizard-size.component';
+import { ClusterWizardAttributesComponent } from './cluster-wizard/cluster-wizard-attributes/cluster-wizard-attributes.component';
+import { ClusterWizardModule } from './cluster-wizard/cluster-wizard.module';
 
 @NgModule({
   imports: [
@@ -24,6 +29,7 @@ import { ClusterTablePrimeComponent } from './cluster-table-prime/cluster-table-
     Ng2SmartTableModule,
     FormsModule,
     ElementsModule,
+    ClusterWizardModule,
     ApiModule,
     DataTableModule,
     SharedModule,

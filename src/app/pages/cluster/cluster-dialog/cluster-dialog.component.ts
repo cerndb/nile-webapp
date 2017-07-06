@@ -39,6 +39,7 @@ export class ClusterDialogComponent implements OnInit {
     }
     else {
       console.log('edit cluster');
+
     }
     this.modal.hide();
 
@@ -56,9 +57,6 @@ export class ClusterDialogComponent implements OnInit {
         description: data.description,
         category: data.class,
         type: data.type,
-  //      retention: data.log_retention_hours,
-  //      replication: data.replication_factor,
-  //      partitions: data.partitions_number
       });
     this.modal.show();
   }
