@@ -1,0 +1,17 @@
+.nav {
+  display: block !important;
+  padding: 0;
+   li > a {
+    position: relative;
+    display: block;
+    padding: 15px 22px 15px 22px;
+  }
+}
+
+.item-active {
+//  background-color: #0053A1;
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
