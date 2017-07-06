@@ -27,7 +27,7 @@
 
   <div app-modal-footer>
     <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
-    <button type="button" class="btn btn-primary" (click)="createOrSaveCluster()">Save changes</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!isValidForm()" (click)="createOrSaveCluster()">Save changes</button>
   </div>
 
 </nile-modal-dialog>

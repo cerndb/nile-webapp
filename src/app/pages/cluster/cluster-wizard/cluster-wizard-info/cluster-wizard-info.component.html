@@ -1,12 +1,12 @@
 <form #infoForm="ngForm">
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" ngModel name="name" [disabled]="!create"/>
+    <input type="text" class="form-control" id="name" ngModel name="name" [disabled]="!create" required/>
   </div>
 
   <div class="form-group">
     <label for="type">Type</label>
-    <select class="form-control" id="type" ngModel name="type" [disabled]="!create">
+    <select class="form-control" id="type" ngModel name="type" [disabled]="!create" required>
       <option value="KAFKA">Kafka</option>
       <option value="ZOOKEEPER">Zookeeper</option>
     </select>
@@ -14,17 +14,17 @@
 
   <div class="form-group">
     <label for="superuser">Owner</label>
-    <input type="text" class="form-control" id="superuser" ngModel name="superuser" [disabled]="!create"/>
+    <input type="text" class="form-control" id="superuser" ngModel name="superuser" [disabled]="!create" required/>
   </div>
 
   <div class="form-group">
     <label for="description">Description</label>
-    <input type="text" class="form-control" id="description" ngModel name="description" [disabled]="!create"/>
+    <input type="text" class="form-control" id="description" ngModel name="description" [disabled]="!create" required/>
   </div>
 
   <div class="form-group">
     <label for="category">Category</label>
-    <select class="form-control" id="category" ngModel name="category" [disabled]="!create">
+    <select class="form-control" id="category" ngModel name="category" [disabled]="!create" required>
       <option *ngFor="let cat of categories">{{cat}}</option>
     </select>
   </div>

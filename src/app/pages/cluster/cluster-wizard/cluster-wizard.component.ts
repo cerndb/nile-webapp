@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import {Component, ViewChild, ElementRef, OnInit} from '@angular/core';
 import { ClusterEntity } from '../../../api/model/clusterEntity';
 import { ModalDialogComponent}  from '../../../theme/elements/modal-dialog/modal-dialog.component';
 import { ClusterWizardInfoComponent } from './cluster-wizard-info/cluster-wizard-info.component';
@@ -31,9 +31,14 @@ export class ClusterWizardComponent {
   constructor() {
   }
 
+  isValidForm(): boolean {
+    return this.infoComponent.infoForm.valid;
+  }
+
 
   createOrSaveCluster(): void {
     //create or edit the cluster
+    console.log(this.infoComponent.infoForm.form.value);
     if(this.infoComponent.create){
       console.log('created cluster');
     }
@@ -42,11 +47,11 @@ export class ClusterWizardComponent {
 
     }
     this.modal.hide();
-
   }
 
   public fillData(data:ClusterEntity): void {
     this.infoComponent.create = false;
+    this.sizeComponent.create = false;
     this.sizeComponent.create = false;
 
     this.title.nativeElement.textContent = 'Edit Cluster';
@@ -68,7 +73,17 @@ export class ClusterWizardComponent {
     this.modal.show();
   }
 
+  public resetForm(): void {
+    this.infoComponent.infoForm.form.reset();
+    this.sizeComponent.sizeForm.form.reset();
+    this.attributesComponent.attributesForm.form.reset();
+  }
+
   public show(): void {
+    //in case there was something written before
+    if(this.infoComponent.create) {
+      this.resetForm();
+    }
     this.modal.show();
   }
 }
