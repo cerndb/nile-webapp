@@ -23,6 +23,7 @@ export class ClusterWizardMenuComponent implements AfterContentInit {
     if(activeTabs.length === 0) {
       this.selectTab(this.tabs.first);
     }
+
   }
 
   selectTab(tab: ClusterWizardMenuTabComponent){
@@ -31,6 +32,10 @@ export class ClusterWizardMenuComponent implements AfterContentInit {
 
     // activate the tab the user has clicked on.
     tab.active = true;
+  }
+
+  selectFirstTab(): void {
+    this.selectTab(this.tabs.first);
   }
 }
 

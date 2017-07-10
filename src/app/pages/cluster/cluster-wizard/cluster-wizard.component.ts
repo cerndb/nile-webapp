@@ -4,6 +4,7 @@ import { ModalDialogComponent}  from '../../../theme/elements/modal-dialog/modal
 import { ClusterWizardInfoComponent } from './cluster-wizard-info/cluster-wizard-info.component';
 import { ClusterWizardTypeComponent } from './cluster-wizard-type/cluster-wizard-type.component';
 import { ClusterWizardAttributesComponent } from './cluster-wizard-attributes/cluster-wizard-attributes.component';
+import {ClusterWizardMenuComponent} from "./cluster-wizard-menu/cluster-wizard-menu.component";
 
 @Component({
   selector: 'nile-cluster-wizard',
@@ -26,6 +27,9 @@ export class ClusterWizardComponent {
 
   @ViewChild('title')
   private title: ElementRef;
+
+  @ViewChild(ClusterWizardMenuComponent)
+  private menuComponent: ClusterWizardMenuComponent;
 
   constructor() {
   }
@@ -69,7 +73,7 @@ export class ClusterWizardComponent {
         type: data.type,
       }
     );
-    this.modal.show();
+    this.show();
   }
 
   public resetForm(): void {
@@ -84,6 +88,7 @@ export class ClusterWizardComponent {
     if(this.infoComponent.create) {
       this.resetForm();
     }
+    this.menuComponent.selectFirstTab();
     this.modal.show();
   }
 
