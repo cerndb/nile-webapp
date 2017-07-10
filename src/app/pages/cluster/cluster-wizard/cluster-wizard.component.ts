@@ -27,12 +27,11 @@ export class ClusterWizardComponent {
   @ViewChild('title')
   private title: ElementRef;
 
-
   constructor() {
   }
 
   isValidForm(): boolean {
-    return this.infoComponent.infoForm.valid;
+    return this.infoComponent.infoForm.valid || !this.infoComponent.create;
   }
 
 
