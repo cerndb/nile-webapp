@@ -73,9 +73,10 @@ export class ClusterWizardComponent {
   }
 
   public resetForm(): void {
+    //to be called when create cluster has been clicked
     this.infoComponent.infoForm.form.reset();
     this.typeComponent.typeForm.form.reset();
-    this.attributesComponent.attributesForm.form.reset();
+    this.attributesComponent.resetDefaultValues();
   }
 
   public show(): void {
@@ -84,5 +85,13 @@ export class ClusterWizardComponent {
       this.resetForm();
     }
     this.modal.show();
+  }
+
+  public validate(): boolean {
+    //num.partitions and replication factor < number of brokers
+    //name is zk or kafka and alphanumeric
+    //valid inputs:numbers or texts?
+
+    return true;
   }
 }

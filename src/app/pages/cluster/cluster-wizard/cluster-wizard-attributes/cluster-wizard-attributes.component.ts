@@ -14,9 +14,22 @@ export class ClusterWizardAttributesComponent implements OnInit {
   // Use to disabled HTML tags
   public create: boolean = true;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  public resetDefaultValues(): void {
+
+    this.attributesForm.form.patchValue(
+      {
+        zk_chroot: "/kafka",
+        port: "9093",
+        replication_factor: "3",
+        retention: "120",
+        partitions: "3",
+      });
   }
 
 }
