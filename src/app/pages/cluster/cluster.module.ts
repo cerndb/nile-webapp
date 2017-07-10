@@ -19,7 +19,7 @@ import { ClusterTablePrimeComponent } from './cluster-table-prime/cluster-table-
 
 import { ClusterWizardComponent } from './cluster-wizard/cluster-wizard.component';
 import { ClusterWizardInfoComponent } from './cluster-wizard/cluster-wizard-info/cluster-wizard-info.component';
-import { ClusterWizardSizeComponent } from './cluster-wizard/cluster-wizard-size/cluster-wizard-size.component';
+import { ClusterWizardTypeComponent } from './cluster-wizard/cluster-wizard-type/cluster-wizard-type.component';
 import { ClusterWizardAttributesComponent } from './cluster-wizard/cluster-wizard-attributes/cluster-wizard-attributes.component';
 import { ClusterWizardModule } from './cluster-wizard/cluster-wizard.module';
 

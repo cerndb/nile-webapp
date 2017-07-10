@@ -8,7 +8,7 @@ import { BrowserModule }      from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { ClusterWizardInfoComponent } from './cluster-wizard-info/cluster-wizard-info.component';
-import { ClusterWizardSizeComponent } from './cluster-wizard-size/cluster-wizard-size.component';
+import { ClusterWizardTypeComponent } from './cluster-wizard-type/cluster-wizard-type.component';
 import { ClusterWizardAttributesComponent } from './cluster-wizard-attributes/cluster-wizard-attributes.component';
 import { ClusterWizardMenuComponent } from './cluster-wizard-menu/cluster-wizard-menu.component';
 import { ClusterWizardComponent } from './cluster-wizard.component';
@@ -26,7 +26,7 @@ import { ClusterWizardMenuTabComponent } from './cluster-wizard-menu/cluster-wiz
   declarations: [
     ClusterWizardComponent,
     ClusterWizardInfoComponent,
-    ClusterWizardSizeComponent,
+    ClusterWizardTypeComponent,
     ClusterWizardAttributesComponent,
     ClusterWizardMenuComponent,
     ClusterWizardMenuTabComponent

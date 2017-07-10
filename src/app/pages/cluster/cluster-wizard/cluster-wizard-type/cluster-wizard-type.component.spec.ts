@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClusterWizardSizeComponent } from './cluster-wizard-size.component';
+import { ClusterWizardTypeComponent } from './cluster-wizard-type.component';
 
-describe('ClusterWizardSizeComponent', () => {
-  let component: ClusterWizardSizeComponent;
-  let fixture: ComponentFixture<ClusterWizardSizeComponent>;
+describe('ClusterWizardTypeComponent', () => {
+  let component: ClusterWizardTypeComponent;
+  let fixture: ComponentFixture<ClusterWizardTypeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ClusterWizardSizeComponent ]
+      declarations: [ ClusterWizardTypeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ClusterWizardSizeComponent);
+    fixture = TestBed.createComponent(ClusterWizardTypeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

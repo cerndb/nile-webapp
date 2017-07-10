@@ -2,7 +2,7 @@ import {Component, ViewChild, ElementRef, OnInit} from '@angular/core';
 import { ClusterEntity } from '../../../api/model/clusterEntity';
 import { ModalDialogComponent}  from '../../../theme/elements/modal-dialog/modal-dialog.component';
 import { ClusterWizardInfoComponent } from './cluster-wizard-info/cluster-wizard-info.component';
-import { ClusterWizardSizeComponent } from './cluster-wizard-size/cluster-wizard-size.component';
+import { ClusterWizardTypeComponent } from './cluster-wizard-type/cluster-wizard-type.component';
 import { ClusterWizardAttributesComponent } from './cluster-wizard-attributes/cluster-wizard-attributes.component';
 
 @Component({
@@ -18,8 +18,8 @@ export class ClusterWizardComponent {
   @ViewChild(ClusterWizardInfoComponent)
   private infoComponent: ClusterWizardInfoComponent;
 
-  @ViewChild(ClusterWizardSizeComponent)
-  private sizeComponent: ClusterWizardSizeComponent;
+  @ViewChild(ClusterWizardTypeComponent)
+  private typeComponent: ClusterWizardTypeComponent;
 
   @ViewChild(ClusterWizardAttributesComponent)
   private attributesComponent: ClusterWizardAttributesComponent;
@@ -50,8 +50,8 @@ export class ClusterWizardComponent {
 
   public fillData(data:ClusterEntity): void {
     this.infoComponent.create = false;
-    this.sizeComponent.create = false;
-    this.sizeComponent.create = false;
+    this.typeComponent.create = false;
+    this.attributesComponent.create = false;
 
     this.title.nativeElement.textContent = 'Edit Cluster';
     console.log(data);
@@ -62,11 +62,11 @@ export class ClusterWizardComponent {
         superuser: data.username,
         description: data.description,
         category: data.class,
-        type: data.type,
       });
 
-    this.sizeComponent.sizeForm.form.patchValue(
+    this.typeComponent.typeForm.form.patchValue(
       {
+        type: data.type,
       }
     );
     this.modal.show();
@@ -74,7 +74,7 @@ export class ClusterWizardComponent {
 
   public resetForm(): void {
     this.infoComponent.infoForm.form.reset();
-    this.sizeComponent.sizeForm.form.reset();
+    this.typeComponent.typeForm.form.reset();
     this.attributesComponent.attributesForm.form.reset();
   }
 

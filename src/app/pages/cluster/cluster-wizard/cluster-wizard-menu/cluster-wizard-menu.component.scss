@@ -1,10 +1,12 @@
 .nav {
   display: block !important;
   padding: 0;
-   li > a {
-    position: relative;
-    display: block;
-    padding: 15px 22px 15px 22px;
+  cursor: pointer;
+
+  li > a {
+     position: relative;
+     display: block;
+     padding: 15px 22px 15px 22px;
   }
 }
 
