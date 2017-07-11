@@ -28,20 +28,42 @@ export class ClusterWizardComponent {
   @ViewChild('title')
   private title: ElementRef;
 
+  @ViewChild('error')
+  private error:ElementRef;
+
   @ViewChild(ClusterWizardMenuComponent)
   private menuComponent: ClusterWizardMenuComponent;
+
+  private errorMessage: string = '';
 
   constructor() {
   }
 
   isValidForm(): boolean {
-    return this.infoComponent.infoForm.valid || !this.infoComponent.create;
+    //For edit form the disabled inputs should not be taken into account since they won't be valid
+    if(this.infoComponent.create){
+      return this.infoComponent.infoForm.valid
+        && this.typeComponent.typeForm.form.valid
+        && this.attributesComponent.attributesForm.valid;
+    }
+    else {
+      return this.typeComponent.typeForm.form.valid
+        && this.attributesComponent.attributesForm.valid;
+    }
   }
 
 
   createOrSaveCluster(): void {
     //create or edit the cluster
     console.log(this.infoComponent.infoForm.form.value);
+    console.log(this.typeComponent.typeForm.form.value);
+    console.log(this.attributesComponent.attributesForm.form.value);
+
+    if(!this.validate()) {
+      this.error.nativeElement.textContent = this.errorMessage;
+      return;
+    }
+
     if(this.infoComponent.create){
       console.log('created cluster');
     }
@@ -71,15 +93,27 @@ export class ClusterWizardComponent {
     this.typeComponent.typeForm.form.patchValue(
       {
         type: data.type,
+        num_brokers: data.hosts.length,
       }
     );
+
+    this.attributesComponent.attributesForm.form.patchValue(
+      {
+        zk_chroot: data.attributes.zk_chroot,
+        port: data.attributes.port_ssl,
+        replication_factor: data.attributes['default.replication.factor'],
+        retention: data.attributes['log.retention.hours'],
+        partitions: data.attributes['num.partitions'],
+      }
+    );
+
     this.show();
   }
 
   public resetForm(): void {
-    //to be called when create cluster has been clicked
-    this.infoComponent.infoForm.form.reset();
-    this.typeComponent.typeForm.form.reset();
+    //to be called when create cluster button has been clicked
+    this.infoComponent.infoForm.reset();
+    this.typeComponent.typeForm.reset();
     this.attributesComponent.resetDefaultValues();
   }
 
@@ -89,13 +123,33 @@ export class ClusterWizardComponent {
       this.resetForm();
     }
     this.menuComponent.selectFirstTab();
+    this.errorMessage = '';
     this.modal.show();
   }
 
   public validate(): boolean {
-    //num.partitions and replication factor < number of brokers
-    //name is zk or kafka and alphanumeric
-    //valid inputs:numbers or texts?
+    
+    if(this.typeComponent.typeForm.form.get('type').value  === 'KAFKA'
+      && !this.infoComponent.infoForm.form.get('name').value.startsWith('kafka-')) {
+        this.errorMessage = 'Kafka cluster name should start with \'kafka-\'.';
+        return false;
+    }
+    else if(this.typeComponent.typeForm.form.get('type').value  === 'ZOOKEEPER'
+      && !this.infoComponent.infoForm.form.get('name').value.startsWith('zk-')) {
+      this.errorMessage = 'Zookeeper cluster name should start with \'zk-\'.';
+      return false;
+    }
+    else if(this.attributesComponent.attributesForm.form.get('partitions').value
+        > this.typeComponent.typeForm.form.get('num_brokers').value){
+      this.errorMessage = 'Number of partitions is bigger than number of brokers.';
+        return false;
+    }
+    else if(this.attributesComponent.attributesForm.form.get('replication_factor').value
+              > this.typeComponent.typeForm.form.get('num_brokers').value ){
+      this.errorMessage = 'Replication factor is bigger than number of brokers.';
+
+        return false
+    }
 
     return true;
   }

@@ -24,7 +24,7 @@ export class ClusterTablePrimeComponent {
     {field: 'master_cluster_id', header: 'Master/Slave'},
     {field: 'description', header: 'Description'},
     {field: 'class', header: 'Category'},
-    {field: 'attributes.port', header: 'Port'},
+    {field: 'attributes.port_ssl', header: 'Port'},
     {field: 'username', header: 'Superuser'},
     {field: 'version', header: 'Version'},
     {field: 'status', header: 'Status'}

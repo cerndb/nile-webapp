@@ -6,6 +6,10 @@
   </div>
 
   <div app-modal-body>
+    <div class="alert alert-danger" role="alert" [hidden]="errorMessage == ''">
+      <span #error >
+      </span>
+    </div>
     <div class="row">
        <nile-cluster-wizard-menu>
 
