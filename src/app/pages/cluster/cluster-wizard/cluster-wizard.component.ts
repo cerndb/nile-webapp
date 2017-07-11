@@ -128,7 +128,7 @@ export class ClusterWizardComponent {
   }
 
   public validate(): boolean {
-    
+
     if(this.typeComponent.typeForm.form.get('type').value  === 'KAFKA'
       && !this.infoComponent.infoForm.form.get('name').value.startsWith('kafka-')) {
         this.errorMessage = 'Kafka cluster name should start with \'kafka-\'.';

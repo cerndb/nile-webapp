@@ -17,7 +17,7 @@
         </p-column>
 
         <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"  [filter]="true" filterPlaceholder="{{col.header}}"
-                  filterMatchMode="contains"></p-column>
+                  filterMatchMode="contains" [sortable]="true"></p-column>
 
         <ng-template let-col pTemplate="rowexpansion">
           <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px">
