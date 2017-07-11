@@ -1,0 +1,45 @@
+<div class="widgets">
+
+  <div class="row">
+    <nile-card baCardClass="with-scroll" >
+      <p-dataTable #table [value]="clusterList" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]" [totalRecords]="numberCluster"
+                   expandableRows="true">
+        <!--<p-column expander="true" styleClass="col-icon" ></p-column>-->
+
+        <p-column styleClass="col-icon" expander="true">
+          <ng-template let-clusterEntity="rowData" pTemplate="body">
+
+            <a class="col-edit" (click)="onEdit(clusterEntity)">
+              <i class="ion-edit"></i>
+            </a>
+            <!--<button type="button" pButton (click)="onEdit(clusterEntity)" class="ion-edit"></button>-->
+          </ng-template>
+        </p-column>
+
+        <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"  [filter]="true" filterPlaceholder="{{col.header}}"
+                  filterMatchMode="contains"></p-column>
+
+        <ng-template let-col pTemplate="rowexpansion">
+          <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px">
+            <div class="ui-grid-row">
+              <div class="ui-grid-col-9">
+                <div class="ui-grid ui-grid-responsive ui-grid-pad">
+                  <nile-project-dropdown-menu></nile-project-dropdown-menu>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+
+        <!--<p-footer class="paginator-total">Total:{{table.totalRecords}}</p-footer>-->
+
+      </p-dataTable>
+
+      <nile-cluster-wizard></nile-cluster-wizard>
+
+    </nile-card>
+
+  </div>
+
+</div>
+

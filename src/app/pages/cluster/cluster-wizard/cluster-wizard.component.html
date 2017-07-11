@@ -1,0 +1,37 @@
+<nile-modal-dialog>
+
+  <div app-modal-header>
+    <button type="button" class="close" (click)="modal.hide()">&times;</button>
+    <h2 #title class="title">Create Cluster</h2>
+  </div>
+
+  <div app-modal-body>
+    <div class="alert alert-danger" role="alert" [hidden]="errorMessage == ''">
+      <span #error >
+      </span>
+    </div>
+    <div class="row">
+       <nile-cluster-wizard-menu>
+
+         <nile-cluster-wizard-menu-tab tabTitle="Info">
+           <nile-cluster-wizard-info></nile-cluster-wizard-info>
+         </nile-cluster-wizard-menu-tab>
+
+         <nile-cluster-wizard-menu-tab tabTitle="Type">
+           <nile-cluster-wizard-type></nile-cluster-wizard-type>
+         </nile-cluster-wizard-menu-tab>
+
+         <nile-cluster-wizard-menu-tab tabTitle="Attributes">
+           <nile-cluster-wizard-attributes></nile-cluster-wizard-attributes>
+         </nile-cluster-wizard-menu-tab>
+
+       </nile-cluster-wizard-menu>
+    </div>
+  </div>
+
+  <div app-modal-footer>
+    <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!isValidForm()" (click)="createOrSaveCluster()">Save changes</button>
+  </div>
+
+</nile-modal-dialog>

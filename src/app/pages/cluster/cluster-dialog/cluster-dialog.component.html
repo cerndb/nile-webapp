@@ -6,7 +6,7 @@
   </div>
 
   <div app-modal-body>
-    <form #clusterform="ngForm">
+<!--    <form #clusterform="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" ngModel name="name" [disabled]="!create"/>
@@ -15,13 +15,13 @@
       <div class="form-group">
         <label for="type">Type</label>
         <select class="form-control" id="type" ngModel name="type" [disabled]="!create">
-          <option value="Kafka">Kafka</option>
-          <option value="Zookeeper">Zookeeper</option>
+          <option value="KAFKA">Kafka</option>
+          <option value="ZOOKEEPER">Zookeeper</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="superuser">Superuser</label>
+        <label for="superuser">Owner</label>
         <input type="text" class="form-control" id="superuser" ngModel name="superuser" [disabled]="!create"/>
       </div>
 
@@ -31,12 +31,13 @@
       </div>
 
       <div class="form-group">
-        <label for="egroup">Egroup</label>
-        <input type="text" class="form-control" id="egroup" ngModel name="egroup" [disabled]="!create"/>
+        <label for="category">Category</label>
+        <select class="form-control" id="category" ngModel name="category" [disabled]="!create">
+          <option *ngFor="let cat of categories">{{cat}}</option>
+        </select>
       </div>
 
-
-      <div class="form-group">
+&lt;!&ndash;      <div class="form-group">
         <label><h3>Attributes</h3></label>
         <div class="form-group">
           <label for="retention">Log Retention hours</label>
@@ -52,8 +53,8 @@
           <label for="partitions">Partitions Number</label>
           <input type="number" class="form-control" id="partitions" ngModel name="partitions"/>
         </div>
-      </div>
-    </form>
+      </div>&ndash;&gt;
+    </form>-->
   </div>
 
   <div app-modal-footer>

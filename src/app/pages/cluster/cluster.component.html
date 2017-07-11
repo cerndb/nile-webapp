@@ -3,14 +3,15 @@
     <div class="row">
           <div class="col align-left action-bar">
           <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-info btn-lg" (click)="dialog.show()" >Create Cluster</button>
-            <nile-cluster-dialog></nile-cluster-dialog>
+            <button type="button" class="btn btn-info btn-lg create" (click)="wizard.show()" >Create Cluster</button>
+            <nile-cluster-wizard></nile-cluster-wizard>
         </div>
       </div>
 
       <div class="row">
         <div  class="col-md-12">
-          <nile-cluster-table></nile-cluster-table>
+          <!--<nile-cluster-table></nile-cluster-table>-->
+          <nile-cluster-table-prime></nile-cluster-table-prime>
         </div>
       </div>
 </div>
