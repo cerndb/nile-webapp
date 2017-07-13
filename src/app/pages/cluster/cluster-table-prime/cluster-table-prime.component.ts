@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { ClusterEntity } from '../../../api/model/clusterEntity';
 import { ClusterTableService } from '../cluster-table/cluster-table.service';
 import { ClusterDialogComponent } from '../cluster-dialog/cluster-dialog.component';
@@ -10,7 +10,7 @@ import { ClusterWizardComponent } from '../cluster-wizard/cluster-wizard.compone
   templateUrl: './cluster-table-prime.component.html',
   styleUrls: ['./cluster-table-prime.component.scss']
 })
-export class ClusterTablePrimeComponent {
+export class ClusterTablePrimeComponent implements OnInit {
 
   @ViewChild(ClusterWizardComponent)
   public readonly dialog: ClusterWizardComponent;
@@ -27,12 +27,15 @@ export class ClusterTablePrimeComponent {
     {field: 'attributes.port_ssl', header: 'Port'},
     {field: 'username', header: 'Superuser'},
     {field: 'version', header: 'Version'},
-    {field: 'status', header: 'Status'}
+    {field: 'state', header: 'State'}
   ];
 
   numberCluster:number;
 
   constructor(protected service: ClusterTableService) {
+  }
+
+  ngOnInit(){
     this.service.getClusterList()
       .subscribe(
         (data) => {

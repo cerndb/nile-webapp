@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { DashboardService } from './dashboard.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { DashboardService } from './dashboard.service';
   styleUrls: ['./dashboard.component.scss']
 })
 
-export class DashboardComponent implements  AfterViewInit {
+export class DashboardComponent implements OnInit, AfterViewInit {
 
   kafka: any [];
   zookeeper: any [];
@@ -17,6 +17,10 @@ export class DashboardComponent implements  AfterViewInit {
   storageUsage: any[];
 
   constructor(private _service: DashboardService) {
+  }
+
+  ngOnInit()
+  {
     this._service.getKafkaData().then(data => this.kafka = data);
     this._service.getZookeeperData().then(data => this.zookeeper = data);
     this._service.getVCPUData().then(data => this.vcpu = data);
@@ -24,7 +28,6 @@ export class DashboardComponent implements  AfterViewInit {
     this._service.getNumberVolumes().then(data => this.numberVolumes = data);
     this._service.getStorageUsage().then(data => this.storageUsage = data);
   }
-
 
   ngAfterViewInit(): void {
 
