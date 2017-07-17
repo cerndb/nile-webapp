@@ -16,8 +16,19 @@
           </ng-template>
         </p-column>
 
+<!--        <p-column field="color" header="Color">
+          <ng-template let-col let-car="rowData" pTemplate="body">
+            <span [style.color]="car[col.field]">{{car[col.field]}}</span>
+          </ng-template>
+        </p-column>-->
+
         <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"  [filter]="true" filterPlaceholder="{{col.header}}"
-                  filterMatchMode="contains" [sortable]="true"></p-column>
+                  filterMatchMode="contains" [sortable]="true">
+          <ng-template let-col let-state="rowData" *ngIf="col.header == 'State'" pTemplate="body">
+            <!--<span class="{{state[col.field]}}">{{state[col.field]}}</span>-->
+            <nile-state-button [state]="state[col.field]"></nile-state-button>
+          </ng-template>
+        </p-column>
 
         <ng-template let-col pTemplate="rowexpansion">
           <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px">

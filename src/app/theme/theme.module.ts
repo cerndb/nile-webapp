@@ -14,6 +14,7 @@ import { SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, C
   TooltipContainerComponent, TooltipContentComponent, TooltipService} from './elements';
 
 import { BaScrollPosition, TooltipDirective } from './directives';
+import { StateButtonComponent } from './elements/state-button/state-button.component';
 
 const ELEMENT_COMPONENTS = [
   SideBarComponent,
@@ -27,7 +28,8 @@ const ELEMENT_COMPONENTS = [
   ModalDialogComponent,
   TooltipContentComponent,
   TooltipContainerComponent,
-  ProjectDropdownMenuComponent
+  ProjectDropdownMenuComponent,
+  StateButtonComponent
 ];
 
 const ELEMENT_SERVICES = [
@@ -46,6 +48,7 @@ const ELEMENT_DIRECTIVES = [
   declarations: [
     ...ELEMENT_COMPONENTS,
     ...ELEMENT_DIRECTIVES,
+    StateButtonComponent,
   ],
   imports: [
     CommonModule,
