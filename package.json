@@ -47,7 +47,7 @@
     "@types/core-js": "0.9.35",
     "@types/d3": "4.7.0",
     "animate.css": "3.5.2",
-    "bootstrap": "4.0.0-alpha.4",
+    "bootstrap": "4.0.0-alpha.6",
     "core-js": "^2.4.1",
     "d3": "^4.2.2",
     "font-awesome": "4.7.0",
