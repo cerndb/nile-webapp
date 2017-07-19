@@ -11,7 +11,6 @@ import { routing } from './pages.routing';
 import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ClusterModule } from './cluster/cluster.module';
-import { ClusterComponent } from './cluster/cluster.component';
 
 @NgModule({
   imports: [

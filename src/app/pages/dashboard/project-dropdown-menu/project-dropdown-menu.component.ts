@@ -14,11 +14,11 @@ export class ProjectDropdownMenuComponent implements OnInit {
   egroupSelected: string;
 
   constructor(private _service: ProjectService) {
-    this._service.getEgroupsList().then(data => {this.egroupList = data;
-                  this.egroupSelected = this.egroupList[0].name; } );
   }
 
   ngOnInit() {
+    this._service.getEgroupsList().then(data => {this.egroupList = data;
+      this.egroupSelected = this.egroupList[0].name; } );
   }
 
   changeProject(data) {

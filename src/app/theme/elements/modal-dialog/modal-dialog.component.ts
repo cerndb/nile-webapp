@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {AfterViewInit, Component, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'nile-modal-dialog',
@@ -6,24 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./modal-dialog.component.scss']
 })
 
-export class ModalDialogComponent  {
+export class ModalDialogComponent  implements AfterViewInit{
 
-  public visible = false;
-  public visibleAnimate = false;
+  modalEl = null;
+
+  constructor (private _rootNode: ElementRef) {}
 
   public show(): void {
-    this.visible = true;
-    setTimeout(() => this.visibleAnimate = true, 100);
+    this.modalEl.modal('show');
   }
 
   public hide(): void {
-    this.visibleAnimate = false;
-    setTimeout(() => this.visible = false, 600);
+    this.modalEl.modal('hide');
   }
 
-  public onContainerClicked(event: MouseEvent): void {
-    if ((<HTMLElement>event.target).classList.contains('modal')) {
-      this.hide();
-    }
+  ngAfterViewInit() {
+    this.modalEl = $(this._rootNode.nativeElement).find('div.modal');
   }
 }
