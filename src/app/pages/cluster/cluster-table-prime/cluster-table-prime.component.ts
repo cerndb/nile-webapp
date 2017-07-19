@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import { ClusterEntity } from '../../../api/model/clusterEntity';
 import { ClusterTableService } from '../cluster-table/cluster-table.service';
-import { ClusterDialogComponent } from '../cluster-dialog/cluster-dialog.component';
 import { ClusterWizardComponent } from '../cluster-wizard/cluster-wizard.component';
 
 
