@@ -1,11 +1,11 @@
-$default: #ffffff; // default colors for layout
+$default: #21323d; // default colors for layout
 $body-bg: #F0F3F4; // default bg color
 
 $default-text: $default; // default text color layout (usually is the same as $default)
-$content-text: $default-text; // content text color on card, panels, form, etc
+$content-text: #21323d; // content text color on card, panels, form, etc
 $help-text: $default-text; // additional text color for hits
 
-$label-text: $default-text; // labels color
+$label-text: #000000; // labels color
 $disabled: rgba(255, 255, 255, 0.4); // color for disabled state
 $disabled-bg: tint($disabled, 15%); // background color for disable state
 $border: rgba(255, 255, 255, 0.5); // border color
@@ -14,12 +14,15 @@ $input-border: rgba(255, 255, 255, 0.6); // input border color
 $input-background: rgba(255, 255, 255, 0.1); // input border color for hover
 $dropdown-text: #7d7d7d; // dropdown text color
 
+$progress-background: rgba(0, 0, 0, 0.15);
+$progress-default: rgba($default-text, 0.95);
+
 //pagetop
 $pagetop-height: 66px;
 
 //cerntoolbar
 $cerntoolbar-height: 42px;
-$cerntoolbar-background: #222;
+$cerntoolbar-background: #21323d;
 
 // sidebar colors
 $sidebar: #21323d;
@@ -29,8 +32,8 @@ $sidebar-top-height: $pagetop-height + $cerntoolbar-height;
 
 // bootstrap card panel styles
 $bootstrap-panel-radius: 7px;
-$bootstrap-panel-text: #ffffff;
-$bootstrap-panel-bg: rgba(255, 255, 255, 0.1);
+$bootstrap-panel-text: #B4B7B8;
+$bootstrap-panel-bg: rgba(227, 231, 232, 0.3);
 $bootstrap-panel-header-bg: transparent;
 $bootstrap-panel-header-border: 1px solid $border-light;
 $bootstrap-panel-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
@@ -56,7 +59,7 @@ $danger-bg: tint($danger, 20%);
 @mixin body-bg() {
   background-color: $body-bg;
 
-  $mainBgUrl: $images-root + 'sky-bg.jpg';
+  //$mainBgUrl: $images-root + 'sky-bg.jpg';
 
   &::before {
     content: '';
@@ -65,7 +68,7 @@ $danger-bg: tint($danger, 20%);
     height: 100%;
     left: 0;
     top: $sidebar-top-height;
-    background: url($mainBgUrl) no-repeat center center;
+    //background: url($mainBgUrl) no-repeat center center;
     background-size: cover;
     will-change: transform;
     z-index: 0;

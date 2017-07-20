@@ -1,0 +1,23 @@
+<div class="channels-block">
+
+  <div class="chart-bg"></div>
+  <div class="cluster-summary-chart" id="clusters-summary-chart">
+    <div class="canvas-holder">
+      <canvas class="chart-area" width="300" height="300"></canvas>
+      <div class="cluster-summary-text">
+        23
+        <span translate>Total Brokers</span>
+      </div>
+    </div>
+    <div class="cluster-summary-legend"></div>
+  </div>
+
+  <div class="channels-info" *ngIf="legend">
+    <div>
+      <div class="channels-info-item" *ngFor="let item of data" >
+        <div class="legend-color" [ngStyle]="{'background-color': item.color }"></div>
+        <span>{{ item.label }}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,9 @@ import { ElementsModule } from '../../theme/theme.module';
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardService } from './dashboard.service';
+import { clusterSummaryChart } from '../../components/clusterSummaryChart';
+import { resourceSummaryChart } from '../../components/resourceSummaryChart';
+
 
 
 @NgModule({
@@ -13,7 +16,9 @@ import { DashboardService } from './dashboard.service';
     ElementsModule
   ],
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    clusterSummaryChart,
+    resourceSummaryChart
   ],
   providers: [
     DashboardService

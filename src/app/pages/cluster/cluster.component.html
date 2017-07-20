@@ -1,17 +1,17 @@
 <div class="cluster-container">
-
-    <div class="row">
-          <div class="col align-left action-bar">
-          <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-info btn-lg create" (click)="wizard.show()" >Create Cluster</button>
-            <nile-cluster-wizard></nile-cluster-wizard>
-        </div>
+  <div class="row">
+    <div class="col-xl-12 col-lg-12 align-left action-bar">
+      <!-- Trigger the modal with a button -->
+      <div class="button-wrapper">
+        <button type="button" class="btn btn-primary" (click)="wizard.show()">New Cluster</button>
+        <nile-cluster-wizard></nile-cluster-wizard>
       </div>
-
-      <div class="row">
-        <div  class="col-md-12">
-          <!--<nile-cluster-table></nile-cluster-table>-->
-          <nile-cluster-table-prime></nile-cluster-table-prime>
-        </div>
-      </div>
+    </div>
+  </div>
+  <p></p>
+  <div class="row">
+    <div  class="col-md-12">
+      <nile-cluster-table-prime></nile-cluster-table-prime>
+    </div>
+  </div>
 </div>

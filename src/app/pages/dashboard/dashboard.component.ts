@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { DashboardService } from './dashboard.service';
 
 @Component({
@@ -7,29 +7,23 @@ import { DashboardService } from './dashboard.service';
   styleUrls: ['./dashboard.component.scss']
 })
 
-export class DashboardComponent implements  AfterViewInit {
+export class DashboardComponent implements OnInit {
 
-  kafka: any [];
-  zookeeper: any [];
-  vcpu: any[];
-  numberNodes: any[];
-  numberVolumes: any[];
-  storageUsage: any[];
+  public kafka: Array<Object>;
+  public zookeeper: Array<Object>;
+  public vcpu: Array<Object>;
 
   constructor(private _service: DashboardService) {
-    this._service.getKafkaData().then(data => this.kafka = data);
-    this._service.getZookeeperData().then(data => this.zookeeper = data);
-    this._service.getVCPUData().then(data => this.vcpu = data);
-    this._service.getNumberNodes().then(data => this.numberNodes = data);
-    this._service.getNumberVolumes().then(data => this.numberVolumes = data);
-    this._service.getStorageUsage().then(data => this.storageUsage = data);
+
+  }
+
+  ngOnInit() {
+    this.kafka = this._service.getKafkaData();
+    this.zookeeper = this._service.getZookeeperData();
+    this.vcpu = this._service.getVcpuData();
+
   }
 
 
-  ngAfterViewInit(): void {
-
-    let el = jQuery('.nile-pie-chart').get(0) as HTMLElement;
- //   console.log(el);
-  }
 
 }

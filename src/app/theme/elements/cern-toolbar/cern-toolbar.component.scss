@@ -28,7 +28,7 @@
     display: inline-block;
   }
   #cern-toolbar a:hover {
-    background-color: #000;
+    background-color: $cerntoolbar-background;
     color: #fff;
   }
   #cern-toolbar .active a {
@@ -37,7 +37,7 @@
     padding-bottom: 20px;
   }
   #cern-toolbar .active .cern-account {
-    background-color: #fff;
+    background-color: $cerntoolbar-background;
   }
   #cern-toolbar h1 {
     float: left;
