@@ -2,7 +2,7 @@ $default: #21323d; // default colors for layout
 $body-bg: #F0F3F4; // default bg color
 
 $default-text: $default; // default text color layout (usually is the same as $default)
-$content-text: #21323d; // content text color on card, panels, form, etc
+$content-text: $default-text; // content text color on card, panels, form, etc
 $help-text: $default-text; // additional text color for hits
 
 $label-text: #000000; // labels color
@@ -22,7 +22,7 @@ $pagetop-height: 66px;
 
 //cerntoolbar
 $cerntoolbar-height: 42px;
-$cerntoolbar-background: #21323d;
+$cerntoolbar-background: #222; //#21323d
 
 // sidebar colors
 $sidebar: #21323d;

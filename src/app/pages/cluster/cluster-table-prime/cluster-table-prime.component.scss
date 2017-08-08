@@ -10,7 +10,7 @@
     }
 
     table th {
-      border: 1px solid rgba(0, 0, 0, 0.3) !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
       text-align:center;
       font-style: normal;
       padding: .5rem 1rem;
@@ -85,7 +85,7 @@
       .ui-paginator-element:hover {
           color: #014c8c;
           background-color: #eceeef;
-          border-color: #000000;
+          border-color: #ddd;
       }
 
       a.ui-state-disabled {

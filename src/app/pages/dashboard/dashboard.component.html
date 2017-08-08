@@ -1,14 +1,12 @@
-
 <div class="row">
   <div class="col-xl-12 col-lg-12 align-right action-bar">
     <!-- Trigger the modal with a button -->
     <div class="button-wrapper">
-      <button type="button" class="btn btn-primary">Request Quota</button>
+      <button type="button" class="btn btn-primary request">Request Quota</button>
     </div>
   </div>
-
 </div>
-<p></p>
+
 <div class="row">
   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
     <resource-summary-chart></resource-summary-chart>
@@ -16,17 +14,16 @@
 </div>
 
 <div class="row">
-
   <div class="col-md-12">
     <nile-card title="Cluster Summary" baCardClass="with-scroll">
       <div class="row">
         <div class="col-lg-6 col-md-12">
           <p>KAFKA</p>
-          <cluster-summary-chart [pos]="0" [data]="kafka" [legend]="true"></cluster-summary-chart>
+          <cluster-summary-chart [pos]="0" [data]="kafka" [legend]="true" [numberBrokers]="23"></cluster-summary-chart>
         </div>
         <div class="col-lg-6 col-md-12">
           <p>ZOOKEEPER</p>
-          <cluster-summary-chart [pos]="1" [data]="zookeeper" [legend]="true"></cluster-summary-chart>
+          <cluster-summary-chart [pos]="1" [data]="zookeeper" [legend]="true" [numberBrokers]="7"></cluster-summary-chart>
         </div>
       </div>
     </nile-card>

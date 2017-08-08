@@ -128,7 +128,7 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom: 1px solid transparent;
-  background-color: #000000;
+  background-color: $primary-light;
   a {
     color: $label-text;
     &:hover {
@@ -142,27 +142,27 @@
     border: none;
     &:hover {
       border: none;
-      background-color: #000000;
+      background-color: $primary-light;
     }
   }
   & > li.active > a {
     color: $label-text;
-    background-color: #000000;
+    background-color: $primary;
   }
   > li:first-of-type a {
     border-top-left-radius: 5px;
   }
   .dropdown-menu > li > a {
-    color: #000000;
+    color: $dropdown-text;
     &:hover {
-      color: #000000;
+      color: $dropdown-text;
     }
   }
 }
 
 .blur {
   .nav.nav-tabs {
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.2);
     a {
       color: $default-text;
       &:hover {
@@ -170,17 +170,17 @@
       }
     }
     & > li > a:hover {
-      background-color: #000000;
+      background-color: rgba(0, 0, 0, 0.2);
     }
     & > li.active > a {
       color: $default-text;
-      background-color: #000000;
+      background-color: rgba(0, 0, 0, 0.2);
     }
   }
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {

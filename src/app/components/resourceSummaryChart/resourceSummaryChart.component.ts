@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 
 import {DashboardService} from '../../pages/dashboard/dashboard.service';
 
@@ -6,18 +6,21 @@ import 'easy-pie-chart/dist/jquery.easypiechart.js';
 
 @Component({
   selector: 'resource-summary-chart',
-  templateUrl: './resourceSummaryChart.html',
-  styleUrls: ['./resourceSummaryChart.scss']
+  templateUrl: './resourceSummaryChart.component.html',
+  styleUrls: ['./resourceSummaryChart.component.scss']
 })
 
 // TODO: move easypiechart to component
-export class resourceSummaryChart {
+export class resourceSummaryChart implements OnInit, AfterViewInit{
 
   public charts: Array<Object>;
   private _init = false;
 
-  constructor(private _pieChartService: DashboardService) {
-    this.charts = this._pieChartService.getResourcesData();
+  constructor(private _dashboardService: DashboardService) {
+  }
+
+  ngOnInit() {` `
+    this.charts = this._dashboardService.getResourcesData();
   }
 
   ngAfterViewInit() {
@@ -48,6 +51,7 @@ export class resourceSummaryChart {
     });
   }
 
+  //TODO: Change the random percentage
   private _updatePieCharts() {
     let getRandomArbitrary = (min, max) => { return Math.random() * (max - min) + min; };
 

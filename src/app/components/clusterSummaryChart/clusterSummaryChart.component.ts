@@ -5,8 +5,8 @@ import * as Chart from 'chart.js';
 
 @Component({
   selector: 'cluster-summary-chart',
-  templateUrl: './clusterSummaryChart.html',
-  styleUrls: ['./clusterSummaryChart.scss']
+  templateUrl: './clusterSummaryChart.component.html',
+  styleUrls: ['./clusterSummaryChart.component.scss']
 })
 
 // TODO: move chart.js to it's own component
@@ -15,6 +15,7 @@ export class clusterSummaryChart {
   @Input() public data: Array<Object>;
   @Input() public pos: number;
   @Input() public legend: boolean;
+  @Input() public numberBrokers: number;
 
   constructor() {
 

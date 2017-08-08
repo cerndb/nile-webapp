@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { colorHelper } from '../../theme/theme.constants';
 
-
-
 @Injectable()
 export class DashboardService {
 
@@ -69,7 +67,7 @@ export class DashboardService {
               label: 'zk-nxcals-test',
 
             }, {
-              value: 3,
+              value: 1,
               color: '#3c4eb9',
               highlight: colorHelper.shade('#3c4eb9', 15),
               label: 'zk-nxcals-qa',
