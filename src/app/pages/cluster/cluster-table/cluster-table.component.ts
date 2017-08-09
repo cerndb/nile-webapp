@@ -1,8 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { ClusterTableService } from './cluster-table.service';
 import { LocalDataSource } from 'ng2-smart-table';
-import { ClusterDialogComponent } from '../cluster-dialog/cluster-dialog.component';
 import { ClusterEntity } from '../../../api/model/clusterEntity';
+import {ClusterWizardComponent} from '../cluster-wizard/cluster-wizard.component';
 
 
 @Component({
@@ -11,10 +11,10 @@ import { ClusterEntity } from '../../../api/model/clusterEntity';
   styleUrls: ['./cluster-table.component.scss'],
 })
 
-export class ClusterTableComponent  {
+export class ClusterTableComponent implements OnInit {
 
-  @ViewChild(ClusterDialogComponent)
-  public readonly dialog: ClusterDialogComponent;
+  @ViewChild(ClusterWizardComponent)
+  public readonly dialog: ClusterWizardComponent;
 
   clusterList: ClusterEntity[];
 
@@ -82,6 +82,9 @@ export class ClusterTableComponent  {
   source: LocalDataSource = new LocalDataSource();
 
   constructor(protected service: ClusterTableService) {
+  }
+
+  ngOnInit() {
     this.service.getClusterList()
       .subscribe(
         (data) => {

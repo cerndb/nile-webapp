@@ -14,16 +14,12 @@ export class DashboardComponent implements OnInit {
   public vcpu: Array<Object>;
 
   constructor(private _service: DashboardService) {
-
   }
 
   ngOnInit() {
     this.kafka = this._service.getKafkaData();
     this.zookeeper = this._service.getZookeeperData();
     this.vcpu = this._service.getVcpuData();
-
   }
-
-
 
 }
