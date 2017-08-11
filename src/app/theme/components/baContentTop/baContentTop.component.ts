@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { GlobalState } from '../../../global.state';
 
 
 @Component({
-  selector: 'nile-content-top',
-  templateUrl: 'content-top.component.html',
-  styleUrls: ['./content-top.component.scss']
+  selector: 'ba-content-top',
+  templateUrl: 'baContentTop.html',
+  styleUrls: ['./baContentTop.scss']
 })
 
-export class ContentTopComponent {
+export class BaContentTop {
 
   //for breadcrumbs
   public activePageTitle: string = '';

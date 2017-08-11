@@ -17,7 +17,7 @@ import { MenuService } from '../theme/components/side-bar/menu';
     <nile-page-top [isToolMenuVisible]="true" [isProjectMenuVisible]="true"></nile-page-top>
     <div class="al-main">
       <div class="al-content">
-        <nile-content-top></nile-content-top>
+        <ba-content-top></ba-content-top>
         <router-outlet></router-outlet>
       </div>
     </div>

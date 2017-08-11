@@ -9,7 +9,7 @@ import { NgUploaderModule } from 'ngx-uploader/src/module/ngx-uploader.module';
 
 import { ProjectDropdownMenuComponent, ProjectService } from '../pages/dashboard/project-dropdown-menu';
 
-import { SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, ContentTopComponent, MenuService,
+import { SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, MenuService,
   CardComponent} from './components';
 
 import { TooltipDirective } from './directives';
@@ -20,7 +20,7 @@ import {
 //  BaCard,
   BaChartistChart,
   BaCheckbox,
-//  BaContentTop,
+  BaContentTop,
   BaFullCalendar,
 //  BaMenuItem,
 //  BaMenu,
@@ -72,7 +72,6 @@ const NGA_COMPONENTS = [
 //  BaCard,
   BaChartistChart,
   BaCheckbox,
-//  BaContentTop,
   BaFullCalendar,
 //  BaMenuItem,
 //  BaMenu,
@@ -86,7 +85,7 @@ const NGA_COMPONENTS = [
   MenuItemComponent,
   MenuComponent,
   PageTopComponent,
-  ContentTopComponent,
+  BaContentTop,
   CardComponent,
   ProjectDropdownMenuComponent,
 ];
