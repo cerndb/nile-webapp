@@ -3,11 +3,11 @@ import { GlobalState } from '../../../global.state';
 
 @Component({
   selector: 'nile-page-top',
-  templateUrl: 'page-top.component.html',
-  styleUrls: ['./page-top.component.scss']
+  templateUrl: 'baPageTop.html',
+  styleUrls: ['./baPageTop.scss']
 })
 
-export class PageTopComponent {
+export class BaPageTop {
 
   public isScrolled: boolean = false;
   public isMenuCollapsed: boolean = false;

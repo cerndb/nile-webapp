@@ -6,10 +6,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgUploaderModule } from 'ngx-uploader/src/module/ngx-uploader.module';
+import { AppTranslationModule } from '../app.translation.module';
 
 import { ProjectDropdownMenuComponent, ProjectService } from '../pages/dashboard/project-dropdown-menu';
 
-import { SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, MenuService,
+import { SideBarComponent, MenuComponent, MenuItemComponent, BaPageTop, MenuService,
   CardComponent} from './components';
 
 import { TooltipDirective } from './directives';
@@ -84,7 +85,7 @@ const NGA_COMPONENTS = [
   SideBarComponent,
   MenuItemComponent,
   MenuComponent,
-  PageTopComponent,
+  BaPageTop,
   BaContentTop,
   CardComponent,
   ProjectDropdownMenuComponent,
@@ -128,6 +129,7 @@ const NGA_VALIDATORS = [
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+    AppTranslationModule,
     NgUploaderModule
 
   ],

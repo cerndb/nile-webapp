@@ -13,12 +13,14 @@
   },
   "general": {
     "akveo": "Akveo",
+    "nile": "Nile",
     "home": "Home",
     "forms": {
       "option1": "Option 1"
     },
     "menu": {
       "dashboard": "Dashboard",
+      "clusters": "Cluster",
       "editors": "Editors",
       "ck_editor": "CKEditor",
       "components": "Components",

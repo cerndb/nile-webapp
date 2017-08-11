@@ -43,6 +43,8 @@
     "@angular/platform-browser-dynamic": "4.0.1",
     "@angular/platform-server": "4.0.1",
     "@angular/router": "4.0.1",
+    "@ngx-translate/core": "6.0.1",
+    "@ngx-translate/http-loader": "0.0.3",
     "@swimlane/ngx-charts": "5.0.0",
     "@types/core-js": "0.9.35",
     "@types/d3": "4.7.0",

@@ -3,7 +3,7 @@
  */
 export * from './baAmChart';
 export * from './baBackTop';
-export * from './page-top';
+export * from './baPageTop';
 export * from './side-bar/menu/menu-item';
 export * from './side-bar/menu';
 export * from './side-bar';
