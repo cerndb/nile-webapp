@@ -4,7 +4,6 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { DataTableModule,SharedModule } from 'primeng/primeng';
 
 import { ElementsModule } from '../../theme/theme.module';
-import { FormsModule } from '@angular/forms';
 
 import { ClusterComponent } from './cluster.component';
 import { ClusterTableComponent } from './cluster-table/cluster-table.component';
@@ -17,13 +16,14 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ClusterTablePrimeComponent } from './cluster-table-prime/cluster-table-prime.component';
 
 import { ClusterWizardModule } from './cluster-wizard/cluster-wizard.module';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     Ng2SmartTableModule,
-    FormsModule,
     ElementsModule,
+    ComponentsModule,
     ClusterWizardModule,
     ApiModule,
     DataTableModule,

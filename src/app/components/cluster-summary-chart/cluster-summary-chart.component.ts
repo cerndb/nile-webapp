@@ -1,16 +1,16 @@
 import {Component, Input} from '@angular/core';
 
-import {DashboardService} from '../../pages/dashboard/dashboard.service';
+import { DashboardService } from '../../pages/dashboard/dashboard.service';
 import * as Chart from 'chart.js';
 
 @Component({
   selector: 'cluster-summary-chart',
-  templateUrl: './clusterSummaryChart.component.html',
-  styleUrls: ['./clusterSummaryChart.component.scss']
+  templateUrl: './cluster-summary-chart.component.html',
+  styleUrls: ['./cluster-summary-chart.component.scss']
 })
 
 // TODO: move chart.js to it's own component
-export class clusterSummaryChart {
+export class ClusterSummaryChartComponent {
 
   @Input() public data: Array<Object>;
   @Input() public pos: number;

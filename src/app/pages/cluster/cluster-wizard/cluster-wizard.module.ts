@@ -12,8 +12,8 @@ import { ClusterWizardTypeComponent } from './cluster-wizard-type/cluster-wizard
 import { ClusterWizardAttributesComponent } from './cluster-wizard-attributes/cluster-wizard-attributes.component';
 import { ClusterWizardMenuComponent } from './cluster-wizard-menu/cluster-wizard-menu.component';
 import { ClusterWizardComponent } from './cluster-wizard.component';
-import { ElementsModule } from '../../../theme/theme.module';
 import { ClusterWizardMenuTabComponent } from './cluster-wizard-menu/cluster-wizard-menu-tab/cluster-wizard-menu-tab.component';
+import { ComponentsModule } from '../../../components/components.module';
 
 
 @NgModule({
@@ -21,7 +21,7 @@ import { ClusterWizardMenuTabComponent } from './cluster-wizard-menu/cluster-wiz
     CommonModule,
     FormsModule,
     BrowserModule,
-    ElementsModule
+    ComponentsModule
   ],
   declarations: [
     ClusterWizardComponent,
@@ -29,7 +29,7 @@ import { ClusterWizardMenuTabComponent } from './cluster-wizard-menu/cluster-wiz
     ClusterWizardTypeComponent,
     ClusterWizardAttributesComponent,
     ClusterWizardMenuComponent,
-    ClusterWizardMenuTabComponent
+    ClusterWizardMenuTabComponent,
   ],
   providers: [
   ],

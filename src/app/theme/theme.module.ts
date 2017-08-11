@@ -5,16 +5,12 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ProjectDropdownMenuComponent, ProjectService } from '../pages/dashboard/project-dropdown-menu';
 
-
 import { SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, ContentTopComponent, MenuService,
-  CernToolbarComponent, PieChartComponent, CardComponent, ModalDialogComponent,
-  TooltipContainerComponent, TooltipContentComponent, TooltipService} from './elements';
+  CardComponent} from './elements';
 
 import { BaScrollPosition, TooltipDirective } from './directives';
-import { StateButtonComponent } from './elements/state-button/state-button.component';
 
 const ELEMENT_COMPONENTS = [
   SideBarComponent,
@@ -22,19 +18,12 @@ const ELEMENT_COMPONENTS = [
   MenuComponent,
   PageTopComponent,
   ContentTopComponent,
-  CernToolbarComponent,
-  PieChartComponent,
   CardComponent,
-  ModalDialogComponent,
-  TooltipContentComponent,
-  TooltipContainerComponent,
   ProjectDropdownMenuComponent,
-  StateButtonComponent
 ];
 
 const ELEMENT_SERVICES = [
   MenuService,
-  TooltipService,
   ProjectService
 ];
 
@@ -48,12 +37,10 @@ const ELEMENT_DIRECTIVES = [
   declarations: [
     ...ELEMENT_COMPONENTS,
     ...ELEMENT_DIRECTIVES,
-    StateButtonComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule,
-    NgxChartsModule
+    RouterModule
   ],
   exports: [
     ...ELEMENT_COMPONENTS,

@@ -13,8 +13,8 @@ import { PagesModule } from './pages/pages.module';
 import { ElementsModule } from './theme/theme.module';
 import { GlobalState } from './global.state';
 
-import { ApiModule }  from './api/api.module';
 import { Configuration } from './api/configuration';
+import { ComponentsModule } from './components/components.module';
 
 
 
@@ -34,6 +34,7 @@ export function apiConfig() {
     RouterModule,
     BrowserAnimationsModule,
     PagesModule,
+    ComponentsModule,
     ElementsModule.forRoot(),
     routing
   ],

@@ -5,20 +5,22 @@ import { ElementsModule } from '../../theme/theme.module';
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardService } from './dashboard.service';
-import { clusterSummaryChart } from '../../components/clusterSummaryChart';
-import { resourceSummaryChart } from '../../components/resourceSummaryChart';
+import { ClusterSummaryChartComponent } from '../../components/cluster-summary-chart';
+import { ResourceSummaryChartComponent } from '../../components/resource-summary-chart';
+import { ComponentsModule } from '../../components/components.module';
 
 
 
 @NgModule({
   imports: [
     CommonModule,
-    ElementsModule
+    ElementsModule,
+    ComponentsModule
   ],
   declarations: [
     DashboardComponent,
-    clusterSummaryChart,
-    resourceSummaryChart
+    ClusterSummaryChartComponent,
+    ResourceSummaryChartComponent
   ],
   providers: [
     DashboardService

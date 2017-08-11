@@ -6,12 +6,12 @@ import 'easy-pie-chart/dist/jquery.easypiechart.js';
 
 @Component({
   selector: 'resource-summary-chart',
-  templateUrl: './resourceSummaryChart.component.html',
-  styleUrls: ['./resourceSummaryChart.component.scss']
+  templateUrl: './resource-summary-chart.component.html',
+  styleUrls: ['./resource-summary-chart.component.scss']
 })
 
 // TODO: move easypiechart to component
-export class resourceSummaryChart implements OnInit, AfterViewInit{
+export class ResourceSummaryChartComponent implements OnInit, AfterViewInit{
 
   public charts: Array<Object>;
   private _init = false;

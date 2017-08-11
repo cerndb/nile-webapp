@@ -11,16 +11,22 @@ import { routing } from './pages.routing';
 import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ClusterModule } from './cluster/cluster.module';
+import { ComponentsModule } from '../components/components.module';
+
+
 
 @NgModule({
   imports: [
     CommonModule,
     ElementsModule,
+    ComponentsModule,
     DashboardModule,
     ClusterModule,
     routing
   ],
-  declarations: [PagesComponent]
+  declarations: [
+    PagesComponent
+  ]
 })
 
 export class PagesModule {
