@@ -4,13 +4,33 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgUploaderModule } from 'ngx-uploader/src/module/ngx-uploader.module';
 
 import { ProjectDropdownMenuComponent, ProjectService } from '../pages/dashboard/project-dropdown-menu';
 
 import { SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, ContentTopComponent, MenuService,
-  CardComponent} from './elements';
+  CardComponent} from './components';
 
 import { TooltipDirective } from './directives';
+
+import {
+  BaAmChart,
+  BaBackTop,
+//  BaCard,
+  BaChartistChart,
+  BaCheckbox,
+//  BaContentTop,
+  BaFullCalendar,
+//  BaMenuItem,
+//  BaMenu,
+  BaMsgCenter,
+  BaMultiCheckbox,
+//  BaPageTop,
+  BaPictureUploader,
+//  BaSidebar,
+  BaFileUploader
+} from './components';
 
 import {
   BaThemeConfig
@@ -46,8 +66,22 @@ import {
   EqualPasswordsValidator
 } from './validators';
 
-
 const NGA_COMPONENTS = [
+  BaAmChart,
+  BaBackTop,
+//  BaCard,
+  BaChartistChart,
+  BaCheckbox,
+//  BaContentTop,
+  BaFullCalendar,
+//  BaMenuItem,
+//  BaMenu,
+  BaMsgCenter,
+  BaMultiCheckbox,
+//  BaPageTop,
+  BaPictureUploader,
+//  BaSidebar,
+  BaFileUploader,
   SideBarComponent,
   MenuItemComponent,
   MenuComponent,
@@ -92,7 +126,11 @@ const NGA_VALIDATORS = [
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgUploaderModule
+
   ],
   exports: [
     ...NGA_PIPES,
