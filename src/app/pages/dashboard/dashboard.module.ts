@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ElementsModule } from '../../theme/theme.module';
+import { NgaModule } from '../../theme/nga.module';
 
 import { DashboardComponent } from './dashboard.component';
 import { DashboardService } from './dashboard.service';
@@ -14,7 +14,7 @@ import { ComponentsModule } from '../../components/components.module';
 @NgModule({
   imports: [
     CommonModule,
-    ElementsModule,
+    NgaModule,
     ComponentsModule
   ],
   declarations: [

@@ -3,7 +3,7 @@ import {CernToolbarComponent, PieChartComponent, ModalDialogComponent,
   TooltipContainerComponent, TooltipContentComponent, TooltipService, StateButtonComponent, ClusterSummaryChartComponent,
   ResourceSummaryChartComponent } from '../components';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import {ElementsModule} from "../theme/theme.module";
+import { NgaModule } from '../theme/nga.module';
 
 const ELEMENTS_COMPONENTS = [
   CernToolbarComponent,
@@ -23,7 +23,7 @@ const ELEMENT_SERVICES = [
 @NgModule({
   imports: [
     NgxChartsModule,
-    ElementsModule
+    NgaModule
   ],
   declarations: [
     ELEMENTS_COMPONENTS

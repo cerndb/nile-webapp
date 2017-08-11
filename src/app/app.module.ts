@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // App is our top level component
 import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
-import { ElementsModule } from './theme/theme.module';
+import { NgaModule } from './theme/nga.module';
 import { GlobalState } from './global.state';
 
 import { Configuration } from './api/configuration';
@@ -35,7 +35,7 @@ export function apiConfig() {
     BrowserAnimationsModule,
     PagesModule,
     ComponentsModule,
-    ElementsModule.forRoot(),
+    NgaModule.forRoot(),
     routing
   ],
   providers: [

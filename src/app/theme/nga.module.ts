@@ -10,7 +10,7 @@ import { ProjectDropdownMenuComponent, ProjectService } from '../pages/dashboar
 import { SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, ContentTopComponent, MenuService,
   CardComponent} from './elements';
 
-import { BaScrollPosition, TooltipDirective } from './directives';
+import { TooltipDirective } from './directives';
 
 import {
   BaThemeConfig
@@ -20,7 +20,34 @@ import {
   BaThemeConfigProvider
 } from './theme.configProvider';
 
-const ELEMENT_COMPONENTS = [
+//import { BaCardBlur } from './components/baCard/baCardBlur.directive';
+
+import {
+  BaScrollPosition,
+  BaSlimScroll,
+  BaThemeRun
+} from './directives';
+
+import {
+  BaAppPicturePipe,
+  BaKameleonPicturePipe,
+  BaProfilePicturePipe
+} from './pipes';
+
+import {
+  BaImageLoaderService,
+  BaMenuService,
+  BaThemePreloader,
+  BaThemeSpinner
+} from './services';
+
+import {
+  EmailValidator,
+  EqualPasswordsValidator
+} from './validators';
+
+
+const NGA_COMPONENTS = [
   SideBarComponent,
   MenuItemComponent,
   MenuComponent,
@@ -30,40 +57,59 @@ const ELEMENT_COMPONENTS = [
   ProjectDropdownMenuComponent,
 ];
 
-const ELEMENT_SERVICES = [
+const NGA_DIRECTIVES = [
+  BaScrollPosition,
+  BaSlimScroll,
+  BaThemeRun,
+//  BaCardBlur
+];
+
+const NGA_PIPES = [
+  BaAppPicturePipe,
+  BaKameleonPicturePipe,
+  BaProfilePicturePipe
+];
+
+const NGA_SERVICES = [
+  BaImageLoaderService,
+  BaThemePreloader,
+  BaThemeSpinner,
+  BaMenuService,
   MenuService,
   ProjectService
 ];
 
-const ELEMENT_DIRECTIVES = [
-  BaScrollPosition,
-  TooltipDirective,
+const NGA_VALIDATORS = [
+  EmailValidator,
+  EqualPasswordsValidator
 ];
-
 
 @NgModule({
   declarations: [
-    ...ELEMENT_COMPONENTS,
-    ...ELEMENT_DIRECTIVES,
+    ...NGA_PIPES,
+    ...NGA_COMPONENTS,
+    ...NGA_DIRECTIVES,
   ],
   imports: [
     CommonModule,
     RouterModule
   ],
   exports: [
-    ...ELEMENT_COMPONENTS,
-    ...ELEMENT_DIRECTIVES
+    ...NGA_PIPES,
+    ...NGA_COMPONENTS,
+    ...NGA_DIRECTIVES
   ]
 })
 
-export class ElementsModule {
+export class NgaModule {
   static forRoot(): ModuleWithProviders {
     return <ModuleWithProviders> {
-      ngModule: ElementsModule,
+      ngModule: NgaModule,
       providers: [
         BaThemeConfigProvider,
         BaThemeConfig,
-        ...ELEMENT_SERVICES
+        ...NGA_VALIDATORS,
+        ...NGA_SERVICES
       ],
     };
   }

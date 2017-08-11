@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { DataTableModule,SharedModule } from 'primeng/primeng';
 
-import { ElementsModule } from '../../theme/theme.module';
+import { NgaModule } from '../../theme/nga.module';
 
 import { ClusterComponent } from './cluster.component';
 import { ClusterTableComponent } from './cluster-table/cluster-table.component';
@@ -22,7 +22,7 @@ import { ComponentsModule } from '../../components/components.module';
   imports: [
     CommonModule,
     Ng2SmartTableModule,
-    ElementsModule,
+    NgaModule,
     ComponentsModule,
     ClusterWizardModule,
     ApiModule,

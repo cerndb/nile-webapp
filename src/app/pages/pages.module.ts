@@ -4,7 +4,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ElementsModule } from '../theme/theme.module';
+import { NgaModule } from '../theme/nga.module';
 
 import { routing } from './pages.routing';
 
@@ -14,11 +14,10 @@ import { ClusterModule } from './cluster/cluster.module';
 import { ComponentsModule } from '../components/components.module';
 
 
-
 @NgModule({
   imports: [
     CommonModule,
-    ElementsModule,
+    NgaModule,
     ComponentsModule,
     DashboardModule,
     ClusterModule,
