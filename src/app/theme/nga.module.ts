@@ -12,6 +12,14 @@ import { SideBarComponent, MenuComponent, MenuItemComponent, PageTopComponent, C
 
 import { BaScrollPosition, TooltipDirective } from './directives';
 
+import {
+  BaThemeConfig
+} from './theme.config';
+
+import {
+  BaThemeConfigProvider
+} from './theme.configProvider';
+
 const ELEMENT_COMPONENTS = [
   SideBarComponent,
   MenuItemComponent,
@@ -53,6 +61,8 @@ export class ElementsModule {
     return <ModuleWithProviders> {
       ngModule: ElementsModule,
       providers: [
+        BaThemeConfigProvider,
+        BaThemeConfig,
         ...ELEMENT_SERVICES
       ],
     };
