@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 
-import { DashboardService } from '../../pages/dashboard/dashboard.service';
 import * as Chart from 'chart.js';
 
 @Component({
@@ -25,13 +24,14 @@ export class ClusterSummaryChartComponent {
       this._loadDoughnutCharts();
   }
 
-    private _loadDoughnutCharts() {
-      let el = jQuery('.chart-area').get(this.pos) as HTMLCanvasElement;
-      new Chart(el.getContext('2d')).Doughnut(this.data, {
-        segmentShowStroke: false,
-        percentageInnerCutout : 64,
-        responsive: true
-      });
-    }
+  //TODO: move this to dashboard component
+  private _loadDoughnutCharts() {
+    let el = jQuery('.chart-area').get(this.pos) as HTMLCanvasElement;
+    new Chart(el.getContext('2d')).Doughnut(this.data, {
+      segmentShowStroke: false,
+      percentageInnerCutout : 64,
+      responsive: true
+    });
+  }
 
 }

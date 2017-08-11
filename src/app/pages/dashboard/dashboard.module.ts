@@ -18,9 +18,7 @@ import { ComponentsModule } from '../../components/components.module';
     ComponentsModule
   ],
   declarations: [
-    DashboardComponent,
-    ClusterSummaryChartComponent,
-    ResourceSummaryChartComponent
+    DashboardComponent
   ],
   providers: [
     DashboardService
