@@ -63,9 +63,28 @@
     border: 0;
     opacity: 1;
     position: relative;
+    ul.profile-dropdown:after {
+      bottom: 100%;
+      right: 0;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(255, 255, 255, 0);
+      border-bottom-color: #fff;
+      border-width: 10px;
+      margin-right: 28px;
+    }
     a {
       display: block;
       color: $body-bg;
+    }
+    img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
     }
   }
 
@@ -178,6 +197,61 @@
     }
 
   }
+
+  .al-skin-dropdown {
+    float: right;
+    margin-top: 14px;
+    margin-right: 26px;
+
+    .tpl-skin-panel {
+      max-height: 300px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }
+
+  .icon-palette {
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    @include bg('theme/palette.png');
+    background-size: cover;
+  }
+
+  .search {
+    text-shadow: none;
+    font-size: 13px;
+    line-height: 25px;
+    transition: all 0.5s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 162px;
+    float: left;
+    margin: 20px 0 0 30px;
+
+    label {
+      cursor: pointer;
+    }
+    i {
+      width: 16px;
+      display: inline-block;
+      cursor: pointer;
+      padding-left: 1px;
+      font-size: 16px;
+      margin-right: 13px;
+    }
+    input {
+      color: $sidebar-text;
+      background: none;
+      border: none;
+      outline: none;
+      width: 120px;
+      padding: 0;
+      margin: 0 0 0 -3px;
+      height: 27px;
+    }
+  }
+
 
   @media screen and (max-width: $resS) {
     .al-user-profile {

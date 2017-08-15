@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import {GlobalState} from '../../../../global.state';
+import {GlobalState} from '../../../global.state';
 
 import { Subscription } from 'rxjs/Rx';
 

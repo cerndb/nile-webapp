@@ -6,7 +6,7 @@ import { Routes } from '@angular/router';
 
 import { MENU } from '../app.menu';
 
-import { MenuService } from '../theme/components/side-bar/menu';
+import { MenuService } from '../theme/components/menu';
 
 @Component({
   selector: 'nile-pages',

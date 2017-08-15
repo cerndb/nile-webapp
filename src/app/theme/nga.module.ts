@@ -10,15 +10,14 @@ import { AppTranslationModule } from '../app.translation.module';
 
 import { ProjectDropdownMenuComponent, ProjectService } from '../pages/dashboard/project-dropdown-menu';
 
-import { SideBarComponent, MenuComponent, MenuItemComponent, BaPageTop, MenuService,
-  BaCard} from './components';
+import { SideBarComponent, MenuComponent, MenuItemComponent, MenuService } from './components';
 
 import { TooltipDirective } from './directives';
 
 import {
   BaAmChart,
   BaBackTop,
-//  BaCard,
+  BaCard,
   BaChartistChart,
   BaCheckbox,
   BaContentTop,
@@ -27,7 +26,7 @@ import {
 //  BaMenu,
   BaMsgCenter,
   BaMultiCheckbox,
-//  BaPageTop,
+  BaPageTop,
   BaPictureUploader,
 //  BaSidebar,
   BaFileUploader

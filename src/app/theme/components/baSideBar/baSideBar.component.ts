@@ -4,16 +4,17 @@ import {GlobalState} from '../../../global.state';
 
 @Component({
   selector: 'nile-side-bar',
-  templateUrl: 'side-bar.component.html',
-  styleUrls: ['./side-bar.component.scss'],
+  templateUrl: 'baSideBar.html',
+  styleUrls: ['./baSideBar.scss'],
 })
 
-export class SideBarComponent implements OnInit, AfterViewInit {
+export class SideBarComponent {
   public menuHeight: number;
   public isMenuCollapsed: boolean = false;
   public isMenuShouldCollapsed: boolean = false;
 
   constructor(private _elementRef: ElementRef, private _state: GlobalState) {
+
     this._state.subscribe('menu.isCollapsed', (isCollapsed) => {
       this.isMenuCollapsed = isCollapsed;
     });

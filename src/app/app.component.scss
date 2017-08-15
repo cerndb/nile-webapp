@@ -1,7 +1,6 @@
-@import "~normalize.css";
-@import "theme/theme";
+@import './theme/sass/conf/conf';
 
-@import 'theme/components/side-bar/side-bar.component';
+@import 'theme/components/baSideBar/baSideBar';
 
 :host /deep/ {
   @mixin layout-collapsed() {
