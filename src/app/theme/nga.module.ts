@@ -11,7 +11,7 @@ import { AppTranslationModule } from '../app.translation.module';
 import { ProjectDropdownMenuComponent, ProjectService } from '../pages/dashboard/project-dropdown-menu';
 
 import { SideBarComponent, MenuComponent, MenuItemComponent, BaPageTop, MenuService,
-  CardComponent} from './components';
+  BaCard} from './components';
 
 import { TooltipDirective } from './directives';
 
@@ -41,7 +41,7 @@ import {
   BaThemeConfigProvider
 } from './theme.configProvider';
 
-//import { BaCardBlur } from './components/baCard/baCardBlur.directive';
+import { BaCardBlur } from './components/baCard/baCardBlur.directive';
 
 import {
   BaScrollPosition,
@@ -70,7 +70,6 @@ import {
 const NGA_COMPONENTS = [
   BaAmChart,
   BaBackTop,
-//  BaCard,
   BaChartistChart,
   BaCheckbox,
   BaFullCalendar,
@@ -87,7 +86,7 @@ const NGA_COMPONENTS = [
   MenuComponent,
   BaPageTop,
   BaContentTop,
-  CardComponent,
+  BaCard,
   ProjectDropdownMenuComponent,
 ];
 
@@ -95,7 +94,7 @@ const NGA_DIRECTIVES = [
   BaScrollPosition,
   BaSlimScroll,
   BaThemeRun,
-//  BaCardBlur
+  BaCardBlur
 ];
 
 const NGA_PIPES = [

@@ -2,12 +2,11 @@ import { Component, Input} from '@angular/core';
 
 
 @Component({
-  selector: 'nile-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  selector: 'ba-card',
+  templateUrl: './baCard.html'
 })
 
-export class CardComponent {
+export class BaCard {
 
   @Input() title: String;
   @Input() baCardClass: String;
