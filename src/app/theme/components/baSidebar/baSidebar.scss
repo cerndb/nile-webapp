@@ -1,8 +1,8 @@
 @import '../../sass/conf/conf';
 
 $sidebar-scroll-width: 4px;
-$angle-left: "\f100";
-$angle-right: "\f101";
+$angle-left: '\f100';
+$angle-right: '\f101';
 
 @mixin default-sublist() {
   padding: 0;
@@ -45,7 +45,7 @@ $angle-right: "\f101";
 :host /deep/ {
   .al-sidebar {
     width: $sidebar-width;
-    top: $sidebar-top-height;
+    top: $top-height;
     left: 0;
     z-index: 1001;
     display: block;
@@ -151,7 +151,7 @@ $angle-right: "\f101";
   }
 
   .slimScrollBar, .slimScrollRail {
-    border-radius: 0px !important;
+    border-radius: 0 !important;
     width: $sidebar-scroll-width !important;
     left: $sidebar-width - $sidebar-scroll-width;
   }
@@ -177,32 +177,10 @@ $angle-right: "\f101";
     top: 94px;
   }
 
-
-  @mixin sidebar-overlap() {
-    .al-sidebar {
-      width: 52px;
-
-      //   @include bg-translucent-dark(0.75);
-      transition: width 0.5s ease;
-
-      .fa-angle-down, .fa-angle-up {
-        opacity: 1;
-      }
-
-      .al-sidebar-sublist {
-        @include default-sublist();
-        top: auto;
-        left: auto;
-        background: none;
-        width: auto;
-        overflow: visible;
-        transition: none;
-      }
-
-      .sidebar-hover-elem, .sidebar-select-elem {
-        left: $sidebar-width - 4;
-        transition: left 0.5s ease;
-      }
+  .menu-collapsed {
+    .slimScrollBar, .slimScrollRail {
+      display: none !important;
     }
   }
+
 }

@@ -10,7 +10,7 @@ import { AppTranslationModule } from '../app.translation.module';
 
 import { ProjectDropdownMenuComponent, ProjectService } from '../pages/dashboard/project-dropdown-menu';
 
-import { SideBarComponent, MenuComponent, MenuItemComponent, MenuService } from './components';
+import {  MenuService } from './components';
 
 import { TooltipDirective } from './directives';
 
@@ -22,13 +22,13 @@ import {
   BaCheckbox,
   BaContentTop,
   BaFullCalendar,
-//  BaMenuItem,
-//  BaMenu,
+  BaMenuItem,
+  BaMenu,
   BaMsgCenter,
   BaMultiCheckbox,
   BaPageTop,
   BaPictureUploader,
-//  BaSidebar,
+  BaSidebar,
   BaFileUploader
 } from './components';
 
@@ -72,17 +72,14 @@ const NGA_COMPONENTS = [
   BaChartistChart,
   BaCheckbox,
   BaFullCalendar,
-//  BaMenuItem,
-//  BaMenu,
+  BaMenuItem,
   BaMsgCenter,
   BaMultiCheckbox,
-//  BaPageTop,
   BaPictureUploader,
-//  BaSidebar,
+  BaSidebar,
   BaFileUploader,
-  SideBarComponent,
-  MenuItemComponent,
-  MenuComponent,
+  BaMenuItem,
+  BaMenu,
   BaPageTop,
   BaContentTop,
   BaCard,

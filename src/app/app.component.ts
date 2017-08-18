@@ -6,13 +6,17 @@ import { BaThemeConfig } from './theme/theme.config';
 
 
 @Component({
-  selector: 'nile-root',
-  templateUrl: './app.component.html',
+  selector: 'app',
   styleUrls: ['./app.component.scss'],
-
+  template: `
+    <main [class.menu-collapsed]="isMenuCollapsed">
+      <div class="additional-bg"></div>
+      <router-outlet></router-outlet>
+    </main>
+  `
 })
 /* TODO: Component with merge the baTheme(preloaders) and the pages */
-export class AppComponent {
+export class App {
 
   isMenuCollapsed: boolean = false;
 

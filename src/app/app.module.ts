@@ -8,7 +8,8 @@ import { routing } from './app.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // App is our top level component
-import { AppComponent } from './app.component';
+import { App } from './app.component';
+import { AppState, InternalStateType } from './app.service';
 import { PagesModule } from './pages/pages.module';
 import { NgaModule } from './theme/nga.module';
 import { GlobalState } from './global.state';
@@ -16,7 +17,11 @@ import { GlobalState } from './global.state';
 import { Configuration } from './api/configuration';
 import { ComponentsModule } from './components/components.module';
 
-
+// Application wide providers
+const APP_PROVIDERS = [
+  AppState,
+  GlobalState
+];
 
 export function apiConfig() {
   return new Configuration({
@@ -25,8 +30,8 @@ export function apiConfig() {
 }
 
 @NgModule({
-  bootstrap: [AppComponent],
-  declarations: [AppComponent],
+  bootstrap: [App],
+  declarations: [App],
   imports: [
     BrowserModule,
     FormsModule,
@@ -39,7 +44,11 @@ export function apiConfig() {
     routing
   ],
   providers: [
-    GlobalState,
+    APP_PROVIDERS,
   ]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(public appState: AppState) {
+  }
+}
+

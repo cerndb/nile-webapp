@@ -7,12 +7,12 @@ import { Subscription } from 'rxjs/Rx';
 import { MenuService } from './menu.service';
 
 @Component({
-  selector: 'nile-menu-bar',
-  templateUrl: 'menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  selector: 'ba-menu',
+  templateUrl: 'baMenu.html',
+  styleUrls: ['./baMenu.scss'],
 })
 
-export class MenuComponent implements OnInit, OnDestroy {
+export class BaMenu {
   @Input() menuHeight: number;
   @Input() sidebarCollapsed: boolean = false;
 

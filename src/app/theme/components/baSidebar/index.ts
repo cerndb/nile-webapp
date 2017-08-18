@@ -1,4 +1,4 @@
 /**
  * Created by adediosf on 21/02/17.
  */
-export * from './baSideBar.component';
+export * from './baSidebar.component';

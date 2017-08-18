@@ -1,14 +1,14 @@
 import {Component, ElementRef, HostListener, OnInit, AfterViewInit} from '@angular/core';
-import {layoutSizes} from '../../theme.constants';
+import {layoutSizes} from '../../../theme';
 import {GlobalState} from '../../../global.state';
 
 @Component({
-  selector: 'nile-side-bar',
-  templateUrl: 'baSideBar.html',
-  styleUrls: ['./baSideBar.scss'],
+  selector: 'ba-sidebar',
+  templateUrl: 'baSidebar.html',
+  styleUrls: ['./baSidebar.scss']
 })
 
-export class SideBarComponent {
+export class BaSidebar implements OnInit, AfterViewInit {
   public menuHeight: number;
   public isMenuCollapsed: boolean = false;
   public isMenuShouldCollapsed: boolean = false;
