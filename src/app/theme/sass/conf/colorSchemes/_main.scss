@@ -7,7 +7,7 @@ $help-text: $default-text; // additional text color for hits
 
 $label-text: #000000; // labels color
 $disabled: rgba(255, 255, 255, 0.4); // color for disabled state
-$disabled-bg: tint($disabled, 15%); // background color for disable state
+$disabled-bg: rgba(0, 0, 0, 0.2); // background color for disable state
 $border: rgba(255, 255, 255, 0.5); // border color
 $border-light: rgba(255, 255, 255, 0.3); // lighter version of border color (for hovers)
 $input-border: rgba(0, 0, 0, 0.2); // input border color
