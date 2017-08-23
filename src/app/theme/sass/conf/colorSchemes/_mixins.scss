@@ -1,0 +1,45 @@
+// buttons colors
+@mixin button-padding {
+  padding: 0.5rem 1rem;
+}
+
+button.btn.btn-primary {
+  @include button-padding();
+  @include buttonColor($button-primary, $button-primary);
+  &:active, &:target {
+    background-color: $primary-dark;
+  }
+}
+
+
+button.btn.btn-success {
+  @include button-padding();
+  @include buttonColor($button-success, $button-success);
+  &:active, &:target {
+    background-color: $success-dark;
+  }
+}
+
+button.btn.btn-info {
+  @include button-padding();
+  @include buttonColor($button-info, $button-info);
+  &:active, &:target {
+    background-color: $info-dark;
+  }
+}
+
+button.btn.btn-warning {
+  @include button-padding();
+  @include buttonColor($button-warning, $button-warning);
+  &:active, &:target {
+    background-color: $warning-dark;
+  }
+}
+
+button.btn.btn-danger {
+  @include button-padding();
+  @include buttonColor($button-danger, $button-danger);
+  &:active, &:target {
+    background-color: $danger-dark;
+  }
+}

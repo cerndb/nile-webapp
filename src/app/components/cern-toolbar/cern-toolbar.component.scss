@@ -1,6 +1,5 @@
 /* CERN Toolbar CSS - 17/01/13 */
 @import '../../theme/sass/conf/conf';
-
 :host /deep/ {
   #cern-toolbar {
     background-color: $cerntoolbar-background;
@@ -28,7 +27,7 @@
     display: inline-block;
   }
   #cern-toolbar a:hover {
-    background-color: $cerntoolbar-background;
+    background-color: #000;
     color: #fff;
   }
   #cern-toolbar .active a {
@@ -37,7 +36,7 @@
     padding-bottom: 20px;
   }
   #cern-toolbar .active .cern-account {
-    background-color: $cerntoolbar-background;
+    background-color: #fff;
   }
   #cern-toolbar h1 {
     float: left;
@@ -45,6 +44,7 @@
     font-weight: 400;
     line-height: 1;
     position: relative;
+    width: 200px;
     left: -8px;
     padding: 6px 0;
     letter-spacing: 0.08em;
@@ -59,7 +59,7 @@
     padding: 0;
   }
   #cern-toolbar h1 a:hover span {
-    color: $cerntoolbar-background;
+    color: #fff;
   }
   #cern-toolbar ul {
     float: right;
