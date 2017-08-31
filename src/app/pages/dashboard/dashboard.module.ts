@@ -8,6 +8,7 @@ import { DashboardService } from './dashboard.service';
 import { ClusterSummaryChartComponent } from '../../components/cluster-summary-chart';
 import { ResourceSummaryChartComponent } from '../../components/resource-summary-chart';
 import { ComponentsModule } from '../../components/components.module';
+import { ProjectService } from '../../services/project';
 
 
 
@@ -21,7 +22,8 @@ import { ComponentsModule } from '../../components/components.module';
     DashboardComponent
   ],
   providers: [
-    DashboardService
+    DashboardService,
+    ProjectService
   ]
 })
 

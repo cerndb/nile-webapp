@@ -8,7 +8,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgUploaderModule } from 'ngx-uploader/src/module/ngx-uploader.module';
 import { AppTranslationModule } from '../app.translation.module';
 
-import { ProjectDropdownMenuComponent, ProjectService } from '../pages/dashboard/project-dropdown-menu';
+import  {ProjectDropdownMenuComponent } from '../pages/dashboard/project-dropdown-menu/project-dropdown-menu.component';
+
+import { ProjectService } from '../services/project';
 
 import { TooltipDirective } from './directives';
 
