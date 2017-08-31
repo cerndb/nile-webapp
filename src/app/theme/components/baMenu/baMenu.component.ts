@@ -4,7 +4,7 @@ import {GlobalState} from '../../../global.state';
 
 import { Subscription } from 'rxjs/Rx';
 
-import { MenuService } from './menu.service';
+import { BaMenuService } from '../../services';
 
 @Component({
   selector: 'ba-menu',
@@ -13,6 +13,7 @@ import { MenuService } from './menu.service';
 })
 
 export class BaMenu {
+
   @Input() menuHeight: number;
   @Input() sidebarCollapsed: boolean = false;
 
@@ -27,7 +28,7 @@ export class BaMenu {
   public outOfArea: number = -200;
 
 
-  constructor(private _router: Router, private _service: MenuService, private _state: GlobalState) {
+  constructor(private _router: Router, private _service: BaMenuService, private _state: GlobalState) {
   }
 
   public updateMenu(newMenuItems) {
@@ -70,11 +71,11 @@ export class BaMenu {
     this.hoverElemHeight = $event.currentTarget.clientHeight;
     // TODO: get rid of magic 66 constant
     // To create a rectangle in the right margin when mouse hover an item.
-    this.hoverElemTop = $event.currentTarget.getBoundingClientRect().top - 108;
+    this.hoverElemTop = $event.currentTarget.getBoundingClientRect().top - 128;
   }
 
   public toggleSubMenu($event): boolean {
-    const submenu = jQuery($event.currentTarget).next();
+    let submenu = jQuery($event.currentTarget).next();
 
     if (this.sidebarCollapsed) {
       this.expandMenu.emit(null);

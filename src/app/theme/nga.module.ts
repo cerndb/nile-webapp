@@ -10,8 +10,6 @@ import { AppTranslationModule } from '../app.translation.module';
 
 import { ProjectDropdownMenuComponent, ProjectService } from '../pages/dashboard/project-dropdown-menu';
 
-import {  MenuService } from './components';
-
 import { TooltipDirective } from './directives';
 
 import {
@@ -76,13 +74,13 @@ const NGA_COMPONENTS = [
   BaMsgCenter,
   BaMultiCheckbox,
   BaPictureUploader,
-  BaSidebar,
   BaFileUploader,
   BaMenuItem,
   BaMenu,
   BaPageTop,
   BaContentTop,
   BaCard,
+  BaSidebar,
   ProjectDropdownMenuComponent,
 ];
 
@@ -104,7 +102,6 @@ const NGA_SERVICES = [
   BaThemePreloader,
   BaThemeSpinner,
   BaMenuService,
-  MenuService,
   ProjectService
 ];
 

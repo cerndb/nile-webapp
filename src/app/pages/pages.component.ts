@@ -4,17 +4,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes } from '@angular/router';
 
-import { MENU } from '../app.menu';
+import { PAGES_MENU } from './pages.menu';
 
-import { MenuService } from '../theme/components/baMenu';
+import { BaMenuService } from '../theme';
 
 @Component({
   selector: 'nile-pages',
   styles: [],
   template: `
     <nile-cern-toolbar></nile-cern-toolbar>
-    <ba-sidebar></ba-sidebar>
     <ba-page-top [isToolMenuVisible]="true" [isProjectMenuVisible]="true"></ba-page-top>
+    <ba-sidebar></ba-sidebar>
     <div class="al-main">
       <div class="al-content">
         <ba-content-top></ba-content-top>
@@ -27,13 +27,13 @@ import { MenuService } from '../theme/components/baMenu';
 
 export class PagesComponent implements OnInit {
 
-  constructor(private _menuService: MenuService) {
+  constructor(private _menuService: BaMenuService) {
   }
 
   /**
    * In order to update the side-bar menu with the pages.menu constant.
    */
   ngOnInit() {
-    this._menuService.updateMenuByRoutes(<Routes>MENU);
+    this._menuService.updateMenuByRoutes(<Routes>PAGES_MENU);
   }
 }

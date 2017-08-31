@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { routing } from './app.routing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // App is our top level component
 import { App } from './app.component';
@@ -37,10 +36,9 @@ export function apiConfig() {
     FormsModule,
     HttpModule,
     RouterModule,
-    BrowserAnimationsModule,
-    PagesModule,
-    ComponentsModule,
     NgaModule.forRoot(),
+    ComponentsModule,
+    PagesModule,
     routing
   ],
   providers: [

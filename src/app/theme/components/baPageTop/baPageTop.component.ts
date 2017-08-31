@@ -3,7 +3,7 @@ import { GlobalState } from '../../../global.state';
 
 @Component({
   selector: 'ba-page-top',
-  templateUrl: 'baPageTop.html',
+  templateUrl: './baPageTop.html',
   styleUrls: ['./baPageTop.scss']
 })
 
