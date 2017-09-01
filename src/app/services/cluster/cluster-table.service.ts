@@ -2,9 +2,9 @@
  * Created by adediosf on 17/03/17.
  */
 import { Injectable } from '@angular/core';
-import { ClustersService } from '../../../api/api/clusters.service';
+import { ClustersService } from '../../api/api/clusters.service';
 import { Observable }         from 'rxjs/Observable';
-import { ClusterEntity } from '../../../api/model/clusterEntity';
+import { ClusterEntity } from '../../api/model/clusterEntity';
 import { Http, Response }                    from '@angular/http';
 
 @Injectable()

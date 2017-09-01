@@ -7,7 +7,7 @@ import { NgaModule } from '../../theme/nga.module';
 
 import { ClusterComponent } from './cluster.component';
 import { ClusterTableComponent } from './cluster-table/cluster-table.component';
-import { ClusterTableService } from './cluster-table/cluster-table.service';
+import { ClusterTableService } from '../../services/cluster/cluster-table.service';
 
 import { ClustersService } from '../../api/api/clusters.service';
 import { ApiModule }  from '../../api/api.module';

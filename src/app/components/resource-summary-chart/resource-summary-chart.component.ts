@@ -1,6 +1,6 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
-import {DashboardService} from '../../pages/dashboard/dashboard.service';
+import { DashboardService } from '../../services/dashboard/dashboard.service';
 
 import 'easy-pie-chart/dist/jquery.easypiechart.js';
 
