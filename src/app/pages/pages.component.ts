@@ -9,10 +9,10 @@ import { PAGES_MENU } from './pages.menu';
 import { BaMenuService } from '../theme';
 
 @Component({
-  selector: 'nile-pages',
+  selector: 'itdb-pages',
   styles: [],
   template: `
-    <nile-cern-toolbar></nile-cern-toolbar>
+    <itdb-cern-toolbar></itdb-cern-toolbar>
     <ba-page-top [isToolMenuVisible]="true" [isProjectMenuVisible]="true"></ba-page-top>
     <ba-sidebar></ba-sidebar>
     <div class="al-main">

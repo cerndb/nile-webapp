@@ -3,7 +3,7 @@ import { ClusterWizardMenuTabComponent } from './cluster-wizard-menu-tab/cluster
 
 
 @Component({
-  selector: 'nile-cluster-wizard-menu',
+  selector: 'itdb-cluster-wizard-menu',
   templateUrl: './cluster-wizard-menu.component.html',
   styleUrls: ['./cluster-wizard-menu.component.scss']
 })

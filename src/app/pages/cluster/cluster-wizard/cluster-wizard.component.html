@@ -1,4 +1,4 @@
-<nile-modal-dialog>
+<itdb-modal-dialog>
 
   <div class="modal-header" app-modal-header>
     <h5 #title class="modal-title">Create Cluster</h5>
@@ -12,19 +12,19 @@
       <span #error >
       </span>
     </div>
-       <nile-cluster-wizard-menu>
-         <nile-cluster-wizard-menu-tab tabTitle="Info">
-           <nile-cluster-wizard-info></nile-cluster-wizard-info>
-         </nile-cluster-wizard-menu-tab>
+       <itdb-cluster-wizard-menu>
+         <itdb-cluster-wizard-menu-tab tabTitle="Info">
+           <itdb-cluster-wizard-info></itdb-cluster-wizard-info>
+         </itdb-cluster-wizard-menu-tab>
 
-         <nile-cluster-wizard-menu-tab tabTitle="Type">
-           <nile-cluster-wizard-type></nile-cluster-wizard-type>
-         </nile-cluster-wizard-menu-tab>
+         <itdb-cluster-wizard-menu-tab tabTitle="Type">
+           <itdb-cluster-wizard-type></itdb-cluster-wizard-type>
+         </itdb-cluster-wizard-menu-tab>
 
-         <nile-cluster-wizard-menu-tab tabTitle="Attributes">
-           <nile-cluster-wizard-attributes></nile-cluster-wizard-attributes>
-         </nile-cluster-wizard-menu-tab>
-       </nile-cluster-wizard-menu>
+         <itdb-cluster-wizard-menu-tab tabTitle="Attributes">
+           <itdb-cluster-wizard-attributes></itdb-cluster-wizard-attributes>
+         </itdb-cluster-wizard-menu-tab>
+       </itdb-cluster-wizard-menu>
   </div>
 
   <div app-modal-footer>
@@ -32,4 +32,4 @@
     <button type="submit" class="btn btn-primary" [disabled]="!isValidForm()" (click)="createOrSaveCluster()">Save changes</button>
   </div>
 
-</nile-modal-dialog>
+</itdb-modal-dialog>

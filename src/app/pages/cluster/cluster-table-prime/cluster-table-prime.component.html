@@ -26,7 +26,7 @@
                   filterMatchMode="contains" [sortable]="true">
           <ng-template let-col let-state="rowData" *ngIf="col.header == 'State'" pTemplate="body">
             <!--<span class="{{state[col.field]}}">{{state[col.field]}}</span>-->
-            <nile-state-button [state]="state[col.field]"></nile-state-button>
+            <itdb-state-button [state]="state[col.field]"></itdb-state-button>
           </ng-template>
         </p-column>
 
@@ -35,7 +35,7 @@
             <div class="ui-grid-row">
               <div class="ui-grid-col-9">
                 <div class="ui-grid ui-grid-responsive ui-grid-pad">
-                  <nile-project-dropdown-menu></nile-project-dropdown-menu>
+                  <itdb-project-dropdown-menu></itdb-project-dropdown-menu>
                 </div>
               </div>
             </div>
@@ -46,7 +46,7 @@
 
       </p-dataTable>
 
-      <nile-cluster-wizard></nile-cluster-wizard>
+      <itdb-cluster-wizard></itdb-cluster-wizard>
 
     </ba-card>
 

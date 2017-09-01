@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 
 @Component({
-  selector: 'nile-pie-chart',
+  selector: 'itdb-pie-chart',
   templateUrl: './pie-chart.component.html',
   styleUrls: ['./pie-chart.component.scss'],
 })

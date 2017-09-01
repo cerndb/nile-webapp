@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { ClusterEntity } from '../../../../api/model/clusterEntity';
 
 @Component({
-  selector: 'nile-cluster-wizard-info',
+  selector: 'itdb-cluster-wizard-info',
   templateUrl: './cluster-wizard-info.component.html',
   styleUrls: ['./cluster-wizard-info.component.scss']
 })

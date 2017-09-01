@@ -3,7 +3,7 @@ import {Component, Input} from '@angular/core';
 import * as Chart from 'chart.js';
 
 @Component({
-  selector: 'cluster-summary-chart',
+  selector: 'itdb-cluster-summary-chart',
   templateUrl: './cluster-summary-chart.component.html',
   styleUrls: ['./cluster-summary-chart.component.scss']
 })

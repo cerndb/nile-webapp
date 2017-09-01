@@ -3,7 +3,7 @@ import { ProjectService } from '../../../services/project/project.service';
 
 
 @Component({
-  selector: 'nile-project-dropdown-menu',
+  selector: 'itdb-project-dropdown-menu',
   templateUrl: './project-dropdown-menu.component.html',
   styleUrls: ['./project-dropdown-menu.component.scss']
 })

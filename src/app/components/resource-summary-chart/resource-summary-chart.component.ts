@@ -5,7 +5,7 @@ import { DashboardService } from '../../services/dashboard/dashboard.service';
 import 'easy-pie-chart/dist/jquery.easypiechart.js';
 
 @Component({
-  selector: 'resource-summary-chart',
+  selector: 'itdb-resource-summary-chart',
   templateUrl: './resource-summary-chart.component.html',
   styleUrls: ['./resource-summary-chart.component.scss']
 })

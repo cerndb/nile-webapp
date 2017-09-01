@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ElementRef} from '@angular/core';
 
 @Component({
-  selector: 'nile-modal-dialog',
+  selector: 'itdb-modal-dialog',
   templateUrl: './modal-dialog.component.html',
   styleUrls: ['./modal-dialog.component.scss']
 })

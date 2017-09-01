@@ -7,7 +7,7 @@ import { ClusterWizardAttributesComponent } from './cluster-wizard-attributes/cl
 import { ClusterWizardMenuComponent } from './cluster-wizard-menu/cluster-wizard-menu.component';
 
 @Component({
-  selector: 'nile-cluster-wizard',
+  selector: 'itdb-cluster-wizard',
   templateUrl: './cluster-wizard.component.html',
   styleUrls: ['./cluster-wizard.component.scss']
 })

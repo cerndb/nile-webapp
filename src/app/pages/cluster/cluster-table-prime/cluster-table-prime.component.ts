@@ -5,7 +5,7 @@ import { ClusterWizardComponent } from '../cluster-wizard/cluster-wizard.compone
 
 
 @Component({
-  selector: 'nile-cluster-table-prime',
+  selector: 'itdb-cluster-table-prime',
   templateUrl: './cluster-table-prime.component.html',
   styleUrls: ['./cluster-table-prime.component.scss']
 })

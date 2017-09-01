@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 
 @Component({
-  selector: 'nile-state-button',
+  selector: 'itdb-state-button',
   templateUrl: './state-button.component.html',
   styleUrls: ['./state-button.component.scss']
 })

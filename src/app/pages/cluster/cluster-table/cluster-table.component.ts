@@ -6,7 +6,7 @@ import {ClusterWizardComponent} from '../cluster-wizard/cluster-wizard.component
 
 
 @Component({
-  selector: 'nile-cluster-table',
+  selector: 'itdb-cluster-table',
   templateUrl: './cluster-table.component.html',
   styleUrls: ['./cluster-table.component.scss'],
 })

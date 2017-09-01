@@ -9,7 +9,7 @@
 
 <div class="row">
   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-    <resource-summary-chart></resource-summary-chart>
+    <itdb-resource-summary-chart></itdb-resource-summary-chart>
   </div>
 </div>
 
@@ -19,11 +19,11 @@
       <div class="row">
         <div class="col-lg-6 col-md-12">
           <p>KAFKA</p>
-          <cluster-summary-chart [pos]="0" [data]="kafka" [legend]="true" [numberBrokers]="23"></cluster-summary-chart>
+          <itdb-cluster-summary-chart [pos]="0" [data]="kafka" [legend]="true" [numberBrokers]="23"></itdb-cluster-summary-chart>
         </div>
         <div class="col-lg-6 col-md-12">
           <p>ZOOKEEPER</p>
-          <cluster-summary-chart [pos]="1" [data]="zookeeper" [legend]="true" [numberBrokers]="7"></cluster-summary-chart>
+          <itdb-cluster-summary-chart [pos]="1" [data]="zookeeper" [legend]="true" [numberBrokers]="7"></itdb-cluster-summary-chart>
         </div>
       </div>
     </ba-card>

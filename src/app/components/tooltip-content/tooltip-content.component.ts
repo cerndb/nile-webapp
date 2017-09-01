@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, HostListener, Input } from '@angular/core';
 
 @Component({
-  selector: 'nile-tooltip-content',
+  selector: 'itdb-tooltip-content',
   templateUrl: './tooltip-content.component.html',
   styleUrls: ['./tooltip-content.component.scss'],
 })
