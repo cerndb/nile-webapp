@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { DashboardService } from './dashboard.service';
+import { DashboardService } from '../../services/dashboard/dashboard.service';
 
 @Component({
-  selector: 'nile-dashboard',
+  selector: 'itdb-dashboard',
   templateUrl: 'dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })

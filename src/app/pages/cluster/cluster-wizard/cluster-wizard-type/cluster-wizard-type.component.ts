@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'nile-cluster-wizard-type',
+  selector: 'itdb-cluster-wizard-type',
   templateUrl: './cluster-wizard-type.component.html',
   styleUrls: ['./cluster-wizard-type.component.scss']
 })

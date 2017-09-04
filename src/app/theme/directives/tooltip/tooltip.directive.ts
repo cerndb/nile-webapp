@@ -3,7 +3,7 @@
  */
 import {Directive, Input, HostListener, OnDestroy, ElementRef} from '@angular/core';
 
-import { TooltipService } from '../../elements/tooltip-container/tooltip.service';
+import { TooltipService } from '../../../components/tooltip-container/tooltip.service';
 
 
 @Directive({ selector: '[nileTooltip]' })

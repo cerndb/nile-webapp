@@ -9,7 +9,7 @@ $resXS: 500px;
 $resXXS: 435px;
 $resMin: 320px;
 
-$top-height: 90px;
+$top-height: 108px;
 $sidebar-width: 180px;
 
 $small-card-height: 114px;
@@ -21,12 +21,21 @@ $large-card-height: 974px;
 $default-animation-duration: 0.2s;
 $default-animation-style: ease-out;
 
-$assets-root: '/assets/';
-$images-root: $assets-root + '/img/';
-$fonts-root: $assets-root + '/fonts/';
+$assets-root: '/assets';
+$images-root: '/img/';
+$fonts-root: '/fonts/';
 $font-thin: 100;
 $font-light: 300;
 $font-normal: 400;
 $font-bold: 700;
 $font-bolder: 500;
 $font-ultraBold: 900;
+
+$facebook-color: #3b5998;
+$twitter-color: #55acee;
+$google-color: #dd4b39;
+$linkedin-color: #0177B5;
+$github-color: #6b6b6b;
+$stackoverflow-color: #2F96E8;
+$dribble-color: #F26798;
+$behace-color: #0093FA;

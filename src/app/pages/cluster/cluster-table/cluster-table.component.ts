@@ -1,12 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { ClusterTableService } from './cluster-table.service';
+import { ClusterTableService } from '../../../services/cluster/cluster-table.service';
 import { LocalDataSource } from 'ng2-smart-table';
 import { ClusterEntity } from '../../../api/model/clusterEntity';
 import {ClusterWizardComponent} from '../cluster-wizard/cluster-wizard.component';
 
 
 @Component({
-  selector: 'nile-cluster-table',
+  selector: 'itdb-cluster-table',
   templateUrl: './cluster-table.component.html',
   styleUrls: ['./cluster-table.component.scss'],
 })

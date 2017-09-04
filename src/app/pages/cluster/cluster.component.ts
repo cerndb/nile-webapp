@@ -3,7 +3,7 @@ import {ClusterWizardComponent} from "./cluster-wizard/cluster-wizard.component"
 
 
 @Component({
-  selector: 'nile-cluster',
+  selector: 'itdb-cluster',
   templateUrl: './cluster.component.html',
   styleUrls: ['./cluster.component.scss'],
 

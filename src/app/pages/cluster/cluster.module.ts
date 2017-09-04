@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { DataTableModule,SharedModule } from 'primeng/primeng';
 
-import { ElementsModule } from '../../theme/theme.module';
-import { FormsModule } from '@angular/forms';
+import { NgaModule } from '../../theme/nga.module';
 
 import { ClusterComponent } from './cluster.component';
 import { ClusterTableComponent } from './cluster-table/cluster-table.component';
-import { ClusterTableService } from './cluster-table/cluster-table.service';
+import { ClusterTableService } from '../../services/cluster/cluster-table.service';
 
 import { ClustersService } from '../../api/api/clusters.service';
 import { ApiModule }  from '../../api/api.module';
@@ -17,13 +16,14 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { ClusterTablePrimeComponent } from './cluster-table-prime/cluster-table-prime.component';
 
 import { ClusterWizardModule } from './cluster-wizard/cluster-wizard.module';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     Ng2SmartTableModule,
-    FormsModule,
-    ElementsModule,
+    NgaModule,
+    ComponentsModule,
     ClusterWizardModule,
     ApiModule,
     DataTableModule,

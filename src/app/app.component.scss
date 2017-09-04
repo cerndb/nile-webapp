@@ -1,7 +1,5 @@
-@import "~normalize.css";
-@import "theme/theme";
-
-@import './theme/elements/side-bar/side-bar.component';
+@import './theme/sass/conf/conf';
+@import './theme/components/baSidebar/baSidebar';
 
 :host /deep/ {
   @mixin layout-collapsed() {
@@ -100,6 +98,7 @@
   @media (max-width: 1200px) and (min-width: $resXS) {
     @include layout-collapsed();
   }
+
 
   @media (min-width: $resXS + 1) {
     .menu-collapsed {

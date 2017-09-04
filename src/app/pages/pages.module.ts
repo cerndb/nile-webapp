@@ -4,23 +4,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ElementsModule } from '../theme/theme.module';
+import { NgaModule } from '../theme/nga.module';
 
 import { routing } from './pages.routing';
 
 import { PagesComponent } from './pages.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ClusterModule } from './cluster/cluster.module';
+import { ComponentsModule } from '../components/components.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
-    ElementsModule,
+    NgaModule,
+    ComponentsModule,
     DashboardModule,
     ClusterModule,
     routing
   ],
-  declarations: [PagesComponent]
+  declarations: [
+    PagesComponent
+  ]
 })
 
 export class PagesModule {

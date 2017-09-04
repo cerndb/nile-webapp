@@ -1,13 +1,13 @@
-import {Component, ViewChild, ElementRef, OnInit} from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { ClusterEntity } from '../../../api/model/clusterEntity';
-import { ModalDialogComponent}  from '../../../theme/elements/modal-dialog/modal-dialog.component';
+import { ModalDialogComponent}  from '../../../components/modal-dialog/modal-dialog.component';
 import { ClusterWizardInfoComponent } from './cluster-wizard-info/cluster-wizard-info.component';
 import { ClusterWizardTypeComponent } from './cluster-wizard-type/cluster-wizard-type.component';
 import { ClusterWizardAttributesComponent } from './cluster-wizard-attributes/cluster-wizard-attributes.component';
-import {ClusterWizardMenuComponent} from "./cluster-wizard-menu/cluster-wizard-menu.component";
+import { ClusterWizardMenuComponent } from './cluster-wizard-menu/cluster-wizard-menu.component';
 
 @Component({
-  selector: 'nile-cluster-wizard',
+  selector: 'itdb-cluster-wizard',
   templateUrl: './cluster-wizard.component.html',
   styleUrls: ['./cluster-wizard.component.scss']
 })

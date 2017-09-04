@@ -1,27 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ElementsModule } from '../../theme/theme.module';
+import { NgaModule } from '../../theme/nga.module';
 
 import { DashboardComponent } from './dashboard.component';
-import { DashboardService } from './dashboard.service';
-import { clusterSummaryChart } from '../../components/clusterSummaryChart';
-import { resourceSummaryChart } from '../../components/resourceSummaryChart';
+import { DashboardService } from '../../services/dashboard/dashboard.service';
+
+import { ComponentsModule } from '../../components/components.module';
+import { ProjectService } from '../../services/project';
 
 
 
 @NgModule({
   imports: [
     CommonModule,
-    ElementsModule
+    NgaModule,
+    ComponentsModule
   ],
   declarations: [
-    DashboardComponent,
-    clusterSummaryChart,
-    resourceSummaryChart
+    DashboardComponent
   ],
   providers: [
-    DashboardService
+    DashboardService,
+    ProjectService
   ]
 })
 

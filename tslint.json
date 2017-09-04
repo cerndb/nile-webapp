@@ -98,8 +98,8 @@
       "check-type"
     ],
 
-    "directive-selector": [true, "attribute", "nile", "camelCase"],
-    "component-selector": [true, "element", "nile", "kebab-case"],
+    "directive-selector": [true, "attribute", "itdb", "camelCase"],
+    "component-selector": [true, "element", "itdb", "kebab-case"],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,

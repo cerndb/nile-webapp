@@ -1,11 +1,11 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import { ClusterEntity } from '../../../api/model/clusterEntity';
-import { ClusterTableService } from '../cluster-table/cluster-table.service';
+import { ClusterTableService } from '../../../services/cluster/cluster-table.service';
 import { ClusterWizardComponent } from '../cluster-wizard/cluster-wizard.component';
 
 
 @Component({
-  selector: 'nile-cluster-table-prime',
+  selector: 'itdb-cluster-table-prime',
   templateUrl: './cluster-table-prime.component.html',
   styleUrls: ['./cluster-table-prime.component.scss']
 })

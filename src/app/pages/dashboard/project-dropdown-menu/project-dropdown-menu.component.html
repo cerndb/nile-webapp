@@ -5,9 +5,9 @@
   </a>
   <ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="project-profile">
     <li  class="dropdown-item" *ngFor="let item of egroupList" (click)="changeProject(item.name)">
-      <a class="dropdown-selected" href="#" target="_self">
-        <span class="fa fa-check dropdown-selected-icon" [ngStyle]="{'visibility': item.name == egroupSelected?'visible':'hidden'}"></span>
-        <span class="dropdown-title">{{item.name}}</span>
+      <a href="#" target="_self">
+        <span class="fa fa-check" [ngStyle]="{'visibility': item.name == egroupSelected?'visible':'hidden'}"></span>
+        <span class="testing">{{item.name}}</span>
       </a>
     </li>
   </ul>

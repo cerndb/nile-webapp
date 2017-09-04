@@ -1,0 +1,7 @@
+<div class="tooltip-container">
+  <itdb-tooltip-content
+    *ngFor="let tooltip of tooltipService.components"
+    [title]="tooltip.title"
+    [ref]="tooltip.ref">
+  </itdb-tooltip-content>
+</div>
