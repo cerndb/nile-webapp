@@ -13,7 +13,7 @@ WORKDIR /usr/src/app
 # Bundle app source
 COPY . /usr/src/app
 
-RUN npm install && npm i @angular/cli && npm cache clean --force
+RUN npm cache clean --force
 ENV PATH="/usr/src/app/node_modules/.bin:${PATH}"
 RUN ng build
 
