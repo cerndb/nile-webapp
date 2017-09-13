@@ -7,15 +7,13 @@ FROM gitlab-registry.cern.ch/db/nile-web-base:latest
 MAINTAINER Alicia de Dios Fuente <adediosf@cern.ch>
 
 # Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /opt/nile
 
 # Bundle app source
-COPY . /usr/src/app
+COPY . /opt/nile
 
-RUN npm cache clean --force
+RUN npm cache clean --force && npm run build
 ENV PATH="/usr/src/app/node_modules/.bin:${PATH}"
-RUN ng build
 
 EXPOSE 3000
 ENTRYPOINT ["npm", "start"]
