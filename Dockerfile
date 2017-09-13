@@ -1,5 +1,8 @@
 
-FROM node:8.2.1
+
+CMD docker login gitlab-registry.cern.ch
+FROM gitlab-registry.cern.ch/db/nile-web-base:latest
+
 
 # This image provides a Node.JS environment you can use to run your Node.JS
 # applications.
