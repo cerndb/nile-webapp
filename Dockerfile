@@ -16,6 +16,7 @@ RUN npm cache clean --force && npm run build
 ENV PATH="/usr/src/app/node_modules/.bin:${PATH}"
 
 RUN chown node:node /opt/nile && chmod 0777 -R /opt/nile
+
 USER node
 EXPOSE 3000
 ENTRYPOINT ["npm", "start"]
