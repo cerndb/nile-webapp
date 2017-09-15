@@ -13,11 +13,7 @@ WORKDIR /opt/nile
 # Bundle app source
 COPY . /opt/nile
 
-<<<<<<< HEAD
-RUN npm install && npm i angular/cli  && npm cache clean --force && npm run build
-=======
-RUN npm install && npm cache clean --force
->>>>>>> f525f84... Log into gitlab registry
+RUN npm install && npm i @angular/cli  && npm cache clean --force && npm run build
 ENV PATH="/usr/src/app/node_modules/.bin:${PATH}"
 
 RUN chown node:node /opt/nile && chmod 0777 -R /opt/nile
